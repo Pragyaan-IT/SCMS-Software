@@ -1,19 +1,23 @@
 ## Core Tasks
 
 - **Automated Attendance System**
+
   - Face recognition upon entering the classroom.
   - Counting the number of students in class.
   - Monitoring student attention based on posture.
 
 - **Resource Usage Analysis**
+
   - Time spent on whiteboard, projector, and verbal instruction.
 
 - **Attendance and Performance Reports**
+
   - Average class attendance report.
   - Weekly/monthly student performance reports sent to parents.
   - Teacher's performance report.
 
 - **User Interfaces**
+
   - Attendance review UI for teachers.
   - Teacher's Dashboard:
     - Highlights students with low attendance.
@@ -26,6 +30,7 @@
 - **Emergency System Requirements**
 
 - **Teacher-Student Interaction**
+
   - Online Q/A with teachers:
     - Number of questions answered appears in teacher's profile.
   - Student open chat.
