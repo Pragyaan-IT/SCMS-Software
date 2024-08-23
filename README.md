@@ -38,3 +38,21 @@
 
 - **Focus on At-Risk Students**
   - Highlight students with lower grades or low attendance in the teacher's portal for extra attention.
+
+## How to Run
+
+```bash
+
+pnpm install
+
+pnpm run dev
+
+```
+
+## Sync Database
+
+```bash
+
+pnpm run db:push
+
+```
