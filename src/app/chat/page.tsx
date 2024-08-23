@@ -1,9 +1,10 @@
+import ChatBot from "@/components/chatbot";
 
 
-export default function ChatPage(){
+export default function ChatPage() {
     return (
         <>
-            Chat Page
+            <ChatBot />
         </>
     )
 }
