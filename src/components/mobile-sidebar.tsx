@@ -1,10 +1,7 @@
 "use client";
 
-import { Menu } from "lucide-react";
-import { useState } from "react";
-// import Logo from "./logo";
 import NavButton from "@/components/nav-button";
-import { Button } from "./ui/button";
+import { Button } from "@/components/ui/button";
 import {
   Sheet,
   SheetContent,
@@ -12,9 +9,15 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "./ui/sheet";
+} from "@/components/ui/sheet";
+import { Menu } from "lucide-react";
+import { useState } from "react";
 
-export default function MobileSidebar() {
+export default function MobileSidebar({
+  role,
+}: {
+  role: "teacher" | "student";
+}) {
   const [open, setOpen] = useState(false);
 
   return (
@@ -26,15 +29,12 @@ export default function MobileSidebar() {
       </SheetTrigger>
       <SheetContent side="left" className="w-56">
         <SheetHeader>
-          <SheetTitle>
-            {/* <Logo /> */}
-            Pragyaan
-          </SheetTitle>
+          <SheetTitle>Pragyaan</SheetTitle>
           <SheetDescription className="sr-only">Menu</SheetDescription>
         </SheetHeader>
         <nav className="flex flex-col gap-2 px-2 py-6">
           <NavButton
-            href="/dashboard"
+            href={`/${role}/dashboard`}
             name="Dashboard"
             onClick={() => setOpen(false)}
           />
