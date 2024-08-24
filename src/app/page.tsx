@@ -9,7 +9,7 @@ export default async function Home() {
       name: true,
     },
   });
-  console.log(process.env.DATABASE_URL);
+
   return (
     <main className="flex flex-col items-center justify-center gap-4">
       <h1 className="text-6xl uppercase">pragyaan</h1>
@@ -20,7 +20,7 @@ export default async function Home() {
       </ul>
       <h2>This is Landing Page</h2>
       <Button asChild>
-        <Link href="/dashboard">Go To Dashboard</Link>
+        <Link href="/login">Login</Link>
       </Button>
     </main>
   );
