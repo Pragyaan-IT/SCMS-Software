@@ -1,8 +1,12 @@
 import { db } from "@/db";
-import { users } from "@/db/schema";
 
 export default async function Home() {
-  const allUsers = await db.select().from(users);
+  const allUsers = await db.query.users.findMany({
+    columns: {
+      id: true,
+      name: true,
+    },
+  });
 
   return (
     <main className=" flex justify-center items-center flex-col">
@@ -10,7 +14,7 @@ export default async function Home() {
       <ul className=" p-10 text-2xl">
         {allUsers.map((user) => (
           <li key={user.id}>
-            {user.name} ({user.age}) - {user.email}
+            {user.name}
           </li>
         ))}
       </ul>
