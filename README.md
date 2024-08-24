@@ -48,6 +48,7 @@ pnpm install
 pnpm run dev
 
 ```
+
 ## Run Supabase Locally
 
 - Install Docker
@@ -62,6 +63,14 @@ scoop install supabase
 # Start Supabase
 
 supabase start
+
+```
+
+## Seed Database
+
+```bash
+
+pnpm run db:seed
 
 ```
 
