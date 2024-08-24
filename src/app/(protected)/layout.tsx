@@ -1,4 +1,3 @@
-import Header from "@/components/header";
 import { Toaster } from "@/components/ui/sonner";
 
 export default async function ProtectedLayout({
@@ -18,10 +17,7 @@ export default async function ProtectedLayout({
 
   return (
     <>
-      <div className="grid h-dvh grid-rows-[auto_1fr] p-2 lg:grid-rows-none">
-        <Header />
-        {children}
-      </div>
+      {children}
       <Toaster richColors />
     </>
   );
