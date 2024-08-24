@@ -1,30 +1,24 @@
 import { Button } from "@/components/ui/button";
-import { db } from "@/db";
 import Link from "next/link";
 
-export default async function Home() {
-  const allUsers = await db.query.users.findMany({
-    columns: {
-      id: true,
-      name: true,
-    },
-  });
+export default function Home() {
 
   return (
     <main className="flex flex-col items-center justify-center gap-4">
-      <h1 className="text-6xl uppercase">pragyaan</h1>
+      <h1 className="text-4xl uppercase">Smart Classroom Management System (SCMS)</h1>
+      <p className="text-2xl">
+        Developed by Team Pragyaan
+      </p>
       <ul className="text-2xl">
-        {allUsers.map((user) => (
-          <li key={user.id}>{user.name}</li>
-        ))}
       </ul>
       <h2>This is Landing Page</h2>
       <Button asChild>
         <Link href="/student/dashboard">Student Dashboard</Link>
       </Button>
       <Button asChild>
-        <Link href="/teacher/dashboard">Teacher Dashboard</Link>
+        <Link href="/teacher">Teacher Dashboard</Link>
       </Button>
+
     </main>
   );
 }

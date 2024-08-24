@@ -1,0 +1,1 @@
+type userTypes = "student" | "teacher" | "admin" | 'guardian';

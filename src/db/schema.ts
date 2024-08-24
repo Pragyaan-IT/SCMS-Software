@@ -10,9 +10,12 @@ export const users = pgTable('users', {
 
 export const students = pgTable('students', {
   id: serial('id').primaryKey(),
-  user_id: integer('user_id').references(() => users.id),
-  grade: text('grade'),
-  parent_id: integer('parent_id').references(() => users.id),
+  name: text('name').notNull(),
+  registration_id: text('registration_id').notNull().unique(),
+  password: text('password').notNull(),
+  email: text('email').notNull().unique(),
+  is_face_registered: boolean('is_face_registered').notNull().default(false),
+  created_at: timestamp('created_at').defaultNow(),
 });
 
 export const teachers = pgTable('teachers', {
