@@ -48,6 +48,22 @@ pnpm install
 pnpm run dev
 
 ```
+## Run Supabase Locally
+
+- Install Docker
+
+```bash
+
+# Install Supabase CLI
+
+scoop bucket add supabase https://github.com/supabase/scoop-bucket.git
+scoop install supabase
+
+# Start Supabase
+
+supabase start
+
+```
 
 ## Sync Database
 
