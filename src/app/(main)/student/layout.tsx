@@ -9,7 +9,7 @@ export default function StudentLayout({
 }) {
   return (
     <div className="grid h-dvh grid-rows-[auto_1fr] p-2 lg:grid-rows-none">
-      <Header />
+      <Header role="student" />
       <div className="flex h-full flex-row overflow-clip">
         <div className="flex-none">
           <DesktopSidebar role="student" />

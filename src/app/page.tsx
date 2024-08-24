@@ -20,9 +20,6 @@ export default async function Home() {
       </ul>
       <h2>This is Landing Page</h2>
       <Button asChild>
-        <Link href="/login">Login</Link>
-      </Button>
-      <Button asChild>
         <Link href="/student/dashboard">Student Dashboard</Link>
       </Button>
       <Button asChild>
