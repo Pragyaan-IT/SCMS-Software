@@ -22,6 +22,12 @@ export default async function Home() {
       <Button asChild>
         <Link href="/login">Login</Link>
       </Button>
+      <Button asChild>
+        <Link href="/student/dashboard">Student Dashboard</Link>
+      </Button>
+      <Button asChild>
+        <Link href="/teacher/dashboard">Teacher Dashboard</Link>
+      </Button>
     </main>
   );
 }
