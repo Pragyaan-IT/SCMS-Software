@@ -8,8 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "db:push": "npx drizzle-kit push",
-    "netlify:env": "netlify env:import .env.production",
-    "netlify:deploy": "pnpm run build && netlify deploy --prod --dir=.next"
+    "db:seed": "npx tsx --env-file=./.env ./src/db/seed.ts"
   },
   "dependencies": {
     "@auth/drizzle-adapter": "^1.4.2",
