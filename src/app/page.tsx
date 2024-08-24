@@ -9,10 +9,10 @@ export default async function Home() {
       name: true,
     },
   });
-console.log(process.env.DATABASE_URL)
+  console.log(process.env.DATABASE_URL);
   return (
-    <main className=" flex justify-center items-center flex-col gap-4">
-      <h1 className=" uppercase text-6xl ">pragyaan</h1>
+    <main className="flex flex-col items-center justify-center gap-4">
+      <h1 className="text-6xl uppercase">pragyaan</h1>
       <ul className="text-2xl">
         {allUsers.map((user) => (
           <li key={user.id}>{user.name}</li>
