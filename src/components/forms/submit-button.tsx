@@ -1,7 +1,7 @@
 "use client";
 
-import { useFormStatus } from "react-dom";
 import { type ComponentProps } from "react";
+import { useFormStatus } from "react-dom";
 
 type Props = ComponentProps<"button"> & {
   pendingText?: string;
@@ -19,7 +19,7 @@ export function SubmitButton({
   return (
     <button
       {...props}
-      className="bg-black h-8 flex items-center justify-center font-medium text-sm hover:bg-slate-800 transition-colors text-white rounded-md text-foreground"
+      className="flex h-8 items-center justify-center rounded-md bg-black text-sm font-medium text-foreground text-white transition-colors hover:bg-slate-800"
       type="submit"
       aria-disabled={pending}
     >
