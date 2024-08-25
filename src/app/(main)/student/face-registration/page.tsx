@@ -8,10 +8,11 @@ import {
   FormItem,
   FormMessage,
 } from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "@nextui-org/button";
-import Image from "next/image";
+import { Input } from "@nextui-org/input";
+import { Progress } from "@nextui-org/progress";
+import { Image } from "@nextui-org/react";
 import { useEffect, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
@@ -30,12 +31,14 @@ const formSchema = z.object({
   }),
 });
 
+const TOTAL_IMAGES = 3;
+
 export default function FaceRegistration() {
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
   const [faces, setFaces] = useState<Face[]>([]);
-  const [capturedImages, setCapturedImages] = useState<string[]>([]);
+  const [capturedImages, setCapturedImages] = useState<string[]>(["yoyo"]);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -61,6 +64,11 @@ export default function FaceRegistration() {
   }, []);
 
   const captureImage = async () => {
+    if (capturedImages.length >= TOTAL_IMAGES) {
+      toast.info("You've already captured the required number of images.");
+      return;
+    }
+
     const canvas = canvasRef.current;
     const video = videoRef.current;
 
@@ -88,19 +96,25 @@ export default function FaceRegistration() {
           if (response.ok) {
             setFaces(result.faces);
             setCapturedImages([...capturedImages, imageData]);
+            // setCapturedImages((prev) => [...prev, imageData]); NOTE Better way to update state Nitish Badmosh
+            toast.success(
+              `Image ${capturedImages.length + 1} captured successfully!`,
+            );
           } else {
             console.error("Failed to capture frame", result.error);
+            toast.error("Failed to capture image");
           }
         } catch (error) {
           console.error("Error capturing image", error);
+          toast.error("Failed to capture image");
         }
       }
     }
   };
 
   const saveImages = async () => {
-    if (capturedImages.length === 0) {
-      toast.error("Please capture at least one image before saving.");
+    if (capturedImages.length < TOTAL_IMAGES) {
+      toast.error(`Please capture ${TOTAL_IMAGES} images before saving.`);
       return;
     }
 
@@ -114,11 +128,14 @@ export default function FaceRegistration() {
       }
       toast.success("Images saved successfully!");
       setCapturedImages([]);
+      form.reset();
     } catch (error) {
       console.error("Error saving images", error);
-      toast.error("Failed to save images");
+      toast.error("Failed to save images. Please try again.");
     }
   };
+
+  const progress = (capturedImages.length / TOTAL_IMAGES) * 100;
 
   return (
     <div className="container mx-auto p-4">
@@ -143,29 +160,49 @@ export default function FaceRegistration() {
               style={{ display: "none" }}
             ></canvas>
           </div>
-          <Button color="primary" onClick={captureImage}>
+          <Progress
+            value={progress}
+            className="mb-2"
+            color={progress === 100 ? "success" : "primary"}
+          />
+          {/* <p className="mb-2 text-center text-sm">
+            {capturedImages.length} of {TOTAL_IMAGES} images captured
+          </p> */}
+          <Button
+            color="primary"
+            onClick={captureImage}
+            // disabled={capturedImages.length < TOTAL_IMAGES}
+          >
             Capture Image
           </Button>
           <Form {...form}>
-            <form onSubmit={form.handleSubmit(saveImages)} className=" flex flex-col gap-4">
+            <form
+              onSubmit={form.handleSubmit(saveImages)}
+              className="flex flex-col gap-4"
+            >
               <FormField
                 control={form.control}
                 name="name"
                 render={({ field }) => (
                   <FormItem>
-                    {/* <FormLabel>Name</FormLabel> */}
                     <FormControl>
-                      <Input placeholder="Enter your name" {...field} />
+                      <Input
+                        // isRequired
+                        // variant="bordered"
+                        label="Name"
+                        placeholder="Enter your name"
+                        {...field}
+                      />
                     </FormControl>
-                    {/* <FormDescription>
-                      This is the name that will be associated with your face
-                      images.
-                    </FormDescription> */}
                     <FormMessage />
                   </FormItem>
                 )}
               />
-              <Button color="primary" type="submit">
+              <Button
+                color="primary"
+                type="submit"
+                // disabled={capturedImages.length < TOTAL_IMAGES} // Toast wont show if uncommented
+              >
                 Save Images
               </Button>
             </form>
