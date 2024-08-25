@@ -8,9 +8,7 @@ import {
   FormItem,
   FormMessage,
 } from "@/components/ui/form";
-import photo1 from "@/public/portrait/alia.jpg";
 import photo2 from "@/public/portrait/alia2.jpeg";
-import photo3 from "@/public/portrait/alia3.jpeg";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "@nextui-org/button";
 import { Input } from "@nextui-org/input";
@@ -28,8 +26,8 @@ interface Face {
 }
 
 const formSchema = z.object({
-  name: z.string().min(2, {
-    message: "Name must be at least 2 characters.",
+  name: z.string().min(1, {
+    message: "Name is required",
   }),
 });
 
@@ -41,9 +39,9 @@ export default function FaceRegistration() {
 
   const [faces, setFaces] = useState<Face[]>([]);
   const [capturedImages, setCapturedImages] = useState<string[]>([
-    photo1.src,
     photo2.src,
-    photo3.src,
+    photo2.src,
+    photo2.src,
   ]); // NOTE Just to see the images in the UI Nitish Badmosh
 
   const form = useForm<z.infer<typeof formSchema>>({
@@ -144,13 +142,13 @@ export default function FaceRegistration() {
   const progress = (capturedImages.length / TOTAL_IMAGES) * 100;
 
   return (
-    <div className="container mx-auto p-4">
-      <Card className="mb-4 flex flex-col items-center justify-center border-0 shadow-none">
-        <CardHeader>
+    <div className="mx-auto flex h-svh items-center justify-center p-4">
+      <Card className="flex flex-col items-center justify-center">
+        <CardHeader className="w-full rounded-t-md bg-foreground text-center text-background">
           <CardTitle>Face Registration</CardTitle>
         </CardHeader>
-        <CardContent className="flex flex-col gap-6 lg:flex-row">
-          <div className="flex flex-col gap-4">
+        <CardContent className="grid gap-8 p-6 lg:grid-cols-2">
+          <div className="flex flex-col items-center justify-center gap-4">
             <div className="mb-4 h-[480px] w-[640px]">
               <video
                 style={{ transform: "scaleX(-1)" }}
@@ -167,17 +165,21 @@ export default function FaceRegistration() {
                 style={{ display: "none" }}
               ></canvas>
             </div>
-            <Progress
-              value={progress}
-              className="mb-2"
-              color={progress === 100 ? "success" : "primary"}
-            />
-            {/* <p className="mb-2 text-center text-sm">
-            {capturedImages.length} of {TOTAL_IMAGES} images captured
-          </p> */}
+            <div className="w-full space-y-2">
+              <Progress
+              aria-label="Progress"
+                value={progress}
+                className="h-2"
+                color={progress === 100 ? "success" : "primary"}
+              />
+              <p className="text-sm text-gray-600">
+                {capturedImages.length} of {TOTAL_IMAGES} images captured
+              </p>
+            </div>
             <Button
               color="primary"
               onClick={captureImage}
+              className="w-full"
               // disabled={capturedImages.length < TOTAL_IMAGES}
             >
               Capture Image
@@ -196,8 +198,9 @@ export default function FaceRegistration() {
                         key={index}
                         src={image}
                         alt={`Captured ${index + 1}`}
-                        className="h-auto w-full rounded-lg aspect-video object-scale-down"
-                        width={440}
+                        className="aspect-video rounded-lg object-scale-down"
+                        height={200}
+                        width={200}
                       />
                     ))}
                   </div>
@@ -240,7 +243,8 @@ export default function FaceRegistration() {
         </CardContent>
       </Card>
 
-      {faces.length > 0 && (
+      {/* Commenting for now */}
+      {/* {faces.length > 0 && (
         <Card>
           <CardHeader>
             <CardTitle>Detected Faces</CardTitle>
@@ -259,7 +263,7 @@ export default function FaceRegistration() {
             </div>
           </CardContent>
         </Card>
-      )}
+      )} */}
     </div>
   );
 }
