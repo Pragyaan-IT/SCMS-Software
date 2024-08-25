@@ -173,7 +173,6 @@ export default function FaceRegistration() {
               color="primary"
               onClick={captureImage}
               className="w-full"
-              // disabled={capturedImages.length < TOTAL_IMAGES}
             >
               Capture Image
             </Button>
@@ -211,7 +210,6 @@ export default function FaceRegistration() {
               <Button
                 color="primary"
                 type="submit"
-                // disabled={capturedImages.length < TOTAL_IMAGES} // Toast wont show if uncommented
                 onClick={saveImages}
               >
                 Save Images
@@ -220,28 +218,6 @@ export default function FaceRegistration() {
           </div>
         </CardContent>
       </Card>
-
-      {/* Commenting for now */}
-      {/* {faces.length > 0 && (
-        <Card>
-          <CardHeader>
-            <CardTitle>Detected Faces</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="grid gap-4">
-              {faces.map((face, index) => (
-                <div
-                  key={index}
-                  className="rounded-lg border border-red-500 p-2"
-                >
-                  Face {index + 1}:{" "}
-                  {`Top: ${face.top}, Left: ${face.left}, Bottom: ${face.bottom}, Right: ${face.right}`}
-                </div>
-              ))}
-            </div>
-          </CardContent>
-        </Card>
-      )} */}
     </div>
   );
 }
