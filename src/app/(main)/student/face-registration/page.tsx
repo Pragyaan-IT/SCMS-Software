@@ -8,6 +8,9 @@ import {
   FormItem,
   FormMessage,
 } from "@/components/ui/form";
+import photo1 from "@/public/portrait/alia.jpg";
+import photo2 from "@/public/portrait/alia2.jpeg";
+import photo3 from "@/public/portrait/alia3.jpeg";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "@nextui-org/button";
 import { Input } from "@nextui-org/input";
@@ -17,7 +20,6 @@ import { useEffect, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
 import * as z from "zod";
-
 interface Face {
   top: number;
   left: number;
@@ -38,7 +40,11 @@ export default function FaceRegistration() {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
   const [faces, setFaces] = useState<Face[]>([]);
-  const [capturedImages, setCapturedImages] = useState<string[]>(["yoyo"]);
+  const [capturedImages, setCapturedImages] = useState<string[]>([
+    photo1.src,
+    photo2.src,
+    photo3.src,
+  ]); // NOTE Just to see the images in the UI Nitish Badmosh
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -143,94 +149,96 @@ export default function FaceRegistration() {
         <CardHeader>
           <CardTitle>Face Registration</CardTitle>
         </CardHeader>
-        <CardContent className="flex flex-col gap-4">
-          <div className="mb-4 h-[480px] w-[640px]">
-            <video
-              style={{ transform: "scaleX(-1)" }}
-              ref={videoRef}
-              width="640"
-              height="480"
-              autoPlay
-              className="rounded-lg"
-            ></video>
-            <canvas
-              ref={canvasRef}
-              width="640"
-              height="480"
-              style={{ display: "none" }}
-            ></canvas>
-          </div>
-          <Progress
-            value={progress}
-            className="mb-2"
-            color={progress === 100 ? "success" : "primary"}
-          />
-          {/* <p className="mb-2 text-center text-sm">
+        <CardContent className="flex flex-col gap-6 lg:flex-row">
+          <div className="flex flex-col gap-4">
+            <div className="mb-4 h-[480px] w-[640px]">
+              <video
+                style={{ transform: "scaleX(-1)" }}
+                ref={videoRef}
+                width="640"
+                height="480"
+                autoPlay
+                className="rounded-lg"
+              ></video>
+              <canvas
+                ref={canvasRef}
+                width="640"
+                height="480"
+                style={{ display: "none" }}
+              ></canvas>
+            </div>
+            <Progress
+              value={progress}
+              className="mb-2"
+              color={progress === 100 ? "success" : "primary"}
+            />
+            {/* <p className="mb-2 text-center text-sm">
             {capturedImages.length} of {TOTAL_IMAGES} images captured
           </p> */}
-          <Button
-            color="primary"
-            onClick={captureImage}
-            // disabled={capturedImages.length < TOTAL_IMAGES}
-          >
-            Capture Image
-          </Button>
-          <Form {...form}>
-            <form
-              onSubmit={form.handleSubmit(saveImages)}
-              className="flex flex-col gap-4"
+            <Button
+              color="primary"
+              onClick={captureImage}
+              // disabled={capturedImages.length < TOTAL_IMAGES}
             >
-              <FormField
-                control={form.control}
-                name="name"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormControl>
-                      <Input
-                        // isRequired
-                        // variant="bordered"
-                        label="Name"
-                        placeholder="Enter your name"
-                        {...field}
+              Capture Image
+            </Button>
+          </div>
+          <div className="flex flex-col justify-between gap-4">
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-lg">Captured Images</CardTitle>
+              </CardHeader>
+              <CardContent>
+                {capturedImages.length > 0 && (
+                  <div className="grid grid-cols-3 gap-4">
+                    {capturedImages.map((image, index) => (
+                      <Image
+                        key={index}
+                        src={image}
+                        alt={`Captured ${index + 1}`}
+                        className="h-auto w-full rounded-lg aspect-video object-scale-down"
+                        width={440}
                       />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
+                    ))}
+                  </div>
                 )}
-              />
-              <Button
-                color="primary"
-                type="submit"
-                // disabled={capturedImages.length < TOTAL_IMAGES} // Toast wont show if uncommented
+              </CardContent>
+            </Card>
+            <Form {...form}>
+              <form
+                onSubmit={form.handleSubmit(saveImages)}
+                className="flex flex-col gap-4"
               >
-                Save Images
-              </Button>
-            </form>
-          </Form>
+                <FormField
+                  control={form.control}
+                  name="name"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormControl>
+                        <Input
+                          // isRequired
+                          // variant="bordered"
+                          label="Name"
+                          placeholder="Enter your name"
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <Button
+                  color="primary"
+                  type="submit"
+                  // disabled={capturedImages.length < TOTAL_IMAGES} // Toast wont show if uncommented
+                >
+                  Save Images
+                </Button>
+              </form>
+            </Form>
+          </div>
         </CardContent>
       </Card>
-
-      {capturedImages.length > 0 && (
-        <Card className="mb-4">
-          <CardHeader>
-            <CardTitle>Captured Images</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4">
-              {capturedImages.map((image, index) => (
-                <Image
-                  key={index}
-                  src={image}
-                  alt={`Captured ${index + 1}`}
-                  className="h-auto w-full rounded-lg"
-                  height={480}
-                  width={640}
-                />
-              ))}
-            </div>
-          </CardContent>
-        </Card>
-      )}
 
       {faces.length > 0 && (
         <Card>
