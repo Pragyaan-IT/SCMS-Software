@@ -17,7 +17,7 @@ export default async function DashboardPage() {
   });
 
   if (!(student?.is_face_registered)) {
-    redirect("/student/face-registration");
+    redirect("/student/face-registration?registration_id=" + session.user.id+"&student_name="+student?.name);
   }
 
   return (
