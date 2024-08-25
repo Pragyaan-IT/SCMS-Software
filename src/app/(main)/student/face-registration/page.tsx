@@ -10,7 +10,6 @@ import {
   FormItem,
   FormMessage,
 } from "@/components/ui/form";
-import photo2 from "@/public/portrait/alia2.jpeg";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "@nextui-org/button";
 import { Input } from "@nextui-org/input";
@@ -44,11 +43,7 @@ export default function FaceRegistration() {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
   const [faces, setFaces] = useState<Face[]>([]);
-  const [capturedImages, setCapturedImages] = useState<string[]>([
-    photo2.src,
-    photo2.src,
-    photo2.src,
-  ]); // NOTE Just to see the images in the UI Nitish Badmosh
+  const [capturedImages, setCapturedImages] = useState<string[]>([]); // NOTE Just to see the images in the UI Nitish Badmosh
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -109,8 +104,7 @@ export default function FaceRegistration() {
 
           if (response.ok) {
             setFaces(result.faces);
-            setCapturedImages([...capturedImages, imageData]);
-            // setCapturedImages((prev) => [...prev, imageData]); NOTE Better way to update state Nitish Badmosh
+            setCapturedImages((prev) => [...prev, imageData]); 
             toast.success(
               `Image ${capturedImages.length + 1} captured successfully!`,
             );
@@ -216,6 +210,10 @@ export default function FaceRegistration() {
                 <CardTitle className="text-lg">Captured Images</CardTitle>
               </CardHeader>
               <CardContent>
+                {capturedImages.length === 0 && <p className='text-md dark:text-white'>
+                  No images captured yet. Click the "Capture Image" button to capture images.
+                </p>
+                }
                 {capturedImages.length > 0 && (
                   <div className="grid grid-cols-3 gap-4">
                     {capturedImages.map((image, index) => (
@@ -256,7 +254,6 @@ export default function FaceRegistration() {
                 <Button
                   color="primary"
                   type="submit"
-                // disabled={capturedImages.length < TOTAL_IMAGES} // Toast wont show if uncommented
                 >
                   Save Images
                 </Button>
