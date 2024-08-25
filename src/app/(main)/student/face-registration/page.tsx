@@ -184,7 +184,7 @@ export default function FaceRegistration() {
               </CardHeader>
               <CardContent>
                 {capturedImages.length === 0 && <p className='text-md dark:text-white'>
-                  No images captured yet. Click the "Capture Image" button to capture images.
+                  No images captured yet. Click the &quot;Capture Image&quot; button to capture images.
                 </p>
                 }
                 {capturedImages.length > 0 && (
