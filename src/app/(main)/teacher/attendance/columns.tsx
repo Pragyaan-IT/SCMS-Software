@@ -1,27 +1,49 @@
-"use client"
+"use client";
 
-import { ColumnDef } from "@tanstack/react-table"
+import { Button } from "@/components/ui/button";
+import { ColumnDef } from "@tanstack/react-table";
+import { ArrowUpDown } from "lucide-react";
 
-// This type is used to define the shape of our data.
-// You can use a Zod schema here if you want.
-export type Payment = {
-  id: string
-  amount: number
-  status: "pending" | "processing" | "success" | "failed"
-  email: string
-}
+export type AttendanceRecord = {
+  id: number;
+  studentName: string;
+  className: string;
+  date: string;
+  present: boolean;
+};
 
-export const columns: ColumnDef<Payment>[] = [
+export const columns: ColumnDef<AttendanceRecord>[] = [
   {
-    accessorKey: "status",
-    header: "Status",
+    accessorKey: "studentName",
+    header: ({ column }) => {
+      return (
+        <Button
+          variant="ghost"
+          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+        >
+          Student Name
+          <ArrowUpDown className="ml-2 h-4 w-4" />
+        </Button>
+      );
+    },
   },
   {
-    accessorKey: "email",
-    header: "Email",
+    accessorKey: "date",
+    header: ({ column }) => {
+      return (
+        <Button
+          variant="ghost"
+          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+        >
+          Date
+          <ArrowUpDown className="ml-2 h-4 w-4" />
+        </Button>
+      );
+    },
   },
   {
-    accessorKey: "amount",
-    header: "Amount",
+    accessorKey: "present",
+    header: "Present",
+    cell: ({ row }) => (row.getValue("present") ? "Yes" : "No"),
   },
-]
+];

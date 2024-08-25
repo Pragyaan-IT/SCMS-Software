@@ -14,7 +14,7 @@ export default function TeacherLayout({
         <div className="flex-none">
           <DesktopSidebar role="teacher" />
         </div>
-        <ScrollArea className="h-full w-full flex-1 rounded-md border">
+        <ScrollArea className="h-full w-full flex-1 rounded-md border p-4">
           {children}
         </ScrollArea>
       </div>

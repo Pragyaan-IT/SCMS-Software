@@ -1,25 +1,44 @@
-import { Payment, columns } from "./columns";
+"use client";
+import PageTitle from "@/components/page-title";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { useMemo, useState } from "react";
+import { columns } from "./columns";
 import { DataTable } from "./data-table";
+import { dummyClasses, dummyAttendance } from "../dummy-data";
 
-async function getData(): Promise<Payment[]> {
-  // Fetch data from your API here.
-  return [
-    {
-      id: "728ed52f",
-      amount: 100,
-      status: "pending",
-      email: "m@example.com",
-    },
-    // ...
-  ];
-}
+export default function AttendanceTable() {
+  const [selectedClass, setSelectedClass] = useState<string>(dummyClasses[0]);
 
-export default async function DemoPage() {
-  const data = await getData();
+  const filteredData = useMemo(() => {
+    return dummyAttendance.filter(
+      (record) => record.className === selectedClass,
+    );
+  }, [selectedClass]);
 
   return (
-    <div className="container mx-auto py-10">
-      <DataTable columns={columns} data={data} />
-    </div>
+    <section className="flex flex-col gap-4">
+      <PageTitle title="Attendance" />
+      <div className="p-2">
+        <Select value={selectedClass} onValueChange={setSelectedClass}>
+          <SelectTrigger>
+            <SelectValue placeholder="Select a class" />
+          </SelectTrigger>
+          <SelectContent>
+            {dummyClasses.map((className) => (
+              <SelectItem key={className} value={className}>
+                {className}
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
+      </div>
+      <DataTable columns={columns} data={filteredData} />
+    </section>
   );
 }

@@ -144,7 +144,7 @@ export default function FaceRegistration() {
   return (
     <div className="mx-auto flex h-svh items-center justify-center p-4">
       <Card className="flex flex-col items-center justify-center">
-        <CardHeader className="w-full rounded-t-md bg-foreground text-center text-background">
+        <CardHeader className="w-full rounded-t-md text-center">
           <CardTitle>Face Registration</CardTitle>
         </CardHeader>
         <CardContent className="grid gap-8 p-6 lg:grid-cols-2">
@@ -167,7 +167,7 @@ export default function FaceRegistration() {
             </div>
             <div className="w-full space-y-2">
               <Progress
-              aria-label="Progress"
+                aria-label="Progress"
                 value={progress}
                 className="h-2"
                 color={progress === 100 ? "success" : "primary"}
