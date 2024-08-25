@@ -1,10 +1,12 @@
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+import ChatBot from "@/components/chatbot";
 import PageTitle from "@/components/page-title";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { db } from "@/db";
-import { students } from "@/db/schema";
 import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
+import { SidebarMain } from "./_components/sidebar";
+import Dashboard from "./_components/dashboard";
 
 export default async function DashboardPage() {
   const session = await getServerSession(authOptions);
@@ -22,8 +24,10 @@ export default async function DashboardPage() {
 
   return (
     <section>
-      <PageTitle title="Dashboard" />
-      <ScrollArea className="h-full w-full"></ScrollArea>
+      {/* <PageTitle title="Dashboard" />
+      <ScrollArea className="h-full w-full"></ScrollArea> */}
+      <Dashboard />
+      <ChatBot />
     </section>
   );
 }

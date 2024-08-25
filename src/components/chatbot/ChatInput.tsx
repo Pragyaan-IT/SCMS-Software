@@ -4,10 +4,10 @@ import { Send, UserCircle2Icon } from 'lucide-react';
 const ChatInput = () => {
     return (
 
-        <div className="w-full pl-3 pr-1 py-1 rounded-3xl border border-gray-200 items-center gap-2 inline-flex justify-between bg-white">
+        <div className="w-11/12 pl-3 pr-1 py-1 rounded-3xl border border-gray-200 items-center gap-2 inline-flex justify-between bg-white">
             <div className="flex items-center gap-2">
                 <UserCircle2Icon size={20} />
-                <input className="grow shrink w-80 text-black text-xs font-medium leading-4 focus:outline-none" placeholder="Type here..." />
+                <input className="grow shrink w-50 text-black text-xs font-medium leading-4 focus:outline-none" placeholder="Type here..." />
             </div>
             <div className="flex items-center gap-2">
                 <svg className="cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
