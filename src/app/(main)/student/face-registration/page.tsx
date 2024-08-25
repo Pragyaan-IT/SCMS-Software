@@ -197,6 +197,7 @@ export default function FaceRegistration() {
                       <Image
                         key={index}
                         src={image}
+                        isZoomed
                         alt={`Captured ${index + 1}`}
                         className="aspect-video rounded-lg object-scale-down"
                         height={200}
