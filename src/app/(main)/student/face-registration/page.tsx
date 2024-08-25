@@ -15,10 +15,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "@nextui-org/button";
 import { Input } from "@nextui-org/input";
 import { Progress } from "@nextui-org/progress";
-import { Image } from "@nextui-org/react";
-import { useSearchParams } from "next/navigation";
-import { useRouter } from "next/router";
-import { useEffect, useRef, useState } from "react";
+import { Image } from "@nextui-org/image";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
 import * as z from "zod";
@@ -56,7 +53,7 @@ export default function FaceRegistration() {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      name: "",
+      name: studentName ?? "Your Name",
     },
   });
 
@@ -121,76 +118,12 @@ export default function FaceRegistration() {
             console.error("Failed to capture frame", result.error);
             toast.error("Failed to capture image");
           }
-
-
-export default function FaceRegistration() {
-    const searchParams = useSearchParams();
-    const registrationId = searchParams.get('registration_id')
-    const studentName = searchParams.get('student_name')
-    const router = useRouter();
-
-    const videoRef = useRef<HTMLVideoElement | null>(null);
-    const canvasRef = useRef<HTMLCanvasElement | null>(null);
-
-    const [faces, setFaces] = useState<Face[]>([]);
-    const [capturedImages, setCapturedImages] = useState<string[]>([]);
-
-
-    useEffect(() => {
-        const isFaceRegistered = localStorage.getItem('is_face_registered');
-        if (isFaceRegistered === 'true') {
-            router.push('/student/dashboard');
+        } catch (error) {
+          console.error('Error capturing image', error);
         }
-        async function getVideo() {
-            try {
-                const stream = await navigator.mediaDevices.getUserMedia({ video: true });
-                if (videoRef.current) {
-                    videoRef.current.srcObject = stream;
-                }
-            } catch (error) {
-                console.error('Error accessing the webcam', error);
-            }
-        }
-        getVideo();
-    }, []);
-
-
-    const captureImage = async () => {
-        const canvas = canvasRef.current;
-        const video = videoRef.current;
-
-        if (canvas && video) {
-            const context = canvas.getContext('2d');
-            if (context) {
-                context.translate(canvas.width, 0);
-                context.scale(-1, 1);
-                context.drawImage(video, 0, 0, canvas.width, canvas.height);
-                context.setTransform(1, 0, 0, 1, 0, 0); // Reset the transformation matrix
-
-
-
-                const imageData = canvas.toDataURL('image/jpeg');
-
-                try {
-                    const response = await fetch(`${process.env.NEXT_PUBLIC_FACE_DETECTION_API}api/capture_frame`, {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify({ image: imageData })
-                    });
-                    const result = await response.json();
-
-                    if (response.ok) {
-                        setFaces(result.faces);
-                        setCapturedImages([...capturedImages, imageData]);
-                    } else {
-                        console.error('Failed to capture frame', result.error);
-                    }
-                } catch (error) {
-                    console.error('Error capturing image', error);
-                }
-            }
-        }
-    };
+      }
+    }
+  };
 
   const saveImages = async () => {
     if (capturedImages.length < TOTAL_IMAGES) {
@@ -234,7 +167,7 @@ export default function FaceRegistration() {
   const progress = (capturedImages.length / TOTAL_IMAGES) * 100;
 
   return (
-    <div className="mx-auto flex h-svh items-center justify-center p-4">
+    <div className="mx-auto flex h-svh items-center justify-center p-8">
       <Card className="flex flex-col items-center justify-center">
         <CardHeader className="w-full rounded-t-md text-center">
           <CardTitle>Face Registration</CardTitle>
@@ -272,7 +205,7 @@ export default function FaceRegistration() {
               color="primary"
               onClick={captureImage}
               className="w-full"
-              // disabled={capturedImages.length < TOTAL_IMAGES}
+            // disabled={capturedImages.length < TOTAL_IMAGES}
             >
               Capture Image
             </Button>
@@ -312,10 +245,7 @@ export default function FaceRegistration() {
                     <FormItem>
                       <FormControl>
                         <Input
-                          // isRequired
-                          // variant="bordered"
-                          label="Name"
-                          placeholder="Enter your name"
+                          readOnly
                           {...field}
                         />
                       </FormControl>
@@ -326,7 +256,7 @@ export default function FaceRegistration() {
                 <Button
                   color="primary"
                   type="submit"
-                  // disabled={capturedImages.length < TOTAL_IMAGES} // Toast wont show if uncommented
+                // disabled={capturedImages.length < TOTAL_IMAGES} // Toast wont show if uncommented
                 >
                   Save Images
                 </Button>

@@ -13,16 +13,17 @@
   "dependencies": {
     "@auth/drizzle-adapter": "^1.4.2",
     "@hookform/resolvers": "^3.9.0",
+    "@nextui-org/button": "^2.0.37",
+    "@nextui-org/image": "^2.0.31",
+    "@nextui-org/input": "^2.2.4",
+    "@nextui-org/progress": "^2.0.33",
     "@nextui-org/react": "^2.4.6",
     "@radix-ui/react-dialog": "^1.1.1",
     "@radix-ui/react-dropdown-menu": "^2.1.1",
     "@radix-ui/react-label": "^2.1.0",
     "@radix-ui/react-scroll-area": "^1.1.0",
-<<<<<<< HEAD
-    "@radix-ui/react-separator": "^1.1.0",
-=======
     "@radix-ui/react-select": "^2.1.1",
->>>>>>> 5b4fff9244894374738b7fc6a95c45bdf8761b7f
+    "@radix-ui/react-separator": "^1.1.0",
     "@radix-ui/react-slot": "^1.1.0",
     "@tabler/icons-react": "^3.12.0",
     "@tanstack/react-table": "^8.20.1",

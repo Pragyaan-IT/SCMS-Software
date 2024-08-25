@@ -14,6 +14,18 @@ importers:
       '@hookform/resolvers':
         specifier: ^3.9.0
         version: 3.9.0(react-hook-form@7.53.0(react@18.3.1))
+      '@nextui-org/button':
+        specifier: ^2.0.37
+        version: 2.0.37(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/image':
+        specifier: ^2.0.31
+        version: 2.0.31(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/input':
+        specifier: ^2.2.4
+        version: 2.2.4(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(@types/react@18.3.4)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/progress':
+        specifier: ^2.0.33
+        version: 2.0.33(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nextui-org/react':
         specifier: ^2.4.6
         version: 2.4.6(@types/react@18.3.4)(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.10)
@@ -29,15 +41,12 @@ importers:
       '@radix-ui/react-scroll-area':
         specifier: ^1.1.0
         version: 1.1.0(@types/react-dom@18.3.0)(@types/react@18.3.4)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-<<<<<<< HEAD
-      '@radix-ui/react-separator':
-        specifier: ^1.1.0
-        version: 1.1.0(@types/react-dom@18.3.0)(@types/react@18.3.4)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-=======
       '@radix-ui/react-select':
         specifier: ^2.1.1
         version: 2.1.1(@types/react-dom@18.3.0)(@types/react@18.3.4)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
->>>>>>> 5b4fff9244894374738b7fc6a95c45bdf8761b7f
+      '@radix-ui/react-separator':
+        specifier: ^1.1.0
+        version: 1.1.0(@types/react-dom@18.3.0)(@types/react@18.3.4)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@radix-ui/react-slot':
         specifier: ^1.1.0
         version: 1.1.0(@types/react@18.3.4)(react@18.3.1)
@@ -1344,13 +1353,21 @@ packages:
       '@types/react-dom':
         optional: true
 
-<<<<<<< HEAD
-  '@radix-ui/react-separator@1.1.0':
-    resolution: {integrity: sha512-3uBAs+egzvJBDZAzvb/n4NxxOYpnspmWxO2u5NbZ8Y6FM/NdrGSF9bop3Cf6F6C71z1rTSn8KV0Fo2ZVd79lGA==}
-=======
   '@radix-ui/react-select@2.1.1':
     resolution: {integrity: sha512-8iRDfyLtzxlprOo9IicnzvpsO1wNCkuwzzCM+Z5Rb5tNOpCdMvcc2AkzX0Fz+Tz9v6NJ5B/7EEgyZveo4FBRfQ==}
->>>>>>> 5b4fff9244894374738b7fc6a95c45bdf8761b7f
+    peerDependencies:
+      '@types/react': '*'
+      '@types/react-dom': '*'
+      react: ^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc
+      react-dom: ^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+      '@types/react-dom':
+        optional: true
+
+  '@radix-ui/react-separator@1.1.0':
+    resolution: {integrity: sha512-3uBAs+egzvJBDZAzvb/n4NxxOYpnspmWxO2u5NbZ8Y6FM/NdrGSF9bop3Cf6F6C71z1rTSn8KV0Fo2ZVd79lGA==}
     peerDependencies:
       '@types/react': '*'
       '@types/react-dom': '*'
@@ -5647,13 +5664,6 @@ snapshots:
       '@types/react': 18.3.4
       '@types/react-dom': 18.3.0
 
-<<<<<<< HEAD
-  '@radix-ui/react-separator@1.1.0(@types/react-dom@18.3.0)(@types/react@18.3.4)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
-    dependencies:
-      '@radix-ui/react-primitive': 2.0.0(@types/react-dom@18.3.0)(@types/react@18.3.4)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
-=======
   '@radix-ui/react-select@2.1.1(@types/react-dom@18.3.0)(@types/react@18.3.4)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@radix-ui/number': 1.1.0
@@ -5679,7 +5689,15 @@ snapshots:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
       react-remove-scroll: 2.5.7(@types/react@18.3.4)(react@18.3.1)
->>>>>>> 5b4fff9244894374738b7fc6a95c45bdf8761b7f
+    optionalDependencies:
+      '@types/react': 18.3.4
+      '@types/react-dom': 18.3.0
+
+  '@radix-ui/react-separator@1.1.0(@types/react-dom@18.3.0)(@types/react@18.3.4)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@radix-ui/react-primitive': 2.0.0(@types/react-dom@18.3.0)(@types/react@18.3.4)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
     optionalDependencies:
       '@types/react': 18.3.4
       '@types/react-dom': 18.3.0
@@ -5855,9 +5873,9 @@ snapshots:
 
   '@react-aria/focus@3.17.1(react@18.3.1)':
     dependencies:
-      '@react-aria/interactions': 3.21.3(react@18.3.1)
-      '@react-aria/utils': 3.24.1(react@18.3.1)
-      '@react-types/shared': 3.23.1(react@18.3.1)
+      '@react-aria/interactions': 3.22.2(react@18.3.1)
+      '@react-aria/utils': 3.25.2(react@18.3.1)
+      '@react-types/shared': 3.24.1(react@18.3.1)
       '@swc/helpers': 0.5.5
       clsx: 2.1.1
       react: 18.3.1
@@ -5934,8 +5952,8 @@ snapshots:
   '@react-aria/interactions@3.21.3(react@18.3.1)':
     dependencies:
       '@react-aria/ssr': 3.9.5(react@18.3.1)
-      '@react-aria/utils': 3.24.1(react@18.3.1)
-      '@react-types/shared': 3.23.1(react@18.3.1)
+      '@react-aria/utils': 3.25.2(react@18.3.1)
+      '@react-types/shared': 3.24.1(react@18.3.1)
       '@swc/helpers': 0.5.5
       react: 18.3.1
 
@@ -6083,9 +6101,9 @@ snapshots:
 
   '@react-aria/progress@3.4.13(react@18.3.1)':
     dependencies:
-      '@react-aria/i18n': 3.11.1(react@18.3.1)
+      '@react-aria/i18n': 3.12.2(react@18.3.1)
       '@react-aria/label': 3.7.11(react@18.3.1)
-      '@react-aria/utils': 3.24.1(react@18.3.1)
+      '@react-aria/utils': 3.25.2(react@18.3.1)
       '@react-types/progress': 3.5.4(react@18.3.1)
       '@react-types/shared': 3.24.1(react@18.3.1)
       '@swc/helpers': 0.5.5
@@ -6207,14 +6225,14 @@ snapshots:
 
   '@react-aria/textfield@3.14.5(react@18.3.1)':
     dependencies:
-      '@react-aria/focus': 3.17.1(react@18.3.1)
+      '@react-aria/focus': 3.18.2(react@18.3.1)
       '@react-aria/form': 3.0.8(react@18.3.1)
       '@react-aria/label': 3.7.11(react@18.3.1)
-      '@react-aria/utils': 3.24.1(react@18.3.1)
+      '@react-aria/utils': 3.25.2(react@18.3.1)
       '@react-stately/form': 3.0.5(react@18.3.1)
-      '@react-stately/utils': 3.10.1(react@18.3.1)
-      '@react-types/shared': 3.23.1(react@18.3.1)
-      '@react-types/textfield': 3.9.3(react@18.3.1)
+      '@react-stately/utils': 3.10.3(react@18.3.1)
+      '@react-types/shared': 3.24.1(react@18.3.1)
+      '@react-types/textfield': 3.9.6(react@18.3.1)
       '@swc/helpers': 0.5.5
       react: 18.3.1
 
@@ -6687,7 +6705,7 @@ snapshots:
 
   '@react-types/textfield@3.9.3(react@18.3.1)':
     dependencies:
-      '@react-types/shared': 3.23.1(react@18.3.1)
+      '@react-types/shared': 3.24.1(react@18.3.1)
       react: 18.3.1
 
   '@react-types/textfield@3.9.6(react@18.3.1)':
