@@ -18,7 +18,6 @@ export default function Home() {
       <Button asChild>
         <Link href="/teacher">Teacher Dashboard</Link>
       </Button>
-
     </main>
   );
 }

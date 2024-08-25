@@ -1,4 +1,5 @@
 'use client'
+import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
 
 interface Face {
@@ -8,16 +9,25 @@ interface Face {
     right: number;
 }
 
+
 export default function FaceRegistration() {
+    const searchParams = useSearchParams();
+    const registrationId = searchParams.get('registration_id')
+    const studentName = searchParams.get('student_name')
+    const router = useRouter();
+
     const videoRef = useRef<HTMLVideoElement | null>(null);
     const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
-    const [name, setName] = useState<string>('');
     const [faces, setFaces] = useState<Face[]>([]);
     const [capturedImages, setCapturedImages] = useState<string[]>([]);
 
 
     useEffect(() => {
+        const isFaceRegistered = localStorage.getItem('is_face_registered');
+        if (isFaceRegistered === 'true') {
+            router.push('/student/dashboard');
+        }
         async function getVideo() {
             try {
                 const stream = await navigator.mediaDevices.getUserMedia({ video: true });
@@ -49,7 +59,7 @@ export default function FaceRegistration() {
                 const imageData = canvas.toDataURL('image/jpeg');
 
                 try {
-                    const response = await fetch(`${process.env.FACE_DETECTION_API}/api/capture_frame`, {
+                    const response = await fetch(`${process.env.NEXT_PUBLIC_FACE_DETECTION_API}api/capture_frame`, {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify({ image: imageData })
@@ -70,20 +80,25 @@ export default function FaceRegistration() {
     };
 
     const saveImages = async () => {
-        if (name.trim() === '') {
-            alert('Please enter your name');
-            return;
-        }
-
         try {
             for (const image of capturedImages) {
-                await fetch(`${process.env.FACE_DETECTION_API}/api/save_face`, {
+                await fetch(`${process.env.NEXT_PUBLIC_FACE_DETECTION_API}api/save_face`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ image, name })
+                    body: JSON.stringify({ image, name: studentName, registration_id: registrationId })
                 });
             }
-            alert('Images saved successfully!');
+
+            const res = await fetch(`/api/student/${registrationId}`, {
+                method: 'PUT',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ is_face_registered: true })
+            })
+            const data = await res.json();
+            if (res.ok && data.success) {
+                localStorage.setItem('is_face_registered', 'true');
+                router.push('/student/dashboard');
+            }
             setCapturedImages([]);
         } catch (error) {
             console.error('Error saving images', error);
@@ -93,12 +108,7 @@ export default function FaceRegistration() {
 
     return (
         <div>
-            <input
-                type="text"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                placeholder="Enter your name"
-            />
+
             <video style={{ transform: 'scaleX(-1)' }} ref={videoRef} width="640" height="480" autoPlay></video>
             <canvas ref={canvasRef} width="640" height="480" style={{ display: 'none' }}></canvas>
             <button onClick={captureImage}>Capture Image</button>
