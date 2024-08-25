@@ -14,6 +14,8 @@ import { Button } from "@nextui-org/button";
 import { Input } from "@nextui-org/input";
 import { Progress } from "@nextui-org/progress";
 import { Image } from "@nextui-org/react";
+import { useSearchParams } from "next/navigation";
+import { useRouter } from "next/router";
 import { useEffect, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
@@ -34,6 +36,10 @@ const formSchema = z.object({
 const TOTAL_IMAGES = 3;
 
 export default function FaceRegistration() {
+  const searchParams = useSearchParams();
+  const registrationId = searchParams.get("registration_id");
+  const studentName = searchParams.get("student_name");
+  const router = useRouter();
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
@@ -52,6 +58,10 @@ export default function FaceRegistration() {
   });
 
   useEffect(() => {
+    const isFaceRegistered = localStorage.getItem("is_face_registered");
+    if (isFaceRegistered === "true") {
+      router.push("/student/dashboard");
+    }
     async function getVideo() {
       try {
         const stream = await navigator.mediaDevices.getUserMedia({
@@ -88,7 +98,7 @@ export default function FaceRegistration() {
 
         try {
           const response = await fetch(
-            `${process.env.FACE_DETECTION_API}/api/capture_frame`,
+            `${process.env.NEXT_PUBLIC_FACE_DETECTION_API}/api/capture_frame`,
             {
               method: "POST",
               headers: { "Content-Type": "application/json" },
@@ -124,13 +134,29 @@ export default function FaceRegistration() {
 
     try {
       for (const image of capturedImages) {
-        await fetch(`${process.env.FACE_DETECTION_API}/api/save_face`, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ image, name }),
-        });
+        await fetch(
+          `${process.env.NEXT_PUBLIC_FACE_DETECTION_API}/api/save_face`,
+          {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              image,
+              name: studentName,
+              registration_id: registrationId,
+            }),
+          },
+        );
       }
-      toast.success("Images saved successfully!");
+      const res = await fetch(`/api/student/${registrationId}`, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ is_face_registered: true }),
+      });
+      const data = await res.json();
+      if (res.ok && data.success) {
+        localStorage.setItem("is_face_registered", "true");
+        router.push("/student/dashboard");
+      }
       setCapturedImages([]);
       form.reset();
     } catch (error) {
