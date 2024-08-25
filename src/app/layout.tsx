@@ -3,8 +3,8 @@ import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
 
-import "./globals.css";
 import SessionWrapper from "@/components/providers/session-provider";
+import "./globals.css";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -25,7 +25,7 @@ export default function RootLayout({
       <body
         className={cn(
           "min-h-svh bg-background font-sans antialiased",
-          fontSans.variable
+          fontSans.variable,
         )}
       >
         <ThemeProvider
@@ -34,9 +34,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <SessionWrapper>
-            {children}
-          </SessionWrapper>
+          <SessionWrapper>{children}</SessionWrapper>
         </ThemeProvider>
       </body>
     </html>
