@@ -1,36 +1,18 @@
-'use client'
-import { usePathname, useRouter, useSearchParams } from 'next/navigation';
-import { useEffect, useRef, useState } from 'react';
-
+"use client";
+import { useRouter, useSearchParams } from "next/navigation";
+import { useEffect, useRef, useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormMessage,
-} from "@/components/ui/form";
-import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "@nextui-org/button";
+import { Image } from "@nextui-org/image";
 import { Input } from "@nextui-org/input";
 import { Progress } from "@nextui-org/progress";
-import { Image } from "@nextui-org/image";
-import { useForm } from "react-hook-form";
 import { toast } from "sonner";
-import * as z from "zod";
 interface Face {
   top: number;
   left: number;
   bottom: number;
   right: number;
 }
-
-
-const formSchema = z.object({
-  name: z.string().min(1, {
-    message: "Name is required",
-  }),
-});
 
 const TOTAL_IMAGES = 3;
 
@@ -44,13 +26,6 @@ export default function FaceRegistration() {
 
   const [faces, setFaces] = useState<Face[]>([]);
   const [capturedImages, setCapturedImages] = useState<string[]>([]); // NOTE Just to see the images in the UI Nitish Badmosh
-
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
-    defaultValues: {
-      name: studentName ?? "Your Name",
-    },
-  });
 
   useEffect(() => {
     const isFaceRegistered = localStorage.getItem("is_face_registered");
@@ -113,7 +88,7 @@ export default function FaceRegistration() {
             toast.error("Failed to capture image");
           }
         } catch (error) {
-          console.error('Error capturing image', error);
+          console.error("Error capturing image", error);
         }
       }
     }
@@ -151,7 +126,6 @@ export default function FaceRegistration() {
         router.push("/student/dashboard");
       }
       setCapturedImages([]);
-      form.reset();
     } catch (error) {
       console.error("Error saving images", error);
       toast.error("Failed to save images. Please try again.");
@@ -199,7 +173,7 @@ export default function FaceRegistration() {
               color="primary"
               onClick={captureImage}
               className="w-full"
-            // disabled={capturedImages.length < TOTAL_IMAGES}
+              // disabled={capturedImages.length < TOTAL_IMAGES}
             >
               Capture Image
             </Button>
@@ -231,34 +205,18 @@ export default function FaceRegistration() {
                 )}
               </CardContent>
             </Card>
-            <Form {...form}>
-              <form
-                onSubmit={form.handleSubmit(saveImages)}
-                className="flex flex-col gap-4"
+
+            <div className="flex flex-col gap-4">
+              <Input readOnly defaultValue={studentName ?? "Your Name"} />
+              <Button
+                color="primary"
+                type="submit"
+                // disabled={capturedImages.length < TOTAL_IMAGES} // Toast wont show if uncommented
+                onClick={saveImages}
               >
-                <FormField
-                  control={form.control}
-                  name="name"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormControl>
-                        <Input
-                          readOnly
-                          {...field}
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                <Button
-                  color="primary"
-                  type="submit"
-                >
-                  Save Images
-                </Button>
-              </form>
-            </Form>
+                Save Images
+              </Button>
+            </div>
           </div>
         </CardContent>
       </Card>
