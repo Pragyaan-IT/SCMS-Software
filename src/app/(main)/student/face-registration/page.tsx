@@ -39,11 +39,17 @@ export default function FaceRegistration() {
         if (canvas && video) {
             const context = canvas.getContext('2d');
             if (context) {
+                context.translate(canvas.width, 0);
+                context.scale(-1, 1);
                 context.drawImage(video, 0, 0, canvas.width, canvas.height);
+                context.setTransform(1, 0, 0, 1, 0, 0); // Reset the transformation matrix
+
+
+
                 const imageData = canvas.toDataURL('image/jpeg');
 
                 try {
-                    const response = await fetch('http://127.0.0.1:5000/api/capture_frame', {
+                    const response = await fetch(`${process.env.FACE_DETECTION_API}/api/capture_frame`, {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify({ image: imageData })
@@ -71,7 +77,7 @@ export default function FaceRegistration() {
 
         try {
             for (const image of capturedImages) {
-                await fetch('http://127.0.0.1:5000/api/save_face', {
+                await fetch(`${process.env.FACE_DETECTION_API}/api/save_face`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ image, name })
@@ -93,7 +99,7 @@ export default function FaceRegistration() {
                 onChange={(e) => setName(e.target.value)}
                 placeholder="Enter your name"
             />
-            <video ref={videoRef} width="640" height="480" autoPlay></video>
+            <video style={{ transform: 'scaleX(-1)' }} ref={videoRef} width="640" height="480" autoPlay></video>
             <canvas ref={canvasRef} width="640" height="480" style={{ display: 'none' }}></canvas>
             <button onClick={captureImage}>Capture Image</button>
             <br />
