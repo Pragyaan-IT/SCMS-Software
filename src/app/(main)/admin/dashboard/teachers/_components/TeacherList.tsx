@@ -26,7 +26,7 @@ const TeacherList = () => {
                             <tbody className="divide-y divide-gray-200 dark:divide-neutral-700">
                                 {
                                     teacherList.map((item) => {
-                                        return <TeacherItem key={item.id} email={item.email} name={item.name} teacherId={item.teacher_id} />
+                                        return <TeacherItem key={item.id} id={item.id} email={item.email} name={item.name} teacherId={item.teacher_id} />
                                     })
                                 }
                             </tbody>

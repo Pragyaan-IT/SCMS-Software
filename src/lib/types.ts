@@ -5,6 +5,11 @@ export interface Class {
     name: string;
 }
 
+export interface Subject {
+    id: number;
+    name: string;
+}
+
 export interface Teacher {
     id: number;
     name: string;

@@ -5,7 +5,6 @@ import { useAppContext } from '@/components/providers/context-provider'
 
 const ClassList = () => {
     const { getClassList, classList } = useAppContext();
-    console.log(classList)
     useEffect(() => {
         getClassList();
     }, []);

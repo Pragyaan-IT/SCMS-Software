@@ -66,8 +66,6 @@ export const classTeachers = pgTable("class_teachers", {
 export const subjects = pgTable("subjects", {
   id: serial("id").primaryKey(),
   name: text("name").notNull(),
-  teacher_id: integer("teacher_id").references(() => teachers.id).notNull(),
-  class_id: integer("class_id").references(() => classes.id),
 });
 
 

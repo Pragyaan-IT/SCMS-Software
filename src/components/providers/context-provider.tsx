@@ -1,6 +1,6 @@
 "use client"
 import { useModal } from '@/app/hooks/use-modal-store';
-import { Class, Student, Teacher } from '@/lib/types';
+import { Class, Student, Subject, Teacher } from '@/lib/types';
 import React, { createContext, useContext, ReactNode, useState } from 'react';
 import { toast } from 'sonner';
 
@@ -8,12 +8,18 @@ type AppContextType = {
     classList: Class[];
     teacherList: Teacher[];
     studentList: Student[];
+    subjectList: Subject[];
     getClassList: () => void;
     getTeacherList: () => void;
     getStudentList: () => void;
+    getSubjectList: () => void;
     createClass: (name: string) => void;
     createTeacher: ({ name, email, password }: TeacherData) => void;
     createStudent: ({ name, email, password, registration_id, class_id }: StudentData) => void;
+    createSubject: (name: string) => void;
+    addSubjectToTeacher: (teacherId: number, subjectId: number) => void;
+    addTeacherToClass: (teacherId: number, classId: number) => void;
+    addSubjectToClass: (subjectId: number, classId: number) => void;
 };
 
 interface TeacherData {
@@ -35,6 +41,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
     const [classList, setClassList] = useState<Class[]>([]);
     const [teacherList, setTeacherList] = useState<Teacher[]>([])
     const [studentList, setStudentList] = useState<Student[]>([])
+    const [subjectList, setSubjectList] = useState<Subject[]>([])
     const { onClose } = useModal();
 
     const getClassList = async () => {
@@ -51,6 +58,12 @@ export function AppProvider({ children }: { children: ReactNode }) {
         const response = await fetch('/api/student');
         const data = await response.json();
         setStudentList(data.students);
+    }
+
+    const getSubjectList = async () => {
+        const response = await fetch('/api/subject');
+        const data = await response.json();
+        setSubjectList(data.subjects);
     }
 
     const createClass = async (name: string) => {
@@ -125,8 +138,104 @@ export function AppProvider({ children }: { children: ReactNode }) {
         }
     }
 
+    const createSubject = async (name: string) => {
+        try {
+            const res = await fetch('/api/subject', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ name })
+            })
+
+            if (res.ok) {
+                toast.success('Subject created successfully');
+                const newSubject = await res.json();
+                setSubjectList((prev) => [...prev, ...newSubject]);
+                onClose();
+            } else {
+                const error = await res.json();
+            }
+        } catch (error) {
+            console.error(error);
+            toast.error('Error creating subject');
+        }
+    }
+
+    const addSubjectToTeacher = async (teacherId: number, subjectId: number) => {
+        try {
+            const res = await fetch(`/api/teacher/${teacherId}/subject`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ subjectId })
+            })
+
+            if (res.ok) {
+                toast.success('Subject added successfully');
+                const newSubject = await res.json();
+                // setSubjectList((prev) => [...prev, ...newSubject]);
+                onClose();
+            } else {
+                const error = await res.json();
+            }
+        } catch (error) {
+            console.error(error);
+            toast.error('Error adding subject');
+        }
+    }
+    const addTeacherToClass = async (teacherId: number, classId: number) => {
+        try {
+            console.log(teacherId,classId)
+            const res = await fetch(`/api/class/${classId}/teacher`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ teacherId })
+            })
+
+            if (res.ok) {
+                toast.success('Teacher added successfully');
+                const newTeacher = await res.json();
+                // setSubjectList((prev) => [...prev, ...newSubject]);
+                onClose();
+            } else {
+                const error = await res.json();
+            }
+        } catch (error) {
+            console.error(error);
+            toast.error('Error adding teacher');
+        }
+    }
+    const addSubjectToClass = async (subjectId: number, classId: number) => {
+        try {
+            const res = await fetch(`/api/class/${classId}/subject`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ subjectId })
+            })
+
+            if (res.ok) {
+                toast.success('Subject added successfully');
+                const newSubject = await res.json();
+                // setSubjectList((prev) => [...prev, ...newSubject]);
+                onClose();
+            } else {
+                const error = await res.json();
+            }
+        } catch (error) {
+            console.error(error);
+            toast.error('Error adding subject');
+        }
+    }
+
+
     return (
-        <AppContext.Provider value={{ classList, teacherList, studentList, getClassList, getTeacherList, getStudentList, createClass, createTeacher, createStudent }}>
+        <AppContext.Provider value={{ classList, teacherList, studentList, subjectList, getClassList, getTeacherList, getStudentList, getSubjectList, createClass, createTeacher, createStudent, createSubject, addSubjectToTeacher, addTeacherToClass, addSubjectToClass }}>
             {children}
         </AppContext.Provider>
     );
