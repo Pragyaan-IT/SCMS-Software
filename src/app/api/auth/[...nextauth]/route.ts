@@ -3,7 +3,7 @@ import CredentialsProvider from "next-auth/providers/credentials";
 import { DrizzleAdapter } from "@auth/drizzle-adapter"
 import bcrypt from "bcrypt";
 import { db } from "@/db";
-import { students } from "@/db/schema";
+import { admins, students, teachers } from "@/db/schema";
 import { eq } from "drizzle-orm";
 
 export const authOptions: NextAuthOptions = {
@@ -36,6 +36,56 @@ export const authOptions: NextAuthOptions = {
 
       },
     }),
+    CredentialsProvider({
+      id: "teacher",
+      name: "Credentials",
+      credentials: {
+        teacher_id: { label: "teacher_id", type: "text" },
+        password: { label: "Password", type: "password" }
+      },
+      async authorize(credentials): Promise<any> {
+        if (!credentials?.teacher_id || !credentials?.password) {
+          throw new Error("Invalid credentials");
+        }
+        const teacher = await db.select()
+          .from(teachers)
+          .where(eq(teachers.teacher_id, credentials.teacher_id.toString()))
+
+        if (!teacher) {
+          throw new Error("Invalid credentials");
+        }
+
+        if (teacher && teacher[0]?.password === credentials.password) {
+          return { id: teacher[0].teacher_id, userType: "teacher" };
+        }
+        return null;
+      },
+    }),
+    CredentialsProvider({
+      id: "admin",
+      name: "Credentials",
+      credentials: {
+        email: { label: "Email", type: "text" },
+        password: { label: "Password", type: "password" }
+      },
+      async authorize(credentials): Promise<any> {
+        if (!credentials?.email || !credentials?.password) {
+          throw new Error("Invalid credentials");
+        }
+        const admin = await db.select()
+          .from(admins)
+          .where(eq(admins.email, credentials.email.toString()))
+
+        if (!admin) {
+          throw new Error("Invalid credentials");
+        }
+
+        if (admin && admin[0]?.password === credentials.password) {
+          return { id: admin[0].email, userType: "admin" };
+        }
+        return null;
+      },
+    })
   ],
   pages: {
     signIn: '/sign-in',

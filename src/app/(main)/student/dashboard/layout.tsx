@@ -1,8 +1,6 @@
-import DesktopSidebar from "@/components/desktop-sidebar";
 import Header from "@/components/header";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { SidebarMain } from "./_components/sidebar";
-import NavigationSidebar from "./_components/sidebartwo";
 
 export default function StudentLayout({
   children,
@@ -14,10 +12,9 @@ export default function StudentLayout({
       <Header role="student" />
       <div className="flex h-full flex-row overflow-hidden">
         <SidebarMain>
-        {/* <NavigationSidebar /> */}
-        <ScrollArea className="h-full w-full flex-1">
-          {children}
-        </ScrollArea>
+          <ScrollArea className="h-full w-full flex-1">
+            {children}
+          </ScrollArea>
         </SidebarMain>
       </div>
     </div>

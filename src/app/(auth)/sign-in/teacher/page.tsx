@@ -17,29 +17,29 @@ import { BookOpen, Eye, EyeOff } from "lucide-react"
 import { useState } from "react"
 import { signIn } from "next-auth/react"
 
-const StudentSchema = z.object({
-    registration_id: z.string().min(6, 'Missing registration id'),
+const TeacherSchema = z.object({
+    teacher_id: z.string().min(5, 'Missing teacher id').max(5, 'Invalid teacher id'),
     password: z.string().min(8, 'Password must be at least 8 characters long'),
 })
 
 export default function SignIn() {
     const [isVisible, setIsVisible] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
-    const form = useForm<z.infer<typeof StudentSchema>>({
+    const form = useForm<z.infer<typeof TeacherSchema>>({
         mode: 'onChange',
-        resolver: zodResolver(StudentSchema),
+        resolver: zodResolver(TeacherSchema),
         defaultValues: {
-            registration_id: '',
+            teacher_id: '',
             password: '',
         },
     });
 
-    const onSubmit = async (values: z.infer<typeof StudentSchema>) => {
+    const onSubmit = async (values: z.infer<typeof TeacherSchema>) => {
         setIsLoading(true);
-        await signIn("student", {
-            registration_id: values.registration_id,
+        await signIn("teacher", {
+            teacher_id: values.teacher_id,
             password: values.password,
-            callbackUrl: "/student/dashboard",
+            callbackUrl: "/teacher/dashboard",
         });
         setIsLoading(false);
     }
@@ -53,17 +53,17 @@ export default function SignIn() {
                 <div className="flex flex-col items-center gap-2">
                     <BookOpen size={48} />
                     <h1 className="text-2xl font-semibold">SCMS</h1>
-                    <p className="text-gray-500">Login to your account</p>
+                    <p className="text-gray-500">Teacher Login</p>
                 </div>
                 <FormField
                     disabled={isLoading}
                     control={form.control}
-                    name="registration_id"
+                    name="teacher_id"
                     render={({ field }) => (
                         <FormItem>
-                            <FormLabel>Registration Id*</FormLabel>
+                            <FormLabel>Faculty Id*</FormLabel>
                             <FormControl>
-                                <Input placeholder="Enter your registration id" {...field} />
+                                <Input placeholder="Enter your faculty id" {...field} />
                             </FormControl>
                             <FormMessage />
                         </FormItem>

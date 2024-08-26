@@ -5,7 +5,6 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { db } from "@/db";
 import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
-import Dashboard from "./_components/dashboard";
 
 export default async function DashboardPage() {
   const session = await getServerSession(authOptions);
@@ -13,20 +12,18 @@ export default async function DashboardPage() {
     redirect("/sign-in");
   }
 
-  const student = await db.query.students.findFirst({
-    where: (student, { eq }) => eq(student.registration_id, session.user.id)
-  });
-
-  if (!(student?.is_face_registered)) {
-    redirect("/student/face-registration?registration_id=" + session.user.id + "&student_name=" + student?.name);
+  if (session.user.role !== "admin") {
+    redirect("/")
   }
 
   return (
     <section>
-      {/* <PageTitle title="Dashboard" />
-      <ScrollArea className="h-full w-full"></ScrollArea> */}
-      <Dashboard />
-      <ChatBot />
+      <ScrollArea className="h-full w-full flex-1">
+        <div className="p-4">
+          <h1 className="text-2xl font-bold">Welcome back, {session.user.role}!</h1>
+          <ChatBot />
+        </div>
+      </ScrollArea>
     </section>
   );
 }
