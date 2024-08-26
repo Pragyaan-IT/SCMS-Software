@@ -13,11 +13,30 @@ import {
 import { Menu } from "lucide-react";
 import { useState } from "react";
 
-export default function MobileSidebar({
-  role,
-}: {
-  role: "teacher" | "student";
-}) {
+type UserRole = "teacher" | "student";
+
+const RoleBasedNavigation = ({ role }: { role: UserRole }) => {
+  switch (role) {
+    case "teacher":
+      return (
+        <>
+          <NavButton href={`/${role}/dashboard`} name="Dashboard" />
+          <NavButton href={`/${role}/attendance`} name="Attendance" />
+          <NavButton href={`/${role}/kanban`} name="Kanban" />
+        </>
+      );
+    case "student":
+      return (
+        <>
+          <NavButton href={`/${role}/dashboard`} name="Dashboard" />
+        </>
+      );
+    default:
+      return null;
+  }
+};
+
+export default function MobileSidebar({ role }: { role: UserRole }) {
   const [open, setOpen] = useState(false);
 
   return (
@@ -32,12 +51,8 @@ export default function MobileSidebar({
           <SheetTitle>Pragyaan</SheetTitle>
           <SheetDescription className="sr-only">Menu</SheetDescription>
         </SheetHeader>
-        <nav className="flex flex-col gap-2 px-2 py-6">
-          <NavButton
-            href={`/${role}/dashboard`}
-            name="Dashboard"
-            onClick={() => setOpen(false)}
-          />
+        <nav className="flex flex-col gap-2 py-6">
+          <RoleBasedNavigation role={role} />
         </nav>
       </SheetContent>
     </Sheet>
