@@ -8,7 +8,12 @@ import {
   timestamp,
 } from "drizzle-orm/pg-core";
 
-export const roleEnum = pgEnum("role", ["admin", "teacher", "student", "parent"]);
+export const roleEnum = pgEnum("role", [
+  "admin",
+  "teacher",
+  "student",
+  "parent",
+]);
 
 // Admin Table
 export const admins = pgTable("admins", {
@@ -16,7 +21,7 @@ export const admins = pgTable("admins", {
   name: text("name").notNull(),
   email: text("email").notNull().unique(),
   password: text("password").notNull(),
-  role: roleEnum("role").notNull().default('admin'),
+  role: roleEnum("role").notNull().default("admin"),
 });
 
 // Students Table
@@ -28,10 +33,9 @@ export const students = pgTable("students", {
   email: text("email").notNull().unique(),
   is_face_registered: boolean("is_face_registered").notNull().default(false),
   class_id: integer("class_id").references(() => classes.id),
-  role: roleEnum("role").notNull().default('student'),
+  role: roleEnum("role").notNull().default("student"),
   created_at: timestamp("created_at").defaultNow(),
 });
-
 
 // Teachers Table
 export const teachers = pgTable("teachers", {
@@ -40,15 +44,18 @@ export const teachers = pgTable("teachers", {
   teacher_id: text("teacher_id").notNull().unique(),
   email: text("email").notNull().unique(),
   password: text("password").notNull(),
-  role: roleEnum("role").notNull().default('teacher'),
+  role: roleEnum("role").notNull().default("teacher"),
 });
 
 export const teacherSubjects = pgTable("teacher_subjects", {
   id: serial("id").primaryKey(),
-  teacher_id: integer("teacher_id").references(() => teachers.id).notNull(),
-  subject_id: integer("subject_id").references(() => subjects.id).notNull(),
+  teacher_id: integer("teacher_id")
+    .references(() => teachers.id)
+    .notNull(),
+  subject_id: integer("subject_id")
+    .references(() => subjects.id)
+    .notNull(),
 });
-
 
 // Classes Table
 export const classes = pgTable("classes", {
@@ -58,8 +65,12 @@ export const classes = pgTable("classes", {
 
 export const classTeachers = pgTable("class_teachers", {
   id: serial("id").primaryKey(),
-  class_id: integer("class_id").references(() => classes.id).notNull(),
-  teacher_id: integer("teacher_id").references(() => teachers.id).notNull(),
+  class_id: integer("class_id")
+    .references(() => classes.id)
+    .notNull(),
+  teacher_id: integer("teacher_id")
+    .references(() => teachers.id)
+    .notNull(),
 });
 
 // Subjects Table
@@ -68,35 +79,51 @@ export const subjects = pgTable("subjects", {
   name: text("name").notNull(),
 });
 
-
 export const classStudents = pgTable("class_students", {
   id: serial("id").primaryKey(),
-  class_id: integer("class_id").references(() => classes.id).notNull(),
-  student_id: integer("student_id").references(() => students.id).notNull(),
+  class_id: integer("class_id")
+    .references(() => classes.id)
+    .notNull(),
+  student_id: integer("student_id")
+    .references(() => students.id)
+    .notNull(),
 });
 
 export const classSubjects = pgTable("class_subjects", {
   id: serial("id").primaryKey(),
-  class_id: integer("class_id").references(() => classes.id).notNull(),
-  subject_id: integer("subject_id").references(() => subjects.id).notNull(),
+  class_id: integer("class_id")
+    .references(() => classes.id)
+    .notNull(),
+  subject_id: integer("subject_id")
+    .references(() => subjects.id)
+    .notNull(),
 });
-
 
 // Timetable Table
 export const timetable = pgTable("timetable", {
   id: serial("id").primaryKey(),
-  class_id: integer("class_id").references(() => classes.id).notNull(),
+  class_id: integer("class_id")
+    .references(() => classes.id)
+    .notNull(),
   day: text("day").notNull(),
   slot: text("slot").notNull(),
-  subject_id: integer("subject_id").references(() => subjects.id).notNull(),
-  teacher_id: integer("teacher_id").references(() => teachers.id).notNull(),
+  subject_id: integer("subject_id")
+    .references(() => subjects.id)
+    .notNull(),
+  teacher_id: integer("teacher_id")
+    .references(() => teachers.id)
+    .notNull(),
 });
 
 // Attendance Table
 export const attendance = pgTable("attendance", {
   id: serial("id").primaryKey(),
-  student_id: integer("student_id").references(() => students.id).notNull(),
-  timetable_id: integer("timetable_id").references(() => timetable.id).notNull(),
+  student_id: integer("student_id")
+    .references(() => students.id)
+    .notNull(),
+  timetable_id: integer("timetable_id")
+    .references(() => timetable.id)
+    .notNull(),
   date: timestamp("date").notNull(),
   time: timestamp("time").notNull(),
   present: boolean("present").notNull(),
@@ -106,8 +133,22 @@ export const attendance = pgTable("attendance", {
 export const marks = pgTable("marks", {
   id: serial("id").primaryKey(),
   type: text("type").notNull(),
-  student_id: integer("student_id").references(() => students.id).notNull(),
-  subject_id: integer("subject_id").references(() => subjects.id).notNull(),
+  student_id: integer("student_id")
+    .references(() => students.id)
+    .notNull(),
+  subject_id: integer("subject_id")
+    .references(() => subjects.id)
+    .notNull(),
   marks: integer("marks").notNull(),
   date: timestamp("date").notNull(),
+});
+
+export const complaints = pgTable("complaints", {
+  id: serial("id").primaryKey(),
+  teacherName: text("teacher_name").notNull(),
+  teacherId: text("teacher_id").notNull(),
+  classroomNumber: text("classroom_number").notNull(),
+  message: text("message").notNull(),
+  receivedAt: timestamp("received_at").defaultNow().notNull(),
+  isResolved: boolean("is_resolved").default(false).notNull(),
 });

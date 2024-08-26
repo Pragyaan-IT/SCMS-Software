@@ -66,61 +66,62 @@ export default function AttendanceTable() {
   return (
     <section className="flex flex-col gap-4">
       <PageTitle title="Attendance" />
-      <div className="flex flex-wrap gap-4 p-2">
-        <Select value={selectedClass} onValueChange={setSelectedClass}>
-          <SelectTrigger className="w-[200px]">
-            <SelectValue placeholder="Select a class" />
-          </SelectTrigger>
-          <SelectContent>
-            {dummyClasses.map((cls: any) => (
-              <SelectItem key={cls.id} value={cls.id.toString()}>
-                {cls.name}
-              </SelectItem>
-            ))}
-          </SelectContent>
-        </Select>
-
-        <Popover>
-          <PopoverTrigger asChild>
-            <Button
-              variant="outline"
-              className="w-[300px] justify-start text-left font-normal"
-            >
-              <CalendarIcon className="mr-2 h-4 w-4" />
-              {dateRange?.from ? (
-                dateRange.to ? (
-                  <>
-                    {format(dateRange.from, "LLL dd, y")} -{" "}
-                    {format(dateRange.to, "LLL dd, y")}
-                  </>
-                ) : (
-                  format(dateRange.from, "LLL dd, y")
-                )
-              ) : (
-                <span>Pick a date range</span>
-              )}
-            </Button>
-          </PopoverTrigger>
-          <PopoverContent className="w-auto p-0" align="start">
-            <Calendar
-              initialFocus
-              mode="range"
-              defaultMonth={dateRange?.from}
-              selected={dateRange}
-              onSelect={setDateRange}
-              numberOfMonths={2}
-            />
-          </PopoverContent>
-        </Popover>
-
+      <div className="flex flex-wrap justify-between gap-4 p-2">
         <Input
           placeholder="Search student name"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
           className="w-[300px]"
         />
+        <div className="flex flex-row gap-4">
+          <Select value={selectedClass} onValueChange={setSelectedClass}>
+            <SelectTrigger className="w-[200px]">
+              <SelectValue placeholder="Select a class" />
+            </SelectTrigger>
+            <SelectContent>
+              {dummyClasses.map((cls: any) => (
+                <SelectItem key={cls.id} value={cls.id.toString()}>
+                  {cls.name}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+
+          <Popover>
+            <PopoverTrigger asChild>
+              <Button
+                variant="outline"
+                className="w-[300px] justify-start text-left font-normal"
+              >
+                <CalendarIcon className="mr-2 h-4 w-4" />
+                {dateRange?.from ? (
+                  dateRange.to ? (
+                    <>
+                      {format(dateRange.from, "LLL dd, y")} -{" "}
+                      {format(dateRange.to, "LLL dd, y")}
+                    </>
+                  ) : (
+                    format(dateRange.from, "LLL dd, y")
+                  )
+                ) : (
+                  <span>Pick a date range</span>
+                )}
+              </Button>
+            </PopoverTrigger>
+            <PopoverContent className="w-auto p-0" align="start">
+              <Calendar
+                initialFocus
+                mode="range"
+                defaultMonth={dateRange?.from}
+                selected={dateRange}
+                onSelect={setDateRange}
+                numberOfMonths={2}
+              />
+            </PopoverContent>
+          </Popover>
+        </div>
       </div>
-      <ScrollArea className="h-[calc(100dvh-220px)] w-[calc(100dvw-60px)] lg:w-[calc(100dvw-300px)]">
+      <ScrollArea className="h-[calc(100dvh-220px)] w-[calc(100dvw-60px)] lg:w-[calc(100dvw-280px)]">
         <DataTable columns={columns} data={formattedData} />
       </ScrollArea>
     </section>
