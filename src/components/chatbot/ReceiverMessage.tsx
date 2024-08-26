@@ -12,7 +12,7 @@ const ReceiverMessage = ({name, message, pic, time}: ReceiverMessageProps) => {
         <div className="flex gap-2.5 justify-end pb-2">
             <div className="">
                 <div className="grid mb-2">
-                    <h5 className="text-right text-gray-900 text-sm font-semibold leading-snug pb-1">{name}</h5>
+                    <h5 className="text-right text-gray-900 text-sm font-semibold leading-snug pb-1">You</h5>
                     <div className="px-3 py-2 bg-black ml-auto rounded">
                         <h2 className="text-white text-sm font-normal leading-snug">{message}</h2>
                     </div>
