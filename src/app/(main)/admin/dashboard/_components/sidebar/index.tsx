@@ -3,7 +3,7 @@ import React from 'react'
 import { Separator } from '@/components/ui/separator';
 import NavigationItem from './NavigationItem';
 import NavigationHome from './NavigationHome';
-import { LayoutDashboard, CalendarDays, StretchHorizontal, UserMinus, CircuitBoardIcon, UserCog2, List, ChartBar, MessagesSquare } from 'lucide-react';
+import { LayoutDashboard, CalendarDays, StretchHorizontal, UserMinus, CircuitBoardIcon, UserCog2, List, ChartBar, MessagesSquare, User2, UserCheck, ChartAreaIcon } from 'lucide-react';
 import { signOut, useSession } from 'next-auth/react'
 
 
@@ -13,26 +13,30 @@ const NavigationSidebar = () => {
     const menuItems = [
         {
             name: "Dashboard",
-            route: "/student/dashboard",
+            route: "/admin/dashboard",
             icon: <LayoutDashboard size={22} />
         },
         {
-            name: "Timetable",
-            route: "/student/dashboards",
+            name: "Classes",
+            route: "/admin/dashboard/classes",
             icon: <ChartBar size={22} />
 
         },
         {
-            name: "Profile",
-            route: "/student/dashboards",
-            icon: <UserCog2 size={22} />
+            name: "Teachers",
+            route: "/admin/dashboard/teachers",
+            icon: <UserCheck size={22} />
 
         },
         {
-            name: "Discussion",
+            name: "Students",
+            route: "/admin/dashboard/students",
+            icon: <User2 size={22} />
+        },
+        {
+            name: "Reports",
             route: "/student/dashboards",
-            icon: <MessagesSquare size={22} />
-
+            icon: <ChartAreaIcon size={22} />
         },
     ]
 

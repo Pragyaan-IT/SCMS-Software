@@ -37,6 +37,7 @@ export const students = pgTable("students", {
 export const teachers = pgTable("teachers", {
   id: serial("id").primaryKey(),
   name: text("name").notNull(),
+  teacher_id: text("teacher_id").notNull().unique(),
   email: text("email").notNull().unique(),
   password: text("password").notNull(),
   role: roleEnum("role").notNull().default('teacher'),

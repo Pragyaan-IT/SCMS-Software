@@ -16,7 +16,7 @@ export default function Home() {
         <Link href="/student/dashboard">Student Dashboard</Link>
       </Button>
       <Button asChild>
-        <Link href="/teacher">Teacher Dashboard</Link>
+        <Link href="/teacher/dashboard">Teacher Dashboard</Link>
       </Button>
     </main>
   );

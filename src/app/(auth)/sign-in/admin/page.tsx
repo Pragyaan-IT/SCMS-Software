@@ -17,29 +17,29 @@ import { BookOpen, Eye, EyeOff } from "lucide-react"
 import { useState } from "react"
 import { signIn } from "next-auth/react"
 
-const StudentSchema = z.object({
-    registration_id: z.string().min(6, 'Missing registration id'),
+const AdminSchema = z.object({
+    email: z.string().email('Invalid email address'),
     password: z.string().min(8, 'Password must be at least 8 characters long'),
 })
 
 export default function SignIn() {
     const [isVisible, setIsVisible] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
-    const form = useForm<z.infer<typeof StudentSchema>>({
+    const form = useForm<z.infer<typeof AdminSchema>>({
         mode: 'onChange',
-        resolver: zodResolver(StudentSchema),
+        resolver: zodResolver(AdminSchema),
         defaultValues: {
-            registration_id: '',
+            email: '',
             password: '',
         },
     });
 
-    const onSubmit = async (values: z.infer<typeof StudentSchema>) => {
+    const onSubmit = async (values: z.infer<typeof AdminSchema>) => {
         setIsLoading(true);
-        await signIn("student", {
-            registration_id: values.registration_id,
+        await signIn("admin", {
+            email: values.email,
             password: values.password,
-            callbackUrl: "/student/dashboard",
+            callbackUrl: "/admin/dashboard",
         });
         setIsLoading(false);
     }
@@ -53,17 +53,17 @@ export default function SignIn() {
                 <div className="flex flex-col items-center gap-2">
                     <BookOpen size={48} />
                     <h1 className="text-2xl font-semibold">SCMS</h1>
-                    <p className="text-gray-500">Login to your account</p>
+                    <p className="text-gray-500">Admin Login</p>
                 </div>
                 <FormField
                     disabled={isLoading}
                     control={form.control}
-                    name="registration_id"
+                    name="email"
                     render={({ field }) => (
                         <FormItem>
-                            <FormLabel>Registration Id*</FormLabel>
+                            <FormLabel>Email Id*</FormLabel>
                             <FormControl>
-                                <Input placeholder="Enter your registration id" {...field} />
+                                <Input placeholder="Enter your email id" {...field} />
                             </FormControl>
                             <FormMessage />
                         </FormItem>
