@@ -3,6 +3,8 @@ import { ThemeProvider } from "@/components/providers/theme-provider";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
+import NextTopLoader from "nextjs-toploader";
+
 import "./globals.css";
 
 const fontSans = FontSans({
@@ -27,6 +29,7 @@ export default function RootLayout({
           fontSans.variable,
         )}
       >
+        <NextTopLoader showSpinner={false} />
         <ThemeProvider
           attribute="class"
           defaultTheme="light"
