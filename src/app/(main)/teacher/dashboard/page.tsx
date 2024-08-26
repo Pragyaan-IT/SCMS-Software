@@ -10,7 +10,7 @@ export default function DashboardPage() {
     <section>
       <PageTitle title="Dashboard" />
       <ScrollArea className="h-full w-full">
-        <div className="grid grid-cols-3 p-2">
+        <div className="grid grid-cols-1 gap-4 p-2 md:grid-cols-2 lg:grid-cols-3">
           <StudentPerformanceChart />
           <AttendanceRateChart />
         </div>

@@ -112,7 +112,6 @@ export default function AttendanceTable() {
             />
           </PopoverContent>
         </Popover>
-
         <Input
           placeholder="Search student name"
           value={searchQuery}
