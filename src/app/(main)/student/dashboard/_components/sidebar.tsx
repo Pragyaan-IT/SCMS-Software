@@ -21,7 +21,7 @@ export function SidebarMain({ children }: { children: React.ReactNode }) {
         },
         {
             label: "TimeTable",
-            href: "/student/timetable",
+            href: "/student/dashboard/timetable",
             icon: (
                 <ChartBar className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
             ),

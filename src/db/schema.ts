@@ -100,6 +100,7 @@ export const attendance = pgTable("attendance", {
   student_id: integer("student_id").references(() => students.id).notNull(),
   timetable_id: integer("timetable_id").references(() => timetable.id).notNull(),
   date: timestamp("date").notNull(),
+  time: timestamp("time").notNull(),
   present: boolean("present").notNull(),
 });
 

@@ -23,8 +23,6 @@ export default async function DashboardPage() {
 
   return (
     <section>
-      {/* <PageTitle title="Dashboard" />
-      <ScrollArea className="h-full w-full"></ScrollArea> */}
       <Dashboard />
       <ChatBot />
     </section>

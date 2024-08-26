@@ -9,7 +9,6 @@ export default function StudentLayout({
 }) {
   return (
     <div className="grid h-dvh grid-rows-[auto_1fr] lg:grid-rows-none overflow-hidden">
-      <Header role="student" />
       <div className="flex h-full flex-row overflow-hidden">
         <SidebarMain>
           <ScrollArea className="h-full w-full flex-1">
