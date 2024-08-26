@@ -40,12 +40,17 @@ const initialTasks: Task[] = [
   {
     id: "task1",
     status: "TODO",
-    title: "Project initiation and planning",
+    title: "Create a new assignment",
   },
   {
     id: "task2",
-    status: "TODO",
-    title: "Gather requirements from stakeholders",
+    status: "IN_PROGRESS",
+    title: "Create a new quiz",
+  },
+  {
+    id: "task3",
+    status: "DONE",
+    title: "Create a new test",
   },
 ];
 
