@@ -1,18 +1,12 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import { Attendance } from "@/lib/types";
 import { ColumnDef } from "@tanstack/react-table";
 import { ArrowUpDown } from "lucide-react";
 
-export type AttendanceRecord = {
-  id: number;
-  studentName: string;
-  className: string;
-  date: string;
-  present: boolean;
-};
 
-export const columns: ColumnDef<AttendanceRecord>[] = [
+export const columns: ColumnDef<Attendance>[] = [
   {
     accessorKey: "studentName",
     header: ({ column }) => {

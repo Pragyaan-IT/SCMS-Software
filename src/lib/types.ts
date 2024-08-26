@@ -25,3 +25,13 @@ export interface Student {
     class_id: string;
     class_name: string;
 }
+
+export interface Attendance {
+    attendanceId: number;
+    studentName: string;
+    className: string;
+    day: string;
+    slot: string;
+    present: boolean;
+    date: Date;
+}

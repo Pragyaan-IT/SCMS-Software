@@ -102,7 +102,7 @@ export function AddSubjectForm({ teacherId, classId }: FormProps) {
                                             <CommandGroup>
                                                 {subjectList.map((subject) => (
                                                     <CommandItem
-                                                        value={subject.id}
+                                                        value={subject.id.toString()}
                                                         key={subject.id}
                                                         onSelect={() => {
                                                             form.setValue("subject", subject.id)

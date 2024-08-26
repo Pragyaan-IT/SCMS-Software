@@ -17,7 +17,7 @@ import {
 } from "@/components/ui/select";
 import { format } from "date-fns";
 import { Calendar as CalendarIcon } from "lucide-react";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { DateRange } from "react-day-picker";
 import { columns } from "./columns";
 import { DataTable } from "./data-table";
@@ -25,21 +25,24 @@ import { DataTable } from "./data-table";
 // Import dummy data
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { dummyAttendance, dummyClasses, dummyStudents } from "../dummy-data";
+import { useAppContext } from "@/components/providers/context-provider";
 
 export default function AttendanceTable() {
   const [selectedClass, setSelectedClass] = useState<string>("");
   const [dateRange, setDateRange] = useState<DateRange | undefined>();
   const [searchQuery, setSearchQuery] = useState("");
 
+  const { getAttendance, attendanceList } = useAppContext();
+
   const filteredData = useMemo(() => {
-    return dummyAttendance.filter((record: any) => {
+    return attendanceList.filter((record: any) => {
       const student = dummyStudents.find((s) => s.id === record.student_id);
       const matchesClass = selectedClass
         ? student?.class_id.toString() === selectedClass
         : true;
       const matchesDate = dateRange
         ? new Date(record.date) >= (dateRange.from || new Date(0)) &&
-          new Date(record.date) <= (dateRange.to || new Date())
+        new Date(record.date) <= (dateRange.to || new Date())
         : true;
       const matchesSearch = searchQuery
         ? student?.name.toLowerCase().includes(searchQuery.toLowerCase())
@@ -62,6 +65,44 @@ export default function AttendanceTable() {
       };
     });
   }, [filteredData]);
+
+  useEffect(() => {
+    let intervalId: any = null;
+    const startInterval = () => {
+      intervalId = setInterval(async () => {
+        getAttendance();
+      }, 2000);
+    };
+
+    const stopInterval = () => {
+      if (intervalId) {
+        clearInterval(intervalId);
+        intervalId = null;
+      }
+    };
+
+    const checkAndSetInterval = () => {
+      const now = new Date();
+      const minutes = now.getMinutes();
+      if (minutes < 15) {
+        if (!intervalId) {
+          startInterval();
+        }
+      } else {
+        stopInterval();
+      }
+    };
+
+    getAttendance();
+
+    checkAndSetInterval();
+    const hourlyCheckId = setInterval(checkAndSetInterval, 60000);
+
+    return () => {
+      stopInterval();
+      clearInterval(hourlyCheckId);
+    };
+  }, []);
 
   return (
     <section className="flex flex-col gap-4">
@@ -122,7 +163,7 @@ export default function AttendanceTable() {
         </div>
       </div>
       <ScrollArea className="h-[calc(100dvh-220px)] w-[calc(100dvw-60px)] lg:w-[calc(100dvw-280px)]">
-        <DataTable columns={columns} data={formattedData} />
+        <DataTable columns={columns} data={attendanceList} />
       </ScrollArea>
     </section>
   );

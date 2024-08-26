@@ -18,7 +18,7 @@ import { useState } from "react"
 import { signIn } from "next-auth/react"
 
 const TeacherSchema = z.object({
-    teacher_id: z.string().min(5, 'Missing teacher id').max(5, 'Invalid teacher id'),
+    teacher_id: z.string().min(6, 'Missing teacher id').max(6, 'Invalid teacher id'),
     password: z.string().min(8, 'Password must be at least 8 characters long'),
 })
 

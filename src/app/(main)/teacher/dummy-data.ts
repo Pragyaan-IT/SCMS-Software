@@ -1,7 +1,7 @@
 // dummy-data.ts
 
 export const dummyClasses = [
-  { id: 1, name: "Class 1A" },
+  { id: 1, name: "Class 3A" },
   { id: 2, name: "Class 2B" },
   { id: 3, name: "Class 3C" },
 ];

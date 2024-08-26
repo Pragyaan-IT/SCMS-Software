@@ -6,6 +6,7 @@ import {
   serial,
   text,
   timestamp,
+  time
 } from "drizzle-orm/pg-core";
 
 export const roleEnum = pgEnum("role", [
@@ -125,7 +126,7 @@ export const attendance = pgTable("attendance", {
     .references(() => timetable.id)
     .notNull(),
   date: timestamp("date").notNull(),
-  time: timestamp("time").notNull(),
+  time: time("time").notNull(),
   present: boolean("present").notNull(),
 });
 
