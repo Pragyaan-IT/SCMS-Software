@@ -28,19 +28,19 @@ importers:
         version: 3.9.0(react-hook-form@7.53.0(react@18.3.1))
       '@nextui-org/button':
         specifier: ^2.0.37
-        version: 2.0.37(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        version: 2.0.37(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nextui-org/image':
         specifier: ^2.0.31
-        version: 2.0.31(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        version: 2.0.31(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nextui-org/input':
         specifier: ^2.2.4
-        version: 2.2.4(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(@types/react@18.3.4)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        version: 2.2.4(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(@types/react@18.3.4)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nextui-org/progress':
         specifier: ^2.0.33
-        version: 2.0.33(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        version: 2.0.33(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nextui-org/react':
         specifier: ^2.4.6
-        version: 2.4.6(@types/react@18.3.4)(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.10)
+        version: 2.4.6(@types/react@18.3.4)(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.10)
       '@radix-ui/react-alert-dialog':
         specifier: ^1.1.1
         version: 1.1.1(@types/react-dom@18.3.0)(@types/react@18.3.4)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -72,11 +72,11 @@ importers:
         specifier: ^1.1.0
         version: 1.1.0(@types/react@18.3.4)(react@18.3.1)
       '@tabler/icons-react':
-        specifier: ^3.12.0
-        version: 3.12.0(react@18.3.1)
+        specifier: ^3.14.0
+        version: 3.14.0(react@18.3.1)
       '@tanstack/react-table':
-        specifier: ^8.20.1
-        version: 8.20.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: ^8.20.5
+        version: 8.20.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       bcrypt:
         specifier: ^5.1.1
         version: 5.1.1
@@ -96,8 +96,8 @@ importers:
         specifier: ^0.33.0
         version: 0.33.0(@types/react@18.3.4)(postgres@3.4.4)(react@18.3.1)
       framer-motion:
-        specifier: ^11.3.29
-        version: 11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: ^11.3.30
+        version: 11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       lucide-react:
         specifier: ^0.429.0
         version: 0.429.0(react@18.3.1)
@@ -117,13 +117,13 @@ importers:
         specifier: ^3.4.4
         version: 3.4.4
       react:
-        specifier: ^18
+        specifier: ^18.3.1
         version: 18.3.1
       react-day-picker:
         specifier: 8.10.1
         version: 8.10.1(date-fns@3.6.0)(react@18.3.1)
       react-dom:
-        specifier: ^18
+        specifier: ^18.3.1
         version: 18.3.1(react@18.3.1)
       react-hook-form:
         specifier: ^7.53.0
@@ -157,28 +157,28 @@ importers:
         specifier: ^3.15.0
         version: 3.15.0(next@14.2.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@types/node':
-        specifier: ^20
+        specifier: ^20.16.1
         version: 20.16.1
       '@types/react':
-        specifier: ^18
+        specifier: ^18.3.4
         version: 18.3.4
       '@types/react-dom':
-        specifier: ^18
+        specifier: ^18.3.0
         version: 18.3.0
       '@types/uuid':
         specifier: ^10.0.0
         version: 10.0.0
       drizzle-kit:
-        specifier: ^0.24.1
-        version: 0.24.1
+        specifier: ^0.24.2
+        version: 0.24.2
       eslint:
-        specifier: ^8
+        specifier: ^8.57.0
         version: 8.57.0
       eslint-config-next:
         specifier: 14.2.6
         version: 14.2.6(eslint@8.57.0)(typescript@5.5.4)
       postcss:
-        specifier: ^8
+        specifier: ^8.4.41
         version: 8.4.41
       prettier:
         specifier: ^3.3.3
@@ -187,10 +187,10 @@ importers:
         specifier: ^0.6.6
         version: 0.6.6(prettier@3.3.3)
       tailwindcss:
-        specifier: ^3.4.1
+        specifier: ^3.4.10
         version: 3.4.10
       typescript:
-        specifier: ^5
+        specifier: ^5.5.4
         version: 5.5.4
 
 packages:
@@ -1182,6 +1182,10 @@ packages:
   '@nodelib/fs.walk@1.2.8':
     resolution: {integrity: sha512-oGB+UxlgWcgQkgwo8GcEGwemoTFt3FIO9ababBmaGwXIoBKZ+GTy0pP185beGg7Llih/NSHSV2XAs1lnznocSg==}
     engines: {node: '>= 8'}
+
+  '@nolyfill/is-core-module@1.0.39':
+    resolution: {integrity: sha512-nn5ozdjYQpUCZlWGuxcJY/KpxkWQs4DcbMCmKojjyrYDEAGy4Ce19NN4v5MduafTwJlbKc99UA8YhSVqq9yPZA==}
+    engines: {node: '>=12.4.0'}
 
   '@panva/hkdf@1.2.1':
     resolution: {integrity: sha512-6oclG6Y3PiDFcoyk8srjLfVKyMfVCKJ27JwNPViuXziFpmdz+MZnZN/aKY0JGXgYuO/VghU0jcOAZgWXZ1Dmrw==}
@@ -2303,26 +2307,29 @@ packages:
   '@swc/counter@0.1.3':
     resolution: {integrity: sha512-e2BR4lsJkkRlKZ/qCHPw9ZaSxc0MVUd7gtbtaB7aMvHeJVYe8sOB8DBZkP2DtISHGSku9sCK6T6cnY0CtXrOCQ==}
 
+  '@swc/helpers@0.5.12':
+    resolution: {integrity: sha512-KMZNXiGibsW9kvZAO1Pam2JPTDBm+KSHMMHWdsyI/1DbIZjT2A6Gy3hblVXUMEDvUAKq+e0vL0X0o54owWji7g==}
+
   '@swc/helpers@0.5.5':
     resolution: {integrity: sha512-KGYxvIOXcceOAbEk4bi/dVLEK9z8sZ0uBB3Il5b1rhfClSpcX0yfRO0KmTkqR2cnQDymwLB+25ZyMzICg/cm/A==}
 
-  '@tabler/icons-react@3.12.0':
-    resolution: {integrity: sha512-RnJl3HrCqInuC8JJEUxWuYP4OFNYnY2EUtBqZFSpYatPKY3AnvJBIrShJLHf3fiLPpo6xEYAIoB7Qow93JX0fQ==}
+  '@tabler/icons-react@3.14.0':
+    resolution: {integrity: sha512-3XdbuyhBNq8aZW0qagR9YL8diACZYSAtaw6VuwcO2l6HzVFPN6N5TDex9WTz/3lf+uktAvOv1kNuuFBjSjN9yw==}
     peerDependencies:
       react: '>= 16'
 
-  '@tabler/icons@3.12.0':
-    resolution: {integrity: sha512-Im37ar/mQkqLb6XUXsU7nOc4/66VB9/3KLuZ+6tUsJKHHNLaDUkYfCTNG3pnGDI03laByxVf5+umSNK2yPTx8A==}
+  '@tabler/icons@3.14.0':
+    resolution: {integrity: sha512-OakKjK1kuDWKoNwdnHHVMt11kTZAC10iZpN/8o/CSYdeBH7S3v5n8IyqAYynFxLI8yBGTyBvljtvWdmWh57zSg==}
 
-  '@tanstack/react-table@8.20.1':
-    resolution: {integrity: sha512-PJK+07qbengObe5l7c8vCdtefXm8cyR4i078acWrHbdm8JKw1ES7YpmOtVt9ALUVEEFAHscdVpGRhRgikgFMbQ==}
+  '@tanstack/react-table@8.20.5':
+    resolution: {integrity: sha512-WEHopKw3znbUZ61s9i0+i9g8drmDo6asTWbrQh8Us63DAk/M0FkmIqERew6P71HI75ksZ2Pxyuf4vvKh9rAkiA==}
     engines: {node: '>=12'}
     peerDependencies:
       react: '>=16.8'
       react-dom: '>=16.8'
 
-  '@tanstack/table-core@8.20.1':
-    resolution: {integrity: sha512-5Ly5TIRHnWH7vSDell9B/OVyV380qqIJVg7H7R7jU4fPEmOD4smqAX7VRflpYI09srWR8aj5OLD2Ccs1pI5mTg==}
+  '@tanstack/table-core@8.20.5':
+    resolution: {integrity: sha512-P9dF7XbibHph2PFRz8gfBKEXEY/HJPOhym8CHmjF8y3q5mWpKx9xtZapXQUWCgkqvsK0R46Azuz+VaxD4Xl+Tg==}
     engines: {node: '>=12'}
 
   '@types/bcrypt@5.0.2':
@@ -2574,8 +2581,8 @@ packages:
     resolution: {integrity: sha512-QOSvevhslijgYwRx6Rv7zKdMF8lbRmx+uQGx2+vDc+KI/eBnsy9kit5aj23AgGu3pa4t9AgwbnXWqS+iOY+2aA==}
     engines: {node: '>= 6'}
 
-  caniuse-lite@1.0.30001651:
-    resolution: {integrity: sha512-9Cf+Xv1jJNe1xPZLGuUXLNkE1BoDkqRqYyFJ9TDYSqhduqA4hu4oR9HluGoWYQC/aj8WHjsGVV+bwkh0+tegRg==}
+  caniuse-lite@1.0.30001653:
+    resolution: {integrity: sha512-XGWQVB8wFQ2+9NZwZ10GxTYC5hk0Fa+q8cSkr0tgvMhYhMHP/QC+WTgrePMDBWiWc/pV+1ik82Al20XOK25Gcw==}
 
   chalk@4.1.2:
     resolution: {integrity: sha512-oKnbhFyRIXpUuez8iBMmyEa4nbj4IOQyuhc/wy9kY7/WVPcwIO9VA668Pu8RkO7+0G76SLROeyw9CpQ061i4mA==}
@@ -2799,8 +2806,8 @@ packages:
   dom-helpers@5.2.1:
     resolution: {integrity: sha512-nRCa7CK3VTrM2NmGkIy4cbK7IZlgBE/PYMn55rrXefr5xXDP0LdtfPnblFDoVdcAfslJ7or6iqAUnx0CCGIWQA==}
 
-  drizzle-kit@0.24.1:
-    resolution: {integrity: sha512-y47ZuFpy3ZEz5v2P4Q4m7CZpC9infdmFAVP8klfl92hyBBvgWlyFnriDkycK2HXqB1PrYWNTck2p5TfFY5+EWw==}
+  drizzle-kit@0.24.2:
+    resolution: {integrity: sha512-nXOaTSFiuIaTMhS8WJC2d4EBeIcN9OSt2A2cyFbQYBAZbi7lRsVGJNqDpEwPqYfJz38yxbY/UtbvBBahBfnExQ==}
     hasBin: true
 
   drizzle-orm@0.33.0:
@@ -2970,15 +2977,21 @@ packages:
   eslint-import-resolver-node@0.3.9:
     resolution: {integrity: sha512-WFj2isz22JahUv+B788TlO3N6zL3nNJGU8CcZbPZvVEkBPaJdCV4vy5wyghty5ROFbCRnm132v8BScu5/1BQ8g==}
 
-  eslint-import-resolver-typescript@3.6.1:
-    resolution: {integrity: sha512-xgdptdoi5W3niYeuQxKmzVDTATvLYqhpwmykwsh7f6HIOStGWEIL9iqZgQDF9u9OEzrRwR8no5q2VT+bjAujTg==}
+  eslint-import-resolver-typescript@3.6.3:
+    resolution: {integrity: sha512-ud9aw4szY9cCT1EWWdGv1L1XR6hh2PaRWif0j2QjQ0pgTY/69iw+W0Z4qZv5wHahOl8isEr+k/JnyAqNQkLkIA==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
       eslint: '*'
       eslint-plugin-import: '*'
+      eslint-plugin-import-x: '*'
+    peerDependenciesMeta:
+      eslint-plugin-import:
+        optional: true
+      eslint-plugin-import-x:
+        optional: true
 
-  eslint-module-utils@2.8.1:
-    resolution: {integrity: sha512-rXDXR3h7cs7dy9RNpUlQf80nX31XWJEyGq1tRMo+6GsO5VmTe4UTwtmonAD4ZkAsrfMVDA2wlGJ3790Ys+D49Q==}
+  eslint-module-utils@2.8.2:
+    resolution: {integrity: sha512-3XnC5fDyc8M4J2E8pt8pmSVRX2M+5yWMCfI/kDZwauQeFgzQOuhcRBFKjTeJagqgk4sFKxe1mvNVnaWwImx/Tg==}
     engines: {node: '>=4'}
     peerDependencies:
       '@typescript-eslint/parser': '*'
@@ -3112,8 +3125,8 @@ packages:
     resolution: {integrity: sha512-Ld2g8rrAyMYFXBhEqMz8ZAHBi4J4uS1i/CxGMDnjyFWddMXLVcDp051DZfu+t7+ab7Wv6SMqpWmyFIj5UbfFvg==}
     engines: {node: '>=14'}
 
-  framer-motion@11.3.29:
-    resolution: {integrity: sha512-uyDuUOeOElJEA3kbkbyoTNEf75Jih1EUg0ouLKYMlGDdt/LaJPmO+FyOGAGxM2HwKhHcAoKFNveR5A8peb7yhw==}
+  framer-motion@11.3.30:
+    resolution: {integrity: sha512-9VmqGe9OIjfMoCcs+ZsKXlv6JaG5QagKX2F1uSbkG3Z33wgjnz60Kw+CngC1M49rDYau+Y9aL+8jGagAwrbVyw==}
     peerDependencies:
       '@emotion/is-prop-valid': '*'
       react: ^18.0.0
@@ -3302,6 +3315,9 @@ packages:
     resolution: {integrity: sha512-gDYaKHJmnj4aWxyj6YHyXVpdQawtVLHU5cb+eztPGczf6cjuTdwve5ZIEfgXqH4e57An1D1AKf8CZ3kYrQRqYA==}
     engines: {node: '>= 0.4'}
 
+  is-bun-module@1.1.0:
+    resolution: {integrity: sha512-4mTAVPlrXpaN3jtF0lsnPCMGnq4+qZjVIKq0HCpfcqf8OC1SM5oATCIAPM5V5FN05qp2NNnFndphmdZS9CV3hA==}
+
   is-callable@1.2.7:
     resolution: {integrity: sha512-1BC0BVFhS/p0qtw6enp8e+8OD0UrK0oFLztSjNzhcKA3WDuJxxAPXzPuPtKkjEY9UUoEWlX/8fgKeu2S8i9JTA==}
     engines: {node: '>= 0.4'}
@@ -3415,8 +3431,8 @@ packages:
   jose@4.15.9:
     resolution: {integrity: sha512-1vUQX+IdDMVPj4k8kOxgUqlcK518yluMuGZwqlr44FS1ppZB/5GWh4rZG89erpOBOJjU/OBsnCVFfapsRz6nEA==}
 
-  jose@5.7.0:
-    resolution: {integrity: sha512-3P9qfTYDVnNn642LCAqIKbTGb9a1TBxZ9ti5zEVEr48aDdflgRjhspWFb6WM4PzAfFbGMJYC4+803v8riCRAKw==}
+  jose@5.8.0:
+    resolution: {integrity: sha512-E7CqYpL/t7MMnfGnK/eg416OsFCVUrU/Y3Vwe7QjKhu/BkS1Ms455+2xsqZQVN57/U2MHMBvEb5SrmAZWAIntA==}
 
   js-tokens@4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
@@ -3519,8 +3535,8 @@ packages:
     resolution: {integrity: sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg==}
     engines: {node: '>= 8'}
 
-  micromatch@4.0.7:
-    resolution: {integrity: sha512-LPP/3KorzCwBxfeUuZmaR6bG2kdeHSbe0P2tY3FLRU4vYrjYz5hI4QZwV0njUx3jeuKe67YukQ1LSPZBKDqO/Q==}
+  micromatch@4.0.8:
+    resolution: {integrity: sha512-PXwfBhYu0hBCPw8Dn0E+WDYb7af3dSLVWKi3HGv84IdF4TyFoC0ysxFd0Goxw7nSv4T/PzEJQxsYsEiFCKo2BA==}
     engines: {node: '>=8.6'}
 
   minimatch@3.1.2:
@@ -3820,8 +3836,16 @@ packages:
     peerDependencies:
       preact: '>=10'
 
+  preact-render-to-string@5.2.6:
+    resolution: {integrity: sha512-JyhErpYOvBV1hEPwIxc/fHWXPfnEGdRKxc8gFdAZ7XV4tlzyzG847XAyEZqoDnynP88akM4eaHcSOzNcLWFguw==}
+    peerDependencies:
+      preact: '>=10'
+
   preact@10.11.3:
     resolution: {integrity: sha512-eY93IVpod/zG3uMF22Unl8h9KkrcKIRs2EGar8hwLZZDU1lkjph303V9HZBwufh2s736U6VXuhD109LYqPoffg==}
+
+  preact@10.23.2:
+    resolution: {integrity: sha512-kKYfePf9rzKnxOAKDpsWhg/ysrHPqT+yQ7UW4JjdnqjFIeNUnNcEJvhuA8fDenxAGWzUqtd51DfVg7xp/8T9NA==}
 
   prelude-ls@1.2.1:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
@@ -3922,6 +3946,16 @@ packages:
 
   react-remove-scroll-bar@2.3.6:
     resolution: {integrity: sha512-DtSYaao4mBmX+HDo5YWYdBWQwYIQQshUV/dVxFxK+KM26Wjwp1gZ6rv6OC3oujI6Bfu6Xyg3TwK533AQutsn/g==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      '@types/react': ^16.8.0 || ^17.0.0 || ^18.0.0
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+
+  react-remove-scroll@2.5.10:
+    resolution: {integrity: sha512-m3zvBRANPBw3qxVVjEIPEQinkcwlFZ4qyomuWVpNJdv4c6MvHfXV0C3L9Jx5rr3HeBHKNRX+1jreB5QloDIJjA==}
     engines: {node: '>=10'}
     peerDependencies:
       '@types/react': ^16.8.0 || ^17.0.0 || ^18.0.0
@@ -4265,8 +4299,8 @@ packages:
   tsconfig-paths@3.15.0:
     resolution: {integrity: sha512-2Ac2RgzDe/cn48GvOe3M+o82pEFewD3UPbyoUHHdKasHwJKjds4fLXWf/Ux5kATBKN20oaFGu+jbElp1pos0mg==}
 
-  tslib@2.6.3:
-    resolution: {integrity: sha512-xNvxJEOUiWPGhUuUdQgAJPKOOJfGnIyKySOc09XkKsgdUV/3E2zvwZYdejjmRgPCgcym1juLH3226yA7sEFJKQ==}
+  tslib@2.7.0:
+    resolution: {integrity: sha512-gLXCKdN1/j47AiHiOkJN69hJmcbGTHI0ImLmbYLHykhgeN0jVGola9yVjFgzCUklsZQMW55o+dW7IXv3RCXDzA==}
 
   type-check@0.4.0:
     resolution: {integrity: sha512-XleUoc9uwGXqjWwXaUTZAmzMcFZ5858QA2vvx1Ur5xIcixXIP+8LnFDgRplU30us6teqdlskFfu+ae4K79Ooew==}
@@ -4451,7 +4485,7 @@ snapshots:
       '@panva/hkdf': 1.2.1
       '@types/cookie': 0.6.0
       cookie: 0.6.0
-      jose: 5.7.0
+      jose: 5.8.0
       oauth4webapi: 2.12.0
       preact: 10.11.3
       preact-render-to-string: 5.2.3(preact@10.11.3)
@@ -4471,7 +4505,7 @@ snapshots:
   '@dnd-kit/accessibility@3.1.0(react@18.3.1)':
     dependencies:
       react: 18.3.1
-      tslib: 2.6.3
+      tslib: 2.7.0
 
   '@dnd-kit/core@6.1.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
@@ -4479,26 +4513,26 @@ snapshots:
       '@dnd-kit/utilities': 3.2.2(react@18.3.1)
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
-      tslib: 2.6.3
+      tslib: 2.7.0
 
   '@dnd-kit/modifiers@7.0.0(@dnd-kit/core@6.1.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@dnd-kit/core': 6.1.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@dnd-kit/utilities': 3.2.2(react@18.3.1)
       react: 18.3.1
-      tslib: 2.6.3
+      tslib: 2.7.0
 
   '@dnd-kit/sortable@8.0.0(@dnd-kit/core@6.1.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@dnd-kit/core': 6.1.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@dnd-kit/utilities': 3.2.2(react@18.3.1)
       react: 18.3.1
-      tslib: 2.6.3
+      tslib: 2.7.0
 
   '@dnd-kit/utilities@3.2.2(react@18.3.1)':
     dependencies:
       react: 18.3.1
-      tslib: 2.6.3
+      tslib: 2.7.0
 
   '@drizzle-team/brocli@0.10.1': {}
 
@@ -4690,26 +4724,26 @@ snapshots:
   '@formatjs/ecma402-abstract@2.0.0':
     dependencies:
       '@formatjs/intl-localematcher': 0.5.4
-      tslib: 2.6.3
+      tslib: 2.7.0
 
   '@formatjs/fast-memoize@2.2.0':
     dependencies:
-      tslib: 2.6.3
+      tslib: 2.7.0
 
   '@formatjs/icu-messageformat-parser@2.7.8':
     dependencies:
       '@formatjs/ecma402-abstract': 2.0.0
       '@formatjs/icu-skeleton-parser': 1.8.2
-      tslib: 2.6.3
+      tslib: 2.7.0
 
   '@formatjs/icu-skeleton-parser@1.8.2':
     dependencies:
       '@formatjs/ecma402-abstract': 2.0.0
-      tslib: 2.6.3
+      tslib: 2.7.0
 
   '@formatjs/intl-localematcher@0.5.4':
     dependencies:
-      tslib: 2.6.3
+      tslib: 2.7.0
 
   '@hookform/resolvers@3.9.0(react-hook-form@7.53.0(react@18.3.1))':
     dependencies:
@@ -4729,20 +4763,20 @@ snapshots:
 
   '@internationalized/date@3.5.5':
     dependencies:
-      '@swc/helpers': 0.5.5
+      '@swc/helpers': 0.5.12
 
   '@internationalized/message@3.1.4':
     dependencies:
-      '@swc/helpers': 0.5.5
+      '@swc/helpers': 0.5.12
       intl-messageformat: 10.5.14
 
   '@internationalized/number@3.5.3':
     dependencies:
-      '@swc/helpers': 0.5.5
+      '@swc/helpers': 0.5.12
 
   '@internationalized/string@3.2.3':
     dependencies:
-      '@swc/helpers': 0.5.5
+      '@swc/helpers': 0.5.12
 
   '@isaacs/cliui@8.0.2':
     dependencies:
@@ -4818,15 +4852,15 @@ snapshots:
   '@next/swc-win32-x64-msvc@14.2.6':
     optional: true
 
-  '@nextui-org/accordion@2.0.38(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@nextui-org/accordion@2.0.38(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
-      '@nextui-org/aria-utils': 2.0.24(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/aria-utils': 2.0.24(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nextui-org/divider': 2.0.31(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@nextui-org/framer-utils': 2.0.24(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/framer-utils': 2.0.24(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nextui-org/react-utils': 2.0.16(react@18.3.1)
       '@nextui-org/shared-icons': 2.0.9(react@18.3.1)
       '@nextui-org/shared-utils': 2.0.7
-      '@nextui-org/system': 2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/system': 2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nextui-org/theme': 2.2.9(tailwindcss@3.4.10)
       '@nextui-org/use-aria-accordion': 2.0.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@react-aria/button': 3.9.5(react@18.3.1)
@@ -4836,15 +4870,15 @@ snapshots:
       '@react-stately/tree': 3.8.1(react@18.3.1)
       '@react-types/accordion': 3.0.0-alpha.21(react@18.3.1)
       '@react-types/shared': 3.23.1(react@18.3.1)
-      framer-motion: 11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      framer-motion: 11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
-  '@nextui-org/aria-utils@2.0.24(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@nextui-org/aria-utils@2.0.24(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@nextui-org/react-rsc-utils': 2.0.13
       '@nextui-org/shared-utils': 2.0.7
-      '@nextui-org/system': 2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/system': 2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@react-aria/utils': 3.24.1(react@18.3.1)
       '@react-stately/collections': 3.10.7(react@18.3.1)
       '@react-stately/overlays': 3.6.7(react@18.3.1)
@@ -4856,19 +4890,19 @@ snapshots:
       - '@nextui-org/theme'
       - framer-motion
 
-  '@nextui-org/autocomplete@2.1.5(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(@types/react@18.3.4)(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@nextui-org/autocomplete@2.1.5(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(@types/react@18.3.4)(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
-      '@nextui-org/aria-utils': 2.0.24(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@nextui-org/button': 2.0.37(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@nextui-org/input': 2.2.4(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(@types/react@18.3.4)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@nextui-org/listbox': 2.1.25(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@nextui-org/popover': 2.1.27(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(@types/react@18.3.4)(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/aria-utils': 2.0.24(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/button': 2.0.37(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/input': 2.2.4(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(@types/react@18.3.4)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/listbox': 2.1.25(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/popover': 2.1.27(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(@types/react@18.3.4)(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nextui-org/react-utils': 2.0.16(react@18.3.1)
-      '@nextui-org/scroll-shadow': 2.1.19(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/scroll-shadow': 2.1.19(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nextui-org/shared-icons': 2.0.9(react@18.3.1)
       '@nextui-org/shared-utils': 2.0.7
       '@nextui-org/spinner': 2.0.33(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@nextui-org/system': 2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/system': 2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nextui-org/theme': 2.2.9(tailwindcss@3.4.10)
       '@nextui-org/use-aria-button': 2.0.10(react@18.3.1)
       '@nextui-org/use-safe-layout-effect': 2.0.6(react@18.3.1)
@@ -4881,17 +4915,17 @@ snapshots:
       '@react-stately/combobox': 3.8.4(react@18.3.1)
       '@react-types/combobox': 3.11.1(react@18.3.1)
       '@react-types/shared': 3.23.1(react@18.3.1)
-      framer-motion: 11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      framer-motion: 11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
     transitivePeerDependencies:
       - '@types/react'
 
-  '@nextui-org/avatar@2.0.32(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@nextui-org/avatar@2.0.32(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@nextui-org/react-utils': 2.0.16(react@18.3.1)
       '@nextui-org/shared-utils': 2.0.7
-      '@nextui-org/system': 2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/system': 2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nextui-org/theme': 2.2.9(tailwindcss@3.4.10)
       '@nextui-org/use-image': 2.0.6(react@18.3.1)
       '@react-aria/focus': 3.17.1(react@18.3.1)
@@ -4900,21 +4934,21 @@ snapshots:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
-  '@nextui-org/badge@2.0.31(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@nextui-org/badge@2.0.31(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@nextui-org/react-utils': 2.0.16(react@18.3.1)
       '@nextui-org/shared-utils': 2.0.7
-      '@nextui-org/system': 2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/system': 2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nextui-org/theme': 2.2.9(tailwindcss@3.4.10)
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
-  '@nextui-org/breadcrumbs@2.0.12(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@nextui-org/breadcrumbs@2.0.12(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@nextui-org/react-utils': 2.0.16(react@18.3.1)
       '@nextui-org/shared-icons': 2.0.9(react@18.3.1)
       '@nextui-org/shared-utils': 2.0.7
-      '@nextui-org/system': 2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/system': 2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nextui-org/theme': 2.2.9(tailwindcss@3.4.10)
       '@react-aria/breadcrumbs': 3.5.13(react@18.3.1)
       '@react-aria/focus': 3.17.1(react@18.3.1)
@@ -4924,13 +4958,13 @@ snapshots:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
-  '@nextui-org/button@2.0.37(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@nextui-org/button@2.0.37(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@nextui-org/react-utils': 2.0.16(react@18.3.1)
-      '@nextui-org/ripple': 2.0.32(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/ripple': 2.0.32(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nextui-org/shared-utils': 2.0.7
       '@nextui-org/spinner': 2.0.33(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@nextui-org/system': 2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/system': 2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nextui-org/theme': 2.2.9(tailwindcss@3.4.10)
       '@nextui-org/use-aria-button': 2.0.10(react@18.3.1)
       '@react-aria/button': 3.9.5(react@18.3.1)
@@ -4939,19 +4973,19 @@ snapshots:
       '@react-aria/utils': 3.24.1(react@18.3.1)
       '@react-types/button': 3.9.4(react@18.3.1)
       '@react-types/shared': 3.23.1(react@18.3.1)
-      framer-motion: 11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      framer-motion: 11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
-  '@nextui-org/calendar@2.0.11(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@nextui-org/calendar@2.0.11(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@internationalized/date': 3.5.5
-      '@nextui-org/button': 2.0.37(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@nextui-org/framer-utils': 2.0.24(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/button': 2.0.37(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/framer-utils': 2.0.24(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nextui-org/react-utils': 2.0.16(react@18.3.1)
       '@nextui-org/shared-icons': 2.0.9(react@18.3.1)
       '@nextui-org/shared-utils': 2.0.7
-      '@nextui-org/system': 2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/system': 2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nextui-org/theme': 2.2.9(tailwindcss@3.4.10)
       '@nextui-org/use-aria-button': 2.0.10(react@18.3.1)
       '@react-aria/calendar': 3.5.8(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -4973,12 +5007,12 @@ snapshots:
     transitivePeerDependencies:
       - framer-motion
 
-  '@nextui-org/card@2.0.33(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@nextui-org/card@2.0.33(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@nextui-org/react-utils': 2.0.16(react@18.3.1)
-      '@nextui-org/ripple': 2.0.32(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/ripple': 2.0.32(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nextui-org/shared-utils': 2.0.7
-      '@nextui-org/system': 2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/system': 2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nextui-org/theme': 2.2.9(tailwindcss@3.4.10)
       '@nextui-org/use-aria-button': 2.0.10(react@18.3.1)
       '@react-aria/button': 3.9.5(react@18.3.1)
@@ -4986,15 +5020,15 @@ snapshots:
       '@react-aria/interactions': 3.21.3(react@18.3.1)
       '@react-aria/utils': 3.24.1(react@18.3.1)
       '@react-types/shared': 3.23.1(react@18.3.1)
-      framer-motion: 11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      framer-motion: 11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
-  '@nextui-org/checkbox@2.1.4(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@nextui-org/checkbox@2.1.4(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@nextui-org/react-utils': 2.0.16(react@18.3.1)
       '@nextui-org/shared-utils': 2.0.7
-      '@nextui-org/system': 2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/system': 2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nextui-org/theme': 2.2.9(tailwindcss@3.4.10)
       '@nextui-org/use-callback-ref': 2.0.6(react@18.3.1)
       '@nextui-org/use-safe-layout-effect': 2.0.6(react@18.3.1)
@@ -5010,12 +5044,12 @@ snapshots:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
-  '@nextui-org/chip@2.0.32(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@nextui-org/chip@2.0.32(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@nextui-org/react-utils': 2.0.16(react@18.3.1)
       '@nextui-org/shared-icons': 2.0.9(react@18.3.1)
       '@nextui-org/shared-utils': 2.0.7
-      '@nextui-org/system': 2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/system': 2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nextui-org/theme': 2.2.9(tailwindcss@3.4.10)
       '@react-aria/focus': 3.17.1(react@18.3.1)
       '@react-aria/interactions': 3.21.3(react@18.3.1)
@@ -5033,12 +5067,12 @@ snapshots:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
-  '@nextui-org/date-input@2.1.3(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@nextui-org/date-input@2.1.3(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@internationalized/date': 3.5.5
       '@nextui-org/react-utils': 2.0.16(react@18.3.1)
       '@nextui-org/shared-utils': 2.0.7
-      '@nextui-org/system': 2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/system': 2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nextui-org/theme': 2.2.9(tailwindcss@3.4.10)
       '@react-aria/datepicker': 3.10.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@react-aria/i18n': 3.11.1(react@18.3.1)
@@ -5049,18 +5083,18 @@ snapshots:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
-  '@nextui-org/date-picker@2.1.6(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(@types/react@18.3.4)(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@nextui-org/date-picker@2.1.6(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(@types/react@18.3.4)(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@internationalized/date': 3.5.5
-      '@nextui-org/aria-utils': 2.0.24(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@nextui-org/button': 2.0.37(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@nextui-org/calendar': 2.0.11(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@nextui-org/date-input': 2.1.3(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@nextui-org/popover': 2.1.27(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(@types/react@18.3.4)(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/aria-utils': 2.0.24(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/button': 2.0.37(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/calendar': 2.0.11(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/date-input': 2.1.3(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/popover': 2.1.27(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(@types/react@18.3.4)(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nextui-org/react-utils': 2.0.16(react@18.3.1)
       '@nextui-org/shared-icons': 2.0.9(react@18.3.1)
       '@nextui-org/shared-utils': 2.0.7
-      '@nextui-org/system': 2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/system': 2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nextui-org/theme': 2.2.9(tailwindcss@3.4.10)
       '@react-aria/datepicker': 3.10.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@react-aria/i18n': 3.11.1(react@18.3.1)
@@ -5086,53 +5120,53 @@ snapshots:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
-  '@nextui-org/dropdown@2.1.29(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(@types/react@18.3.4)(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@nextui-org/dropdown@2.1.29(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(@types/react@18.3.4)(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
-      '@nextui-org/aria-utils': 2.0.24(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@nextui-org/menu': 2.0.28(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@nextui-org/popover': 2.1.27(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(@types/react@18.3.4)(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/aria-utils': 2.0.24(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/menu': 2.0.28(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/popover': 2.1.27(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(@types/react@18.3.4)(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nextui-org/react-utils': 2.0.16(react@18.3.1)
       '@nextui-org/shared-utils': 2.0.7
-      '@nextui-org/system': 2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/system': 2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nextui-org/theme': 2.2.9(tailwindcss@3.4.10)
       '@react-aria/focus': 3.17.1(react@18.3.1)
       '@react-aria/menu': 3.14.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@react-aria/utils': 3.24.1(react@18.3.1)
       '@react-stately/menu': 3.7.1(react@18.3.1)
       '@react-types/menu': 3.9.9(react@18.3.1)
-      framer-motion: 11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      framer-motion: 11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
     transitivePeerDependencies:
       - '@types/react'
 
-  '@nextui-org/framer-utils@2.0.24(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@nextui-org/framer-utils@2.0.24(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@nextui-org/shared-utils': 2.0.7
-      '@nextui-org/system': 2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/system': 2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nextui-org/use-measure': 2.0.2(react@18.3.1)
-      framer-motion: 11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      framer-motion: 11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
     transitivePeerDependencies:
       - '@nextui-org/theme'
 
-  '@nextui-org/image@2.0.31(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@nextui-org/image@2.0.31(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@nextui-org/react-utils': 2.0.16(react@18.3.1)
       '@nextui-org/shared-utils': 2.0.7
-      '@nextui-org/system': 2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/system': 2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nextui-org/theme': 2.2.9(tailwindcss@3.4.10)
       '@nextui-org/use-image': 2.0.6(react@18.3.1)
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
-  '@nextui-org/input@2.2.4(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(@types/react@18.3.4)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@nextui-org/input@2.2.4(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(@types/react@18.3.4)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@nextui-org/react-utils': 2.0.16(react@18.3.1)
       '@nextui-org/shared-icons': 2.0.9(react@18.3.1)
       '@nextui-org/shared-utils': 2.0.7
-      '@nextui-org/system': 2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/system': 2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nextui-org/theme': 2.2.9(tailwindcss@3.4.10)
       '@nextui-org/use-safe-layout-effect': 2.0.6(react@18.3.1)
       '@react-aria/focus': 3.17.1(react@18.3.1)
@@ -5158,12 +5192,12 @@ snapshots:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
-  '@nextui-org/link@2.0.34(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@nextui-org/link@2.0.34(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@nextui-org/react-utils': 2.0.16(react@18.3.1)
       '@nextui-org/shared-icons': 2.0.9(react@18.3.1)
       '@nextui-org/shared-utils': 2.0.7
-      '@nextui-org/system': 2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/system': 2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nextui-org/theme': 2.2.9(tailwindcss@3.4.10)
       '@nextui-org/use-aria-link': 2.0.19(react@18.3.1)
       '@react-aria/focus': 3.17.1(react@18.3.1)
@@ -5173,13 +5207,13 @@ snapshots:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
-  '@nextui-org/listbox@2.1.25(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@nextui-org/listbox@2.1.25(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
-      '@nextui-org/aria-utils': 2.0.24(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/aria-utils': 2.0.24(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nextui-org/divider': 2.0.31(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nextui-org/react-utils': 2.0.16(react@18.3.1)
       '@nextui-org/shared-utils': 2.0.7
-      '@nextui-org/system': 2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/system': 2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nextui-org/theme': 2.2.9(tailwindcss@3.4.10)
       '@nextui-org/use-is-mobile': 2.0.9(react@18.3.1)
       '@react-aria/focus': 3.17.1(react@18.3.1)
@@ -5194,13 +5228,13 @@ snapshots:
     transitivePeerDependencies:
       - framer-motion
 
-  '@nextui-org/menu@2.0.28(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@nextui-org/menu@2.0.28(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
-      '@nextui-org/aria-utils': 2.0.24(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/aria-utils': 2.0.24(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nextui-org/divider': 2.0.31(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nextui-org/react-utils': 2.0.16(react@18.3.1)
       '@nextui-org/shared-utils': 2.0.7
-      '@nextui-org/system': 2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/system': 2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nextui-org/theme': 2.2.9(tailwindcss@3.4.10)
       '@nextui-org/use-aria-menu': 2.0.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nextui-org/use-is-mobile': 2.0.9(react@18.3.1)
@@ -5217,13 +5251,13 @@ snapshots:
     transitivePeerDependencies:
       - framer-motion
 
-  '@nextui-org/modal@2.0.39(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@nextui-org/modal@2.0.39(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
-      '@nextui-org/framer-utils': 2.0.24(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/framer-utils': 2.0.24(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nextui-org/react-utils': 2.0.16(react@18.3.1)
       '@nextui-org/shared-icons': 2.0.9(react@18.3.1)
       '@nextui-org/shared-utils': 2.0.7
-      '@nextui-org/system': 2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/system': 2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nextui-org/theme': 2.2.9(tailwindcss@3.4.10)
       '@nextui-org/use-aria-button': 2.0.10(react@18.3.1)
       '@nextui-org/use-aria-modal-overlay': 2.0.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -5235,16 +5269,16 @@ snapshots:
       '@react-aria/utils': 3.24.1(react@18.3.1)
       '@react-stately/overlays': 3.6.7(react@18.3.1)
       '@react-types/overlays': 3.8.7(react@18.3.1)
-      framer-motion: 11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      framer-motion: 11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
-  '@nextui-org/navbar@2.0.36(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(@types/react@18.3.4)(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@nextui-org/navbar@2.0.36(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(@types/react@18.3.4)(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
-      '@nextui-org/framer-utils': 2.0.24(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/framer-utils': 2.0.24(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nextui-org/react-utils': 2.0.16(react@18.3.1)
       '@nextui-org/shared-utils': 2.0.7
-      '@nextui-org/system': 2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/system': 2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nextui-org/theme': 2.2.9(tailwindcss@3.4.10)
       '@nextui-org/use-aria-toggle-button': 2.0.10(react@18.3.1)
       '@nextui-org/use-scroll-position': 2.0.8(react@18.3.1)
@@ -5254,19 +5288,19 @@ snapshots:
       '@react-aria/utils': 3.24.1(react@18.3.1)
       '@react-stately/toggle': 3.7.4(react@18.3.1)
       '@react-stately/utils': 3.10.1(react@18.3.1)
-      framer-motion: 11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      framer-motion: 11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
-      react-remove-scroll: 2.5.7(@types/react@18.3.4)(react@18.3.1)
+      react-remove-scroll: 2.5.10(@types/react@18.3.4)(react@18.3.1)
     transitivePeerDependencies:
       - '@types/react'
 
-  '@nextui-org/pagination@2.0.35(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@nextui-org/pagination@2.0.35(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@nextui-org/react-utils': 2.0.16(react@18.3.1)
       '@nextui-org/shared-icons': 2.0.9(react@18.3.1)
       '@nextui-org/shared-utils': 2.0.7
-      '@nextui-org/system': 2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/system': 2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nextui-org/theme': 2.2.9(tailwindcss@3.4.10)
       '@nextui-org/use-pagination': 2.0.9(react@18.3.1)
       '@react-aria/focus': 3.17.1(react@18.3.1)
@@ -5277,14 +5311,14 @@ snapshots:
       react-dom: 18.3.1(react@18.3.1)
       scroll-into-view-if-needed: 3.0.10
 
-  '@nextui-org/popover@2.1.27(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(@types/react@18.3.4)(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@nextui-org/popover@2.1.27(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(@types/react@18.3.4)(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
-      '@nextui-org/aria-utils': 2.0.24(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@nextui-org/button': 2.0.37(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@nextui-org/framer-utils': 2.0.24(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/aria-utils': 2.0.24(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/button': 2.0.37(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/framer-utils': 2.0.24(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nextui-org/react-utils': 2.0.16(react@18.3.1)
       '@nextui-org/shared-utils': 2.0.7
-      '@nextui-org/system': 2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/system': 2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nextui-org/theme': 2.2.9(tailwindcss@3.4.10)
       '@nextui-org/use-aria-button': 2.0.10(react@18.3.1)
       '@nextui-org/use-safe-layout-effect': 2.0.6(react@18.3.1)
@@ -5296,18 +5330,18 @@ snapshots:
       '@react-stately/overlays': 3.6.7(react@18.3.1)
       '@react-types/button': 3.9.4(react@18.3.1)
       '@react-types/overlays': 3.8.7(react@18.3.1)
-      framer-motion: 11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      framer-motion: 11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
-      react-remove-scroll: 2.5.7(@types/react@18.3.4)(react@18.3.1)
+      react-remove-scroll: 2.5.10(@types/react@18.3.4)(react@18.3.1)
     transitivePeerDependencies:
       - '@types/react'
 
-  '@nextui-org/progress@2.0.33(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@nextui-org/progress@2.0.33(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@nextui-org/react-utils': 2.0.16(react@18.3.1)
       '@nextui-org/shared-utils': 2.0.7
-      '@nextui-org/system': 2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/system': 2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nextui-org/theme': 2.2.9(tailwindcss@3.4.10)
       '@nextui-org/use-is-mounted': 2.0.6(react@18.3.1)
       '@react-aria/i18n': 3.11.1(react@18.3.1)
@@ -5317,11 +5351,11 @@ snapshots:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
-  '@nextui-org/radio@2.1.4(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@nextui-org/radio@2.1.4(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@nextui-org/react-utils': 2.0.16(react@18.3.1)
       '@nextui-org/shared-utils': 2.0.7
-      '@nextui-org/system': 2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/system': 2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nextui-org/theme': 2.2.9(tailwindcss@3.4.10)
       '@react-aria/focus': 3.17.1(react@18.3.1)
       '@react-aria/interactions': 3.21.3(react@18.3.1)
@@ -5342,90 +5376,90 @@ snapshots:
       '@nextui-org/shared-utils': 2.0.7
       react: 18.3.1
 
-  '@nextui-org/react@2.4.6(@types/react@18.3.4)(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.10)':
+  '@nextui-org/react@2.4.6(@types/react@18.3.4)(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.10)':
     dependencies:
-      '@nextui-org/accordion': 2.0.38(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@nextui-org/autocomplete': 2.1.5(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(@types/react@18.3.4)(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@nextui-org/avatar': 2.0.32(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@nextui-org/badge': 2.0.31(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@nextui-org/breadcrumbs': 2.0.12(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@nextui-org/button': 2.0.37(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@nextui-org/calendar': 2.0.11(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@nextui-org/card': 2.0.33(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@nextui-org/checkbox': 2.1.4(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@nextui-org/chip': 2.0.32(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/accordion': 2.0.38(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/autocomplete': 2.1.5(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(@types/react@18.3.4)(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/avatar': 2.0.32(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/badge': 2.0.31(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/breadcrumbs': 2.0.12(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/button': 2.0.37(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/calendar': 2.0.11(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/card': 2.0.33(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/checkbox': 2.1.4(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/chip': 2.0.32(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nextui-org/code': 2.0.32(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@nextui-org/date-input': 2.1.3(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@nextui-org/date-picker': 2.1.6(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(@types/react@18.3.4)(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/date-input': 2.1.3(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/date-picker': 2.1.6(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(@types/react@18.3.4)(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nextui-org/divider': 2.0.31(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@nextui-org/dropdown': 2.1.29(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(@types/react@18.3.4)(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@nextui-org/framer-utils': 2.0.24(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@nextui-org/image': 2.0.31(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@nextui-org/input': 2.2.4(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(@types/react@18.3.4)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/dropdown': 2.1.29(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(@types/react@18.3.4)(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/framer-utils': 2.0.24(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/image': 2.0.31(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/input': 2.2.4(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(@types/react@18.3.4)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nextui-org/kbd': 2.0.33(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@nextui-org/link': 2.0.34(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@nextui-org/listbox': 2.1.25(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@nextui-org/menu': 2.0.28(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@nextui-org/modal': 2.0.39(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@nextui-org/navbar': 2.0.36(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(@types/react@18.3.4)(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@nextui-org/pagination': 2.0.35(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@nextui-org/popover': 2.1.27(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(@types/react@18.3.4)(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@nextui-org/progress': 2.0.33(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@nextui-org/radio': 2.1.4(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@nextui-org/ripple': 2.0.32(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@nextui-org/scroll-shadow': 2.1.19(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@nextui-org/select': 2.2.5(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(@types/react@18.3.4)(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@nextui-org/skeleton': 2.0.31(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@nextui-org/slider': 2.2.15(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@nextui-org/snippet': 2.0.41(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/link': 2.0.34(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/listbox': 2.1.25(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/menu': 2.0.28(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/modal': 2.0.39(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/navbar': 2.0.36(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(@types/react@18.3.4)(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/pagination': 2.0.35(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/popover': 2.1.27(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(@types/react@18.3.4)(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/progress': 2.0.33(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/radio': 2.1.4(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/ripple': 2.0.32(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/scroll-shadow': 2.1.19(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/select': 2.2.5(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(@types/react@18.3.4)(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/skeleton': 2.0.31(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/slider': 2.2.15(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/snippet': 2.0.41(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nextui-org/spacer': 2.0.32(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nextui-org/spinner': 2.0.33(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@nextui-org/switch': 2.0.33(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@nextui-org/system': 2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@nextui-org/table': 2.0.39(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@nextui-org/tabs': 2.0.35(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/switch': 2.0.33(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/system': 2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/table': 2.0.39(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/tabs': 2.0.35(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nextui-org/theme': 2.2.9(tailwindcss@3.4.10)
-      '@nextui-org/tooltip': 2.0.39(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@nextui-org/user': 2.0.33(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/tooltip': 2.0.39(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/user': 2.0.33(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@react-aria/visually-hidden': 3.8.12(react@18.3.1)
-      framer-motion: 11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      framer-motion: 11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
     transitivePeerDependencies:
       - '@types/react'
       - tailwindcss
 
-  '@nextui-org/ripple@2.0.32(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@nextui-org/ripple@2.0.32(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@nextui-org/react-utils': 2.0.16(react@18.3.1)
       '@nextui-org/shared-utils': 2.0.7
-      '@nextui-org/system': 2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/system': 2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nextui-org/theme': 2.2.9(tailwindcss@3.4.10)
-      framer-motion: 11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      framer-motion: 11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
-  '@nextui-org/scroll-shadow@2.1.19(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@nextui-org/scroll-shadow@2.1.19(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@nextui-org/react-utils': 2.0.16(react@18.3.1)
       '@nextui-org/shared-utils': 2.0.7
-      '@nextui-org/system': 2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/system': 2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nextui-org/theme': 2.2.9(tailwindcss@3.4.10)
       '@nextui-org/use-data-scroll-overflow': 2.1.6(react@18.3.1)
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
-  '@nextui-org/select@2.2.5(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(@types/react@18.3.4)(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@nextui-org/select@2.2.5(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(@types/react@18.3.4)(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
-      '@nextui-org/aria-utils': 2.0.24(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@nextui-org/listbox': 2.1.25(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@nextui-org/popover': 2.1.27(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(@types/react@18.3.4)(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/aria-utils': 2.0.24(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/listbox': 2.1.25(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/popover': 2.1.27(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(@types/react@18.3.4)(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nextui-org/react-utils': 2.0.16(react@18.3.1)
-      '@nextui-org/scroll-shadow': 2.1.19(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/scroll-shadow': 2.1.19(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nextui-org/shared-icons': 2.0.9(react@18.3.1)
       '@nextui-org/shared-utils': 2.0.7
       '@nextui-org/spinner': 2.0.33(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@nextui-org/system': 2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/system': 2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nextui-org/theme': 2.2.9(tailwindcss@3.4.10)
       '@nextui-org/use-aria-button': 2.0.10(react@18.3.1)
       '@nextui-org/use-aria-multiselect': 2.2.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -5436,7 +5470,7 @@ snapshots:
       '@react-aria/utils': 3.24.1(react@18.3.1)
       '@react-aria/visually-hidden': 3.8.12(react@18.3.1)
       '@react-types/shared': 3.23.1(react@18.3.1)
-      framer-motion: 11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      framer-motion: 11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
     transitivePeerDependencies:
@@ -5448,22 +5482,22 @@ snapshots:
 
   '@nextui-org/shared-utils@2.0.7': {}
 
-  '@nextui-org/skeleton@2.0.31(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@nextui-org/skeleton@2.0.31(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@nextui-org/react-utils': 2.0.16(react@18.3.1)
       '@nextui-org/shared-utils': 2.0.7
-      '@nextui-org/system': 2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/system': 2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nextui-org/theme': 2.2.9(tailwindcss@3.4.10)
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
-  '@nextui-org/slider@2.2.15(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@nextui-org/slider@2.2.15(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@nextui-org/react-utils': 2.0.16(react@18.3.1)
       '@nextui-org/shared-utils': 2.0.7
-      '@nextui-org/system': 2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/system': 2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nextui-org/theme': 2.2.9(tailwindcss@3.4.10)
-      '@nextui-org/tooltip': 2.0.39(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/tooltip': 2.0.39(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@react-aria/focus': 3.17.1(react@18.3.1)
       '@react-aria/i18n': 3.11.1(react@18.3.1)
       '@react-aria/interactions': 3.21.3(react@18.3.1)
@@ -5476,19 +5510,19 @@ snapshots:
     transitivePeerDependencies:
       - framer-motion
 
-  '@nextui-org/snippet@2.0.41(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@nextui-org/snippet@2.0.41(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
-      '@nextui-org/button': 2.0.37(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/button': 2.0.37(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nextui-org/react-utils': 2.0.16(react@18.3.1)
       '@nextui-org/shared-icons': 2.0.9(react@18.3.1)
       '@nextui-org/shared-utils': 2.0.7
-      '@nextui-org/system': 2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/system': 2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nextui-org/theme': 2.2.9(tailwindcss@3.4.10)
-      '@nextui-org/tooltip': 2.0.39(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/tooltip': 2.0.39(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nextui-org/use-clipboard': 2.0.6(react@18.3.1)
       '@react-aria/focus': 3.17.1(react@18.3.1)
       '@react-aria/utils': 3.24.1(react@18.3.1)
-      framer-motion: 11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      framer-motion: 11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
@@ -5510,11 +5544,11 @@ snapshots:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
-  '@nextui-org/switch@2.0.33(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@nextui-org/switch@2.0.33(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@nextui-org/react-utils': 2.0.16(react@18.3.1)
       '@nextui-org/shared-utils': 2.0.7
-      '@nextui-org/system': 2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/system': 2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nextui-org/theme': 2.2.9(tailwindcss@3.4.10)
       '@nextui-org/use-safe-layout-effect': 2.0.6(react@18.3.1)
       '@react-aria/focus': 3.17.1(react@18.3.1)
@@ -5534,7 +5568,7 @@ snapshots:
       clsx: 1.2.1
       react: 18.3.1
 
-  '@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@internationalized/date': 3.5.5
       '@nextui-org/react-utils': 2.0.16(react@18.3.1)
@@ -5543,20 +5577,20 @@ snapshots:
       '@react-aria/overlays': 3.22.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@react-aria/utils': 3.24.1(react@18.3.1)
       '@react-stately/utils': 3.10.1(react@18.3.1)
-      framer-motion: 11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      framer-motion: 11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
     transitivePeerDependencies:
       - '@nextui-org/theme'
 
-  '@nextui-org/table@2.0.39(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@nextui-org/table@2.0.39(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
-      '@nextui-org/checkbox': 2.1.4(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/checkbox': 2.1.4(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nextui-org/react-utils': 2.0.16(react@18.3.1)
       '@nextui-org/shared-icons': 2.0.9(react@18.3.1)
       '@nextui-org/shared-utils': 2.0.7
       '@nextui-org/spacer': 2.0.32(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@nextui-org/system': 2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/system': 2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nextui-org/theme': 2.2.9(tailwindcss@3.4.10)
       '@react-aria/focus': 3.17.1(react@18.3.1)
       '@react-aria/interactions': 3.21.3(react@18.3.1)
@@ -5570,13 +5604,13 @@ snapshots:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
-  '@nextui-org/tabs@2.0.35(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@nextui-org/tabs@2.0.35(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
-      '@nextui-org/aria-utils': 2.0.24(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@nextui-org/framer-utils': 2.0.24(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/aria-utils': 2.0.24(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/framer-utils': 2.0.24(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nextui-org/react-utils': 2.0.16(react@18.3.1)
       '@nextui-org/shared-utils': 2.0.7
-      '@nextui-org/system': 2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/system': 2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nextui-org/theme': 2.2.9(tailwindcss@3.4.10)
       '@nextui-org/use-is-mounted': 2.0.6(react@18.3.1)
       '@nextui-org/use-update-effect': 2.0.6(react@18.3.1)
@@ -5587,7 +5621,7 @@ snapshots:
       '@react-stately/tabs': 3.6.6(react@18.3.1)
       '@react-types/shared': 3.23.1(react@18.3.1)
       '@react-types/tabs': 3.3.7(react@18.3.1)
-      framer-motion: 11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      framer-motion: 11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
       scroll-into-view-if-needed: 3.0.10
@@ -5608,13 +5642,13 @@ snapshots:
       tailwind-variants: 0.1.20(tailwindcss@3.4.10)
       tailwindcss: 3.4.10
 
-  '@nextui-org/tooltip@2.0.39(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@nextui-org/tooltip@2.0.39(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
-      '@nextui-org/aria-utils': 2.0.24(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@nextui-org/framer-utils': 2.0.24(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/aria-utils': 2.0.24(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/framer-utils': 2.0.24(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nextui-org/react-utils': 2.0.16(react@18.3.1)
       '@nextui-org/shared-utils': 2.0.7
-      '@nextui-org/system': 2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/system': 2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nextui-org/theme': 2.2.9(tailwindcss@3.4.10)
       '@nextui-org/use-safe-layout-effect': 2.0.6(react@18.3.1)
       '@react-aria/interactions': 3.21.3(react@18.3.1)
@@ -5624,7 +5658,7 @@ snapshots:
       '@react-stately/tooltip': 3.4.9(react@18.3.1)
       '@react-types/overlays': 3.8.7(react@18.3.1)
       '@react-types/tooltip': 3.4.9(react@18.3.1)
-      framer-motion: 11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      framer-motion: 11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
@@ -5767,12 +5801,12 @@ snapshots:
     dependencies:
       react: 18.3.1
 
-  '@nextui-org/user@2.0.33(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@nextui-org/user@2.0.33(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
-      '@nextui-org/avatar': 2.0.32(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/avatar': 2.0.32(@nextui-org/system@2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nextui-org/react-utils': 2.0.16(react@18.3.1)
       '@nextui-org/shared-utils': 2.0.7
-      '@nextui-org/system': 2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@nextui-org/system': 2.2.5(@nextui-org/theme@2.2.9(tailwindcss@3.4.10))(framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@nextui-org/theme': 2.2.9(tailwindcss@3.4.10)
       '@react-aria/focus': 3.17.1(react@18.3.1)
       '@react-aria/utils': 3.24.1(react@18.3.1)
@@ -5790,6 +5824,8 @@ snapshots:
     dependencies:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.17.1
+
+  '@nolyfill/is-core-module@1.0.39': {}
 
   '@panva/hkdf@1.2.1': {}
 
@@ -6342,7 +6378,7 @@ snapshots:
       '@react-aria/utils': 3.24.1(react@18.3.1)
       '@react-types/breadcrumbs': 3.7.5(react@18.3.1)
       '@react-types/shared': 3.23.1(react@18.3.1)
-      '@swc/helpers': 0.5.5
+      '@swc/helpers': 0.5.12
       react: 18.3.1
 
   '@react-aria/button@3.9.5(react@18.3.1)':
@@ -6351,9 +6387,9 @@ snapshots:
       '@react-aria/interactions': 3.21.3(react@18.3.1)
       '@react-aria/utils': 3.24.1(react@18.3.1)
       '@react-stately/toggle': 3.7.7(react@18.3.1)
-      '@react-types/button': 3.9.6(react@18.3.1)
+      '@react-types/button': 3.9.4(react@18.3.1)
       '@react-types/shared': 3.23.1(react@18.3.1)
-      '@swc/helpers': 0.5.5
+      '@swc/helpers': 0.5.12
       react: 18.3.1
 
   '@react-aria/calendar@3.5.8(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
@@ -6367,7 +6403,7 @@ snapshots:
       '@react-types/button': 3.9.4(react@18.3.1)
       '@react-types/calendar': 3.4.6(react@18.3.1)
       '@react-types/shared': 3.23.1(react@18.3.1)
-      '@swc/helpers': 0.5.5
+      '@swc/helpers': 0.5.12
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
@@ -6383,7 +6419,7 @@ snapshots:
       '@react-stately/toggle': 3.7.4(react@18.3.1)
       '@react-types/checkbox': 3.8.1(react@18.3.1)
       '@react-types/shared': 3.23.1(react@18.3.1)
-      '@swc/helpers': 0.5.5
+      '@swc/helpers': 0.5.12
       react: 18.3.1
 
   '@react-aria/combobox@3.9.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
@@ -6402,7 +6438,7 @@ snapshots:
       '@react-types/button': 3.9.6(react@18.3.1)
       '@react-types/combobox': 3.11.1(react@18.3.1)
       '@react-types/shared': 3.23.1(react@18.3.1)
-      '@swc/helpers': 0.5.5
+      '@swc/helpers': 0.5.12
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
@@ -6425,7 +6461,7 @@ snapshots:
       '@react-types/datepicker': 3.7.4(react@18.3.1)
       '@react-types/dialog': 3.5.12(react@18.3.1)
       '@react-types/shared': 3.23.1(react@18.3.1)
-      '@swc/helpers': 0.5.5
+      '@swc/helpers': 0.5.12
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
@@ -6436,16 +6472,16 @@ snapshots:
       '@react-aria/utils': 3.24.1(react@18.3.1)
       '@react-types/dialog': 3.5.12(react@18.3.1)
       '@react-types/shared': 3.24.1(react@18.3.1)
-      '@swc/helpers': 0.5.5
+      '@swc/helpers': 0.5.12
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
   '@react-aria/focus@3.17.1(react@18.3.1)':
     dependencies:
-      '@react-aria/interactions': 3.22.2(react@18.3.1)
-      '@react-aria/utils': 3.25.2(react@18.3.1)
-      '@react-types/shared': 3.24.1(react@18.3.1)
-      '@swc/helpers': 0.5.5
+      '@react-aria/interactions': 3.21.3(react@18.3.1)
+      '@react-aria/utils': 3.24.1(react@18.3.1)
+      '@react-types/shared': 3.23.1(react@18.3.1)
+      '@swc/helpers': 0.5.12
       clsx: 2.1.1
       react: 18.3.1
 
@@ -6454,7 +6490,7 @@ snapshots:
       '@react-aria/interactions': 3.22.2(react@18.3.1)
       '@react-aria/utils': 3.25.2(react@18.3.1)
       '@react-types/shared': 3.24.1(react@18.3.1)
-      '@swc/helpers': 0.5.5
+      '@swc/helpers': 0.5.12
       clsx: 2.1.1
       react: 18.3.1
 
@@ -6464,7 +6500,7 @@ snapshots:
       '@react-aria/utils': 3.24.1(react@18.3.1)
       '@react-stately/form': 3.0.5(react@18.3.1)
       '@react-types/shared': 3.23.1(react@18.3.1)
-      '@swc/helpers': 0.5.5
+      '@swc/helpers': 0.5.12
       react: 18.3.1
 
   '@react-aria/form@3.0.8(react@18.3.1)':
@@ -6473,7 +6509,7 @@ snapshots:
       '@react-aria/utils': 3.25.2(react@18.3.1)
       '@react-stately/form': 3.0.5(react@18.3.1)
       '@react-types/shared': 3.24.1(react@18.3.1)
-      '@swc/helpers': 0.5.5
+      '@swc/helpers': 0.5.12
       react: 18.3.1
 
   '@react-aria/grid@3.10.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
@@ -6490,7 +6526,7 @@ snapshots:
       '@react-types/checkbox': 3.8.3(react@18.3.1)
       '@react-types/grid': 3.2.8(react@18.3.1)
       '@react-types/shared': 3.24.1(react@18.3.1)
-      '@swc/helpers': 0.5.5
+      '@swc/helpers': 0.5.12
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
@@ -6503,7 +6539,7 @@ snapshots:
       '@react-aria/ssr': 3.9.5(react@18.3.1)
       '@react-aria/utils': 3.24.1(react@18.3.1)
       '@react-types/shared': 3.24.1(react@18.3.1)
-      '@swc/helpers': 0.5.5
+      '@swc/helpers': 0.5.12
       react: 18.3.1
 
   '@react-aria/i18n@3.12.2(react@18.3.1)':
@@ -6515,15 +6551,15 @@ snapshots:
       '@react-aria/ssr': 3.9.5(react@18.3.1)
       '@react-aria/utils': 3.25.2(react@18.3.1)
       '@react-types/shared': 3.24.1(react@18.3.1)
-      '@swc/helpers': 0.5.5
+      '@swc/helpers': 0.5.12
       react: 18.3.1
 
   '@react-aria/interactions@3.21.3(react@18.3.1)':
     dependencies:
       '@react-aria/ssr': 3.9.5(react@18.3.1)
-      '@react-aria/utils': 3.25.2(react@18.3.1)
-      '@react-types/shared': 3.24.1(react@18.3.1)
-      '@swc/helpers': 0.5.5
+      '@react-aria/utils': 3.24.1(react@18.3.1)
+      '@react-types/shared': 3.23.1(react@18.3.1)
+      '@swc/helpers': 0.5.12
       react: 18.3.1
 
   '@react-aria/interactions@3.22.2(react@18.3.1)':
@@ -6531,21 +6567,21 @@ snapshots:
       '@react-aria/ssr': 3.9.5(react@18.3.1)
       '@react-aria/utils': 3.25.2(react@18.3.1)
       '@react-types/shared': 3.24.1(react@18.3.1)
-      '@swc/helpers': 0.5.5
+      '@swc/helpers': 0.5.12
       react: 18.3.1
 
   '@react-aria/label@3.7.11(react@18.3.1)':
     dependencies:
       '@react-aria/utils': 3.25.2(react@18.3.1)
       '@react-types/shared': 3.24.1(react@18.3.1)
-      '@swc/helpers': 0.5.5
+      '@swc/helpers': 0.5.12
       react: 18.3.1
 
   '@react-aria/label@3.7.8(react@18.3.1)':
     dependencies:
       '@react-aria/utils': 3.24.1(react@18.3.1)
       '@react-types/shared': 3.23.1(react@18.3.1)
-      '@swc/helpers': 0.5.5
+      '@swc/helpers': 0.5.12
       react: 18.3.1
 
   '@react-aria/link@3.7.1(react@18.3.1)':
@@ -6555,7 +6591,7 @@ snapshots:
       '@react-aria/utils': 3.24.1(react@18.3.1)
       '@react-types/link': 3.5.5(react@18.3.1)
       '@react-types/shared': 3.24.1(react@18.3.1)
-      '@swc/helpers': 0.5.5
+      '@swc/helpers': 0.5.12
       react: 18.3.1
 
   '@react-aria/link@3.7.4(react@18.3.1)':
@@ -6565,7 +6601,7 @@ snapshots:
       '@react-aria/utils': 3.25.2(react@18.3.1)
       '@react-types/link': 3.5.7(react@18.3.1)
       '@react-types/shared': 3.24.1(react@18.3.1)
-      '@swc/helpers': 0.5.5
+      '@swc/helpers': 0.5.12
       react: 18.3.1
 
   '@react-aria/listbox@3.12.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
@@ -6578,7 +6614,7 @@ snapshots:
       '@react-stately/list': 3.10.5(react@18.3.1)
       '@react-types/listbox': 3.5.1(react@18.3.1)
       '@react-types/shared': 3.23.1(react@18.3.1)
-      '@swc/helpers': 0.5.5
+      '@swc/helpers': 0.5.12
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
@@ -6592,13 +6628,13 @@ snapshots:
       '@react-stately/list': 3.10.8(react@18.3.1)
       '@react-types/listbox': 3.5.1(react@18.3.1)
       '@react-types/shared': 3.24.1(react@18.3.1)
-      '@swc/helpers': 0.5.5
+      '@swc/helpers': 0.5.12
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
   '@react-aria/live-announcer@3.3.4':
     dependencies:
-      '@swc/helpers': 0.5.5
+      '@swc/helpers': 0.5.12
 
   '@react-aria/menu@3.14.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
@@ -6614,7 +6650,7 @@ snapshots:
       '@react-types/button': 3.9.6(react@18.3.1)
       '@react-types/menu': 3.9.9(react@18.3.1)
       '@react-types/shared': 3.23.1(react@18.3.1)
-      '@swc/helpers': 0.5.5
+      '@swc/helpers': 0.5.12
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
@@ -6632,7 +6668,7 @@ snapshots:
       '@react-types/button': 3.9.6(react@18.3.1)
       '@react-types/menu': 3.9.11(react@18.3.1)
       '@react-types/shared': 3.24.1(react@18.3.1)
-      '@swc/helpers': 0.5.5
+      '@swc/helpers': 0.5.12
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
@@ -6648,7 +6684,7 @@ snapshots:
       '@react-types/button': 3.9.6(react@18.3.1)
       '@react-types/overlays': 3.8.7(react@18.3.1)
       '@react-types/shared': 3.24.1(react@18.3.1)
-      '@swc/helpers': 0.5.5
+      '@swc/helpers': 0.5.12
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
@@ -6664,18 +6700,18 @@ snapshots:
       '@react-types/button': 3.9.6(react@18.3.1)
       '@react-types/overlays': 3.8.9(react@18.3.1)
       '@react-types/shared': 3.24.1(react@18.3.1)
-      '@swc/helpers': 0.5.5
+      '@swc/helpers': 0.5.12
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
   '@react-aria/progress@3.4.13(react@18.3.1)':
     dependencies:
-      '@react-aria/i18n': 3.12.2(react@18.3.1)
+      '@react-aria/i18n': 3.11.1(react@18.3.1)
       '@react-aria/label': 3.7.11(react@18.3.1)
-      '@react-aria/utils': 3.25.2(react@18.3.1)
+      '@react-aria/utils': 3.24.1(react@18.3.1)
       '@react-types/progress': 3.5.4(react@18.3.1)
       '@react-types/shared': 3.24.1(react@18.3.1)
-      '@swc/helpers': 0.5.5
+      '@swc/helpers': 0.5.12
       react: 18.3.1
 
   '@react-aria/radio@3.10.4(react@18.3.1)':
@@ -6689,7 +6725,7 @@ snapshots:
       '@react-stately/radio': 3.10.4(react@18.3.1)
       '@react-types/radio': 3.8.1(react@18.3.1)
       '@react-types/shared': 3.23.1(react@18.3.1)
-      '@swc/helpers': 0.5.5
+      '@swc/helpers': 0.5.12
       react: 18.3.1
 
   '@react-aria/selection@3.18.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
@@ -6700,7 +6736,7 @@ snapshots:
       '@react-aria/utils': 3.24.1(react@18.3.1)
       '@react-stately/selection': 3.16.2(react@18.3.1)
       '@react-types/shared': 3.23.1(react@18.3.1)
-      '@swc/helpers': 0.5.5
+      '@swc/helpers': 0.5.12
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
@@ -6712,7 +6748,7 @@ snapshots:
       '@react-aria/utils': 3.25.2(react@18.3.1)
       '@react-stately/selection': 3.16.2(react@18.3.1)
       '@react-types/shared': 3.24.1(react@18.3.1)
-      '@swc/helpers': 0.5.5
+      '@swc/helpers': 0.5.12
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
@@ -6726,7 +6762,7 @@ snapshots:
       '@react-stately/slider': 3.5.4(react@18.3.1)
       '@react-types/shared': 3.24.1(react@18.3.1)
       '@react-types/slider': 3.7.5(react@18.3.1)
-      '@swc/helpers': 0.5.5
+      '@swc/helpers': 0.5.12
       react: 18.3.1
 
   '@react-aria/spinbutton@3.6.8(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
@@ -6736,18 +6772,18 @@ snapshots:
       '@react-aria/utils': 3.25.2(react@18.3.1)
       '@react-types/button': 3.9.6(react@18.3.1)
       '@react-types/shared': 3.24.1(react@18.3.1)
-      '@swc/helpers': 0.5.5
+      '@swc/helpers': 0.5.12
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
   '@react-aria/ssr@3.9.4(react@18.3.1)':
     dependencies:
-      '@swc/helpers': 0.5.5
+      '@swc/helpers': 0.5.12
       react: 18.3.1
 
   '@react-aria/ssr@3.9.5(react@18.3.1)':
     dependencies:
-      '@swc/helpers': 0.5.5
+      '@swc/helpers': 0.5.12
       react: 18.3.1
 
   '@react-aria/switch@3.6.4(react@18.3.1)':
@@ -6755,7 +6791,7 @@ snapshots:
       '@react-aria/toggle': 3.10.7(react@18.3.1)
       '@react-stately/toggle': 3.7.4(react@18.3.1)
       '@react-types/switch': 3.5.5(react@18.3.1)
-      '@swc/helpers': 0.5.5
+      '@swc/helpers': 0.5.12
       react: 18.3.1
 
   '@react-aria/table@3.14.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
@@ -6775,7 +6811,7 @@ snapshots:
       '@react-types/grid': 3.2.6(react@18.3.1)
       '@react-types/shared': 3.24.1(react@18.3.1)
       '@react-types/table': 3.9.5(react@18.3.1)
-      '@swc/helpers': 0.5.5
+      '@swc/helpers': 0.5.12
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
@@ -6788,21 +6824,21 @@ snapshots:
       '@react-stately/tabs': 3.6.6(react@18.3.1)
       '@react-types/shared': 3.23.1(react@18.3.1)
       '@react-types/tabs': 3.3.7(react@18.3.1)
-      '@swc/helpers': 0.5.5
+      '@swc/helpers': 0.5.12
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
   '@react-aria/textfield@3.14.5(react@18.3.1)':
     dependencies:
-      '@react-aria/focus': 3.18.2(react@18.3.1)
+      '@react-aria/focus': 3.17.1(react@18.3.1)
       '@react-aria/form': 3.0.8(react@18.3.1)
       '@react-aria/label': 3.7.11(react@18.3.1)
-      '@react-aria/utils': 3.25.2(react@18.3.1)
+      '@react-aria/utils': 3.24.1(react@18.3.1)
       '@react-stately/form': 3.0.5(react@18.3.1)
-      '@react-stately/utils': 3.10.3(react@18.3.1)
-      '@react-types/shared': 3.24.1(react@18.3.1)
-      '@react-types/textfield': 3.9.6(react@18.3.1)
-      '@swc/helpers': 0.5.5
+      '@react-stately/utils': 3.10.1(react@18.3.1)
+      '@react-types/shared': 3.23.1(react@18.3.1)
+      '@react-types/textfield': 3.9.3(react@18.3.1)
+      '@swc/helpers': 0.5.12
       react: 18.3.1
 
   '@react-aria/textfield@3.14.8(react@18.3.1)':
@@ -6815,7 +6851,7 @@ snapshots:
       '@react-stately/utils': 3.10.3(react@18.3.1)
       '@react-types/shared': 3.24.1(react@18.3.1)
       '@react-types/textfield': 3.9.6(react@18.3.1)
-      '@swc/helpers': 0.5.5
+      '@swc/helpers': 0.5.12
       react: 18.3.1
 
   '@react-aria/toggle@3.10.7(react@18.3.1)':
@@ -6826,7 +6862,7 @@ snapshots:
       '@react-stately/toggle': 3.7.7(react@18.3.1)
       '@react-types/checkbox': 3.8.3(react@18.3.1)
       '@react-types/shared': 3.24.1(react@18.3.1)
-      '@swc/helpers': 0.5.5
+      '@swc/helpers': 0.5.12
       react: 18.3.1
 
   '@react-aria/tooltip@3.7.4(react@18.3.1)':
@@ -6837,15 +6873,15 @@ snapshots:
       '@react-stately/tooltip': 3.4.9(react@18.3.1)
       '@react-types/shared': 3.24.1(react@18.3.1)
       '@react-types/tooltip': 3.4.9(react@18.3.1)
-      '@swc/helpers': 0.5.5
+      '@swc/helpers': 0.5.12
       react: 18.3.1
 
   '@react-aria/utils@3.24.1(react@18.3.1)':
     dependencies:
       '@react-aria/ssr': 3.9.5(react@18.3.1)
       '@react-stately/utils': 3.10.3(react@18.3.1)
-      '@react-types/shared': 3.24.1(react@18.3.1)
-      '@swc/helpers': 0.5.5
+      '@react-types/shared': 3.23.1(react@18.3.1)
+      '@swc/helpers': 0.5.12
       clsx: 2.1.1
       react: 18.3.1
 
@@ -6854,7 +6890,7 @@ snapshots:
       '@react-aria/ssr': 3.9.5(react@18.3.1)
       '@react-stately/utils': 3.10.3(react@18.3.1)
       '@react-types/shared': 3.24.1(react@18.3.1)
-      '@swc/helpers': 0.5.5
+      '@swc/helpers': 0.5.12
       clsx: 2.1.1
       react: 18.3.1
 
@@ -6863,7 +6899,7 @@ snapshots:
       '@react-aria/interactions': 3.22.2(react@18.3.1)
       '@react-aria/utils': 3.25.2(react@18.3.1)
       '@react-types/shared': 3.24.1(react@18.3.1)
-      '@swc/helpers': 0.5.5
+      '@swc/helpers': 0.5.12
       react: 18.3.1
 
   '@react-aria/visually-hidden@3.8.15(react@18.3.1)':
@@ -6871,7 +6907,7 @@ snapshots:
       '@react-aria/interactions': 3.22.2(react@18.3.1)
       '@react-aria/utils': 3.25.2(react@18.3.1)
       '@react-types/shared': 3.24.1(react@18.3.1)
-      '@swc/helpers': 0.5.5
+      '@swc/helpers': 0.5.12
       react: 18.3.1
 
   '@react-stately/calendar@3.5.1(react@18.3.1)':
@@ -6880,7 +6916,7 @@ snapshots:
       '@react-stately/utils': 3.10.1(react@18.3.1)
       '@react-types/calendar': 3.4.6(react@18.3.1)
       '@react-types/shared': 3.23.1(react@18.3.1)
-      '@swc/helpers': 0.5.5
+      '@swc/helpers': 0.5.12
       react: 18.3.1
 
   '@react-stately/checkbox@3.6.5(react@18.3.1)':
@@ -6889,19 +6925,19 @@ snapshots:
       '@react-stately/utils': 3.10.3(react@18.3.1)
       '@react-types/checkbox': 3.8.1(react@18.3.1)
       '@react-types/shared': 3.23.1(react@18.3.1)
-      '@swc/helpers': 0.5.5
+      '@swc/helpers': 0.5.12
       react: 18.3.1
 
   '@react-stately/collections@3.10.7(react@18.3.1)':
     dependencies:
       '@react-types/shared': 3.23.1(react@18.3.1)
-      '@swc/helpers': 0.5.5
+      '@swc/helpers': 0.5.12
       react: 18.3.1
 
   '@react-stately/collections@3.10.9(react@18.3.1)':
     dependencies:
       '@react-types/shared': 3.24.1(react@18.3.1)
-      '@swc/helpers': 0.5.5
+      '@swc/helpers': 0.5.12
       react: 18.3.1
 
   '@react-stately/combobox@3.8.4(react@18.3.1)':
@@ -6914,7 +6950,7 @@ snapshots:
       '@react-stately/utils': 3.10.3(react@18.3.1)
       '@react-types/combobox': 3.11.1(react@18.3.1)
       '@react-types/shared': 3.23.1(react@18.3.1)
-      '@swc/helpers': 0.5.5
+      '@swc/helpers': 0.5.12
       react: 18.3.1
 
   '@react-stately/datepicker@3.9.4(react@18.3.1)':
@@ -6926,23 +6962,23 @@ snapshots:
       '@react-stately/utils': 3.10.3(react@18.3.1)
       '@react-types/datepicker': 3.7.4(react@18.3.1)
       '@react-types/shared': 3.23.1(react@18.3.1)
-      '@swc/helpers': 0.5.5
+      '@swc/helpers': 0.5.12
       react: 18.3.1
 
   '@react-stately/flags@3.0.3':
     dependencies:
-      '@swc/helpers': 0.5.5
+      '@swc/helpers': 0.5.12
 
   '@react-stately/form@3.0.3(react@18.3.1)':
     dependencies:
       '@react-types/shared': 3.23.1(react@18.3.1)
-      '@swc/helpers': 0.5.5
+      '@swc/helpers': 0.5.12
       react: 18.3.1
 
   '@react-stately/form@3.0.5(react@18.3.1)':
     dependencies:
       '@react-types/shared': 3.24.1(react@18.3.1)
-      '@swc/helpers': 0.5.5
+      '@swc/helpers': 0.5.12
       react: 18.3.1
 
   '@react-stately/grid@3.9.2(react@18.3.1)':
@@ -6951,7 +6987,7 @@ snapshots:
       '@react-stately/selection': 3.16.2(react@18.3.1)
       '@react-types/grid': 3.2.8(react@18.3.1)
       '@react-types/shared': 3.24.1(react@18.3.1)
-      '@swc/helpers': 0.5.5
+      '@swc/helpers': 0.5.12
       react: 18.3.1
 
   '@react-stately/list@3.10.5(react@18.3.1)':
@@ -6960,7 +6996,7 @@ snapshots:
       '@react-stately/selection': 3.16.2(react@18.3.1)
       '@react-stately/utils': 3.10.3(react@18.3.1)
       '@react-types/shared': 3.23.1(react@18.3.1)
-      '@swc/helpers': 0.5.5
+      '@swc/helpers': 0.5.12
       react: 18.3.1
 
   '@react-stately/list@3.10.8(react@18.3.1)':
@@ -6969,7 +7005,7 @@ snapshots:
       '@react-stately/selection': 3.16.2(react@18.3.1)
       '@react-stately/utils': 3.10.3(react@18.3.1)
       '@react-types/shared': 3.24.1(react@18.3.1)
-      '@swc/helpers': 0.5.5
+      '@swc/helpers': 0.5.12
       react: 18.3.1
 
   '@react-stately/menu@3.7.1(react@18.3.1)':
@@ -6977,7 +7013,7 @@ snapshots:
       '@react-stately/overlays': 3.6.10(react@18.3.1)
       '@react-types/menu': 3.9.9(react@18.3.1)
       '@react-types/shared': 3.23.1(react@18.3.1)
-      '@swc/helpers': 0.5.5
+      '@swc/helpers': 0.5.12
       react: 18.3.1
 
   '@react-stately/menu@3.8.2(react@18.3.1)':
@@ -6985,21 +7021,21 @@ snapshots:
       '@react-stately/overlays': 3.6.10(react@18.3.1)
       '@react-types/menu': 3.9.11(react@18.3.1)
       '@react-types/shared': 3.24.1(react@18.3.1)
-      '@swc/helpers': 0.5.5
+      '@swc/helpers': 0.5.12
       react: 18.3.1
 
   '@react-stately/overlays@3.6.10(react@18.3.1)':
     dependencies:
       '@react-stately/utils': 3.10.3(react@18.3.1)
       '@react-types/overlays': 3.8.9(react@18.3.1)
-      '@swc/helpers': 0.5.5
+      '@swc/helpers': 0.5.12
       react: 18.3.1
 
   '@react-stately/overlays@3.6.7(react@18.3.1)':
     dependencies:
       '@react-stately/utils': 3.10.3(react@18.3.1)
       '@react-types/overlays': 3.8.7(react@18.3.1)
-      '@swc/helpers': 0.5.5
+      '@swc/helpers': 0.5.12
       react: 18.3.1
 
   '@react-stately/radio@3.10.4(react@18.3.1)':
@@ -7008,7 +7044,7 @@ snapshots:
       '@react-stately/utils': 3.10.3(react@18.3.1)
       '@react-types/radio': 3.8.1(react@18.3.1)
       '@react-types/shared': 3.23.1(react@18.3.1)
-      '@swc/helpers': 0.5.5
+      '@swc/helpers': 0.5.12
       react: 18.3.1
 
   '@react-stately/select@3.6.7(react@18.3.1)':
@@ -7018,7 +7054,7 @@ snapshots:
       '@react-stately/overlays': 3.6.10(react@18.3.1)
       '@react-types/select': 3.9.6(react@18.3.1)
       '@react-types/shared': 3.24.1(react@18.3.1)
-      '@swc/helpers': 0.5.5
+      '@swc/helpers': 0.5.12
       react: 18.3.1
 
   '@react-stately/selection@3.16.2(react@18.3.1)':
@@ -7026,7 +7062,7 @@ snapshots:
       '@react-stately/collections': 3.10.9(react@18.3.1)
       '@react-stately/utils': 3.10.3(react@18.3.1)
       '@react-types/shared': 3.24.1(react@18.3.1)
-      '@swc/helpers': 0.5.5
+      '@swc/helpers': 0.5.12
       react: 18.3.1
 
   '@react-stately/slider@3.5.4(react@18.3.1)':
@@ -7034,7 +7070,7 @@ snapshots:
       '@react-stately/utils': 3.10.3(react@18.3.1)
       '@react-types/shared': 3.24.1(react@18.3.1)
       '@react-types/slider': 3.7.5(react@18.3.1)
-      '@swc/helpers': 0.5.5
+      '@swc/helpers': 0.5.12
       react: 18.3.1
 
   '@react-stately/table@3.11.8(react@18.3.1)':
@@ -7047,7 +7083,7 @@ snapshots:
       '@react-types/grid': 3.2.6(react@18.3.1)
       '@react-types/shared': 3.24.1(react@18.3.1)
       '@react-types/table': 3.9.5(react@18.3.1)
-      '@swc/helpers': 0.5.5
+      '@swc/helpers': 0.5.12
       react: 18.3.1
 
   '@react-stately/tabs@3.6.6(react@18.3.1)':
@@ -7055,28 +7091,28 @@ snapshots:
       '@react-stately/list': 3.10.8(react@18.3.1)
       '@react-types/shared': 3.23.1(react@18.3.1)
       '@react-types/tabs': 3.3.7(react@18.3.1)
-      '@swc/helpers': 0.5.5
+      '@swc/helpers': 0.5.12
       react: 18.3.1
 
   '@react-stately/toggle@3.7.4(react@18.3.1)':
     dependencies:
       '@react-stately/utils': 3.10.1(react@18.3.1)
       '@react-types/checkbox': 3.8.3(react@18.3.1)
-      '@swc/helpers': 0.5.5
+      '@swc/helpers': 0.5.12
       react: 18.3.1
 
   '@react-stately/toggle@3.7.7(react@18.3.1)':
     dependencies:
       '@react-stately/utils': 3.10.3(react@18.3.1)
       '@react-types/checkbox': 3.8.3(react@18.3.1)
-      '@swc/helpers': 0.5.5
+      '@swc/helpers': 0.5.12
       react: 18.3.1
 
   '@react-stately/tooltip@3.4.9(react@18.3.1)':
     dependencies:
       '@react-stately/overlays': 3.6.10(react@18.3.1)
       '@react-types/tooltip': 3.4.9(react@18.3.1)
-      '@swc/helpers': 0.5.5
+      '@swc/helpers': 0.5.12
       react: 18.3.1
 
   '@react-stately/tree@3.8.1(react@18.3.1)':
@@ -7085,7 +7121,7 @@ snapshots:
       '@react-stately/selection': 3.16.2(react@18.3.1)
       '@react-stately/utils': 3.10.3(react@18.3.1)
       '@react-types/shared': 3.23.1(react@18.3.1)
-      '@swc/helpers': 0.5.5
+      '@swc/helpers': 0.5.12
       react: 18.3.1
 
   '@react-stately/tree@3.8.4(react@18.3.1)':
@@ -7094,24 +7130,24 @@ snapshots:
       '@react-stately/selection': 3.16.2(react@18.3.1)
       '@react-stately/utils': 3.10.3(react@18.3.1)
       '@react-types/shared': 3.24.1(react@18.3.1)
-      '@swc/helpers': 0.5.5
+      '@swc/helpers': 0.5.12
       react: 18.3.1
 
   '@react-stately/utils@3.10.1(react@18.3.1)':
     dependencies:
-      '@swc/helpers': 0.5.5
+      '@swc/helpers': 0.5.12
       react: 18.3.1
 
   '@react-stately/utils@3.10.3(react@18.3.1)':
     dependencies:
-      '@swc/helpers': 0.5.5
+      '@swc/helpers': 0.5.12
       react: 18.3.1
 
   '@react-stately/virtualizer@3.7.1(react@18.3.1)':
     dependencies:
       '@react-aria/utils': 3.24.1(react@18.3.1)
       '@react-types/shared': 3.24.1(react@18.3.1)
-      '@swc/helpers': 0.5.5
+      '@swc/helpers': 0.5.12
       react: 18.3.1
 
   '@react-types/accordion@3.0.0-alpha.21(react@18.3.1)':
@@ -7274,7 +7310,7 @@ snapshots:
 
   '@react-types/textfield@3.9.3(react@18.3.1)':
     dependencies:
-      '@react-types/shared': 3.24.1(react@18.3.1)
+      '@react-types/shared': 3.23.1(react@18.3.1)
       react: 18.3.1
 
   '@react-types/textfield@3.9.6(react@18.3.1)':
@@ -7292,25 +7328,29 @@ snapshots:
 
   '@swc/counter@0.1.3': {}
 
+  '@swc/helpers@0.5.12':
+    dependencies:
+      tslib: 2.7.0
+
   '@swc/helpers@0.5.5':
     dependencies:
       '@swc/counter': 0.1.3
-      tslib: 2.6.3
+      tslib: 2.7.0
 
-  '@tabler/icons-react@3.12.0(react@18.3.1)':
+  '@tabler/icons-react@3.14.0(react@18.3.1)':
     dependencies:
-      '@tabler/icons': 3.12.0
+      '@tabler/icons': 3.14.0
       react: 18.3.1
 
-  '@tabler/icons@3.12.0': {}
+  '@tabler/icons@3.14.0': {}
 
-  '@tanstack/react-table@8.20.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@tanstack/react-table@8.20.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
-      '@tanstack/table-core': 8.20.1
+      '@tanstack/table-core': 8.20.5
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
-  '@tanstack/table-core@8.20.1': {}
+  '@tanstack/table-core@8.20.5': {}
 
   '@types/bcrypt@5.0.2':
     dependencies:
@@ -7469,7 +7509,7 @@ snapshots:
 
   aria-hidden@1.2.4:
     dependencies:
-      tslib: 2.6.3
+      tslib: 2.7.0
 
   aria-query@5.1.3:
     dependencies:
@@ -7597,7 +7637,7 @@ snapshots:
 
   camelcase-css@2.0.1: {}
 
-  caniuse-lite@1.0.30001651: {}
+  caniuse-lite@1.0.30001653: {}
 
   chalk@4.1.2:
     dependencies:
@@ -7816,7 +7856,7 @@ snapshots:
       '@babel/runtime': 7.25.4
       csstype: 3.1.3
 
-  drizzle-kit@0.24.1:
+  drizzle-kit@0.24.2:
     dependencies:
       '@drizzle-team/brocli': 0.10.1
       '@esbuild-kit/esm-loader': 2.6.5
@@ -8013,8 +8053,8 @@ snapshots:
       '@typescript-eslint/parser': 7.2.0(eslint@8.57.0)(typescript@5.5.4)
       eslint: 8.57.0
       eslint-import-resolver-node: 0.3.9
-      eslint-import-resolver-typescript: 3.6.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1(eslint@8.57.0))(eslint@8.57.0)
-      eslint-plugin-import: 2.29.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1(eslint@8.57.0))(eslint@8.57.0))(eslint@8.57.0)
+      eslint-import-resolver-typescript: 3.6.3(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1(eslint@8.57.0))(eslint@8.57.0)
+      eslint-plugin-import: 2.29.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-typescript@3.6.3)(eslint@8.57.0)
       eslint-plugin-jsx-a11y: 6.9.0(eslint@8.57.0)
       eslint-plugin-react: 7.35.0(eslint@8.57.0)
       eslint-plugin-react-hooks: 4.6.2(eslint@8.57.0)
@@ -8022,6 +8062,7 @@ snapshots:
       typescript: 5.5.4
     transitivePeerDependencies:
       - eslint-import-resolver-webpack
+      - eslint-plugin-import-x
       - supports-color
 
   eslint-import-resolver-node@0.3.9:
@@ -8032,35 +8073,37 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1(eslint@8.57.0))(eslint@8.57.0):
+  eslint-import-resolver-typescript@3.6.3(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1(eslint@8.57.0))(eslint@8.57.0):
     dependencies:
+      '@nolyfill/is-core-module': 1.0.39
       debug: 4.3.6
       enhanced-resolve: 5.17.1
       eslint: 8.57.0
-      eslint-module-utils: 2.8.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1(eslint@8.57.0))(eslint@8.57.0))(eslint@8.57.0)
-      eslint-plugin-import: 2.29.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1(eslint@8.57.0))(eslint@8.57.0))(eslint@8.57.0)
+      eslint-module-utils: 2.8.2(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.3(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1(eslint@8.57.0))(eslint@8.57.0))(eslint@8.57.0)
       fast-glob: 3.3.2
       get-tsconfig: 4.7.6
-      is-core-module: 2.15.1
+      is-bun-module: 1.1.0
       is-glob: 4.0.3
+    optionalDependencies:
+      eslint-plugin-import: 2.29.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-typescript@3.6.3)(eslint@8.57.0)
     transitivePeerDependencies:
       - '@typescript-eslint/parser'
       - eslint-import-resolver-node
       - eslint-import-resolver-webpack
       - supports-color
 
-  eslint-module-utils@2.8.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1(eslint@8.57.0))(eslint@8.57.0))(eslint@8.57.0):
+  eslint-module-utils@2.8.2(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.3(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1(eslint@8.57.0))(eslint@8.57.0))(eslint@8.57.0):
     dependencies:
       debug: 3.2.7
     optionalDependencies:
       '@typescript-eslint/parser': 7.2.0(eslint@8.57.0)(typescript@5.5.4)
       eslint: 8.57.0
       eslint-import-resolver-node: 0.3.9
-      eslint-import-resolver-typescript: 3.6.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1(eslint@8.57.0))(eslint@8.57.0)
+      eslint-import-resolver-typescript: 3.6.3(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1(eslint@8.57.0))(eslint@8.57.0)
     transitivePeerDependencies:
       - supports-color
 
-  eslint-plugin-import@2.29.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1(eslint@8.57.0))(eslint@8.57.0))(eslint@8.57.0):
+  eslint-plugin-import@2.29.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-typescript@3.6.3)(eslint@8.57.0):
     dependencies:
       array-includes: 3.1.8
       array.prototype.findlastindex: 1.2.5
@@ -8070,7 +8113,7 @@ snapshots:
       doctrine: 2.1.0
       eslint: 8.57.0
       eslint-import-resolver-node: 0.3.9
-      eslint-module-utils: 2.8.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1(eslint@8.57.0))(eslint@8.57.0))(eslint@8.57.0)
+      eslint-module-utils: 2.8.2(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.3(@typescript-eslint/parser@7.2.0(eslint@8.57.0)(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1(eslint@8.57.0))(eslint@8.57.0))(eslint@8.57.0)
       hasown: 2.0.2
       is-core-module: 2.15.1
       is-glob: 4.0.3
@@ -8213,7 +8256,7 @@ snapshots:
       '@nodelib/fs.walk': 1.2.8
       glob-parent: 5.1.2
       merge2: 1.4.1
-      micromatch: 4.0.7
+      micromatch: 4.0.8
 
   fast-json-stable-stringify@2.1.0: {}
 
@@ -8255,9 +8298,9 @@ snapshots:
       cross-spawn: 7.0.3
       signal-exit: 4.1.0
 
-  framer-motion@11.3.29(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+  framer-motion@11.3.30(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
-      tslib: 2.6.3
+      tslib: 2.7.0
     optionalDependencies:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
@@ -8432,7 +8475,7 @@ snapshots:
       '@formatjs/ecma402-abstract': 2.0.0
       '@formatjs/fast-memoize': 2.2.0
       '@formatjs/icu-messageformat-parser': 2.7.8
-      tslib: 2.6.3
+      tslib: 2.7.0
 
   invariant@2.2.4:
     dependencies:
@@ -8466,6 +8509,10 @@ snapshots:
     dependencies:
       call-bind: 1.0.7
       has-tostringtag: 1.0.2
+
+  is-bun-module@1.1.0:
+    dependencies:
+      semver: 7.6.3
 
   is-callable@1.2.7: {}
 
@@ -8571,7 +8618,7 @@ snapshots:
 
   jose@4.15.9: {}
 
-  jose@5.7.0: {}
+  jose@5.8.0: {}
 
   js-tokens@4.0.0: {}
 
@@ -8657,7 +8704,7 @@ snapshots:
 
   merge2@1.4.1: {}
 
-  micromatch@4.0.7:
+  micromatch@4.0.8:
     dependencies:
       braces: 3.0.3
       picomatch: 2.3.1
@@ -8714,8 +8761,8 @@ snapshots:
       next: 14.2.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       oauth: 0.9.15
       openid-client: 5.6.5
-      preact: 10.11.3
-      preact-render-to-string: 5.2.3(preact@10.11.3)
+      preact: 10.23.2
+      preact-render-to-string: 5.2.6(preact@10.23.2)
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
       uuid: 8.3.2
@@ -8730,7 +8777,7 @@ snapshots:
       '@next/env': 14.2.6
       '@swc/helpers': 0.5.5
       busboy: 1.6.0
-      caniuse-lite: 1.0.30001651
+      caniuse-lite: 1.0.30001653
       graceful-fs: 4.2.11
       postcss: 8.4.31
       react: 18.3.1
@@ -8941,7 +8988,14 @@ snapshots:
       preact: 10.11.3
       pretty-format: 3.8.0
 
+  preact-render-to-string@5.2.6(preact@10.23.2):
+    dependencies:
+      preact: 10.23.2
+      pretty-format: 3.8.0
+
   preact@10.11.3: {}
+
+  preact@10.23.2: {}
 
   prelude-ls@1.2.1: {}
 
@@ -8984,7 +9038,18 @@ snapshots:
     dependencies:
       react: 18.3.1
       react-style-singleton: 2.2.1(@types/react@18.3.4)(react@18.3.1)
-      tslib: 2.6.3
+      tslib: 2.7.0
+    optionalDependencies:
+      '@types/react': 18.3.4
+
+  react-remove-scroll@2.5.10(@types/react@18.3.4)(react@18.3.1):
+    dependencies:
+      react: 18.3.1
+      react-remove-scroll-bar: 2.3.6(@types/react@18.3.4)(react@18.3.1)
+      react-style-singleton: 2.2.1(@types/react@18.3.4)(react@18.3.1)
+      tslib: 2.7.0
+      use-callback-ref: 1.3.2(@types/react@18.3.4)(react@18.3.1)
+      use-sidecar: 1.1.2(@types/react@18.3.4)(react@18.3.1)
     optionalDependencies:
       '@types/react': 18.3.4
 
@@ -8993,7 +9058,7 @@ snapshots:
       react: 18.3.1
       react-remove-scroll-bar: 2.3.6(@types/react@18.3.4)(react@18.3.1)
       react-style-singleton: 2.2.1(@types/react@18.3.4)(react@18.3.1)
-      tslib: 2.6.3
+      tslib: 2.7.0
       use-callback-ref: 1.3.2(@types/react@18.3.4)(react@18.3.1)
       use-sidecar: 1.1.2(@types/react@18.3.4)(react@18.3.1)
     optionalDependencies:
@@ -9004,7 +9069,7 @@ snapshots:
       react: 18.3.1
       react-remove-scroll-bar: 2.3.6(@types/react@18.3.4)(react@18.3.1)
       react-style-singleton: 2.2.1(@types/react@18.3.4)(react@18.3.1)
-      tslib: 2.6.3
+      tslib: 2.7.0
       use-callback-ref: 1.3.2(@types/react@18.3.4)(react@18.3.1)
       use-sidecar: 1.1.2(@types/react@18.3.4)(react@18.3.1)
     optionalDependencies:
@@ -9023,7 +9088,7 @@ snapshots:
       get-nonce: 1.0.1
       invariant: 2.2.4
       react: 18.3.1
-      tslib: 2.6.3
+      tslib: 2.7.0
     optionalDependencies:
       '@types/react': 18.3.4
 
@@ -9331,7 +9396,7 @@ snapshots:
       is-glob: 4.0.3
       jiti: 1.21.6
       lilconfig: 2.1.0
-      micromatch: 4.0.7
+      micromatch: 4.0.8
       normalize-path: 3.0.0
       object-hash: 3.0.0
       picocolors: 1.0.1
@@ -9388,7 +9453,7 @@ snapshots:
       minimist: 1.2.8
       strip-bom: 3.0.0
 
-  tslib@2.6.3: {}
+  tslib@2.7.0: {}
 
   type-check@0.4.0:
     dependencies:
@@ -9446,7 +9511,7 @@ snapshots:
   use-callback-ref@1.3.2(@types/react@18.3.4)(react@18.3.1):
     dependencies:
       react: 18.3.1
-      tslib: 2.6.3
+      tslib: 2.7.0
     optionalDependencies:
       '@types/react': 18.3.4
 
@@ -9471,7 +9536,7 @@ snapshots:
     dependencies:
       detect-node-es: 1.1.0
       react: 18.3.1
-      tslib: 2.6.3
+      tslib: 2.7.0
     optionalDependencies:
       '@types/react': 18.3.4
 
