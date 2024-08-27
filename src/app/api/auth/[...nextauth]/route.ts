@@ -56,7 +56,7 @@ export const authOptions: NextAuthOptions = {
         }
 
         if (teacher && teacher[0]?.password === credentials.password) {
-          return { id: teacher[0].teacher_id, userType: "teacher" };
+          return { id: teacher[0].id, userType: "teacher" };
         }
         return null;
       },

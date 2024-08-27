@@ -3,11 +3,21 @@ import { attendance, classes, students, teachers, timetable } from "@/db/schema"
 import { and, eq } from "drizzle-orm";
 import { NextResponse } from "next/server";
 
-const teacherId = 1
 const className = '3A';
 const day = 'Tuesday';
 
+interface AttendanceRecord {
+    teacherId: number;
+    className: string;
+}
+
+
 export async function GET(request: Request) {
+    const today = new Date().toLocaleString('en-us', { weekday: 'long' });
+    const { searchParams } = new URL(request.url);
+    const teacherId = searchParams.get('teacherId');
+    if(!teacherId) return;
+
     const attendanceRecords = await db
         .select({
             attendanceId: attendance.id,
@@ -27,7 +37,7 @@ export async function GET(request: Request) {
             and(
                 eq(classes.name, className),
                 eq(timetable.day, day),
-                eq(teachers.id, teacherId)
+                eq(teachers.id, parseInt(teacherId))
             )
         )
         .orderBy(timetable.slot, attendance.date);
@@ -82,6 +92,7 @@ export async function POST(request: Request) {
                 eq(timetable.day, day)
             )
         );
+
 
     await db.insert(attendance).values({
         student_id: (student[0].id)!,

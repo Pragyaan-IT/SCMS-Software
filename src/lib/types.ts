@@ -35,3 +35,8 @@ export interface Attendance {
     present: boolean;
     date: Date;
 }
+
+export interface TeacherClasses {
+    id: number;
+    className: string;
+}

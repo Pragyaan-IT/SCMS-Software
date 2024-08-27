@@ -24,15 +24,20 @@ import { DataTable } from "./data-table";
 
 // Import dummy data
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { dummyAttendance, dummyClasses, dummyStudents } from "../dummy-data";
+import { dummyAttendance, dummyStudents } from "../dummy-data";
 import { useAppContext } from "@/components/providers/context-provider";
+import { useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
+import { TeacherClasses } from "@/lib/types";
 
 export default function AttendanceTable() {
   const [selectedClass, setSelectedClass] = useState<string>("");
   const [dateRange, setDateRange] = useState<DateRange | undefined>();
   const [searchQuery, setSearchQuery] = useState("");
+  const { data: session } = useSession();
+  const router = useRouter()
 
-  const { getAttendance, attendanceList } = useAppContext();
+  const { getAttendance, getTeacherClasses, attendanceList, teacherClasses: dummyClasses } = useAppContext();
 
   const filteredData = useMemo(() => {
     return attendanceList.filter((record: any) => {
@@ -55,7 +60,7 @@ export default function AttendanceTable() {
     return filteredData.map((record: any) => {
       const student = dummyStudents.find((s) => s.id === record.student_id);
       const className =
-        dummyClasses.find((c) => c.id === student?.class_id)?.name || "Unknown";
+        dummyClasses?.find((c) => c.id === student?.class_id)?.className || "Unknown";
       return {
         id: record.id,
         studentName: student?.name || "Unknown",
@@ -66,11 +71,20 @@ export default function AttendanceTable() {
     });
   }, [filteredData]);
 
+  if (!session || session.user.role !== "teacher") {
+    router.push("/");
+    return;
+  }
+
+  useEffect(() => {
+    getTeacherClasses(parseInt(session.user.id));
+  }, []);
+
   useEffect(() => {
     let intervalId: any = null;
     const startInterval = () => {
       intervalId = setInterval(async () => {
-        getAttendance();
+        getAttendance(parseInt(session.user.id));
       }, 2000);
     };
 
@@ -93,7 +107,7 @@ export default function AttendanceTable() {
       }
     };
 
-    getAttendance();
+    getAttendance(parseInt(session.user.id));
 
     checkAndSetInterval();
     const hourlyCheckId = setInterval(checkAndSetInterval, 60000);
@@ -122,7 +136,7 @@ export default function AttendanceTable() {
             <SelectContent>
               {dummyClasses.map((cls: any) => (
                 <SelectItem key={cls.id} value={cls.id.toString()}>
-                  {cls.name}
+                  {cls.className}
                 </SelectItem>
               ))}
             </SelectContent>

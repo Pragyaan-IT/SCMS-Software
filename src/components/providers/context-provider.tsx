@@ -1,6 +1,6 @@
 "use client"
 import { useModal } from '@/app/hooks/use-modal-store';
-import { Attendance, Class, Student, Subject, Teacher } from '@/lib/types';
+import { Attendance, Class, Student, Subject, Teacher, TeacherClasses } from '@/lib/types';
 import React, { createContext, useContext, ReactNode, useState } from 'react';
 import { toast } from 'sonner';
 
@@ -10,11 +10,13 @@ type AppContextType = {
     studentList: Student[];
     subjectList: Subject[];
     attendanceList: Attendance[];
+    teacherClasses: TeacherClasses[];
     getClassList: () => void;
     getTeacherList: () => void;
     getStudentList: () => void;
     getSubjectList: () => void;
-    getAttendance: () => void;
+    getAttendance: (teacherId: number) => void;
+    getTeacherClasses: (teacherId: number) => void;
     createClass: (name: string) => void;
     createTeacher: ({ name, email, password }: TeacherData) => void;
     createStudent: ({ name, email, password, registration_id, class_id }: StudentData) => void;
@@ -23,6 +25,7 @@ type AppContextType = {
     addTeacherToClass: (teacherId: number, classId: number) => void;
     addSubjectToClass: (subjectId: number, classId: number) => void;
 };
+
 
 interface TeacherData {
     name: string;
@@ -45,6 +48,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
     const [studentList, setStudentList] = useState<Student[]>([])
     const [subjectList, setSubjectList] = useState<Subject[]>([])
     const [attendanceList, setAttendanceList] = useState<Attendance[]>([])
+    const [teacherClasses, setTeacherClasses] = useState<TeacherClasses[]>([])
     const { onClose } = useModal();
 
     const getClassList = async () => {
@@ -69,8 +73,8 @@ export function AppProvider({ children }: { children: ReactNode }) {
         setSubjectList(data.subjects);
     }
     
-    const getAttendance = async () => {
-        const response = await fetch('/api/attendance');
+    const getAttendance = async (teacherId: number) => {
+        const response = await fetch(`/api/attendance?teacherId=${teacherId}`);
         const data = await response.json();
         const formattedData = data.attendance.map((record: Attendance) => {
             return {
@@ -79,6 +83,12 @@ export function AppProvider({ children }: { children: ReactNode }) {
             }
         })
         setAttendanceList(formattedData);
+    }
+
+    const getTeacherClasses = async (teacherId: number) => {
+        const response = await fetch(`/api/teacher/${teacherId}/class`);
+        const data = await response.json();
+        setTeacherClasses(data.teacherClasses);
     }
 
 
@@ -252,7 +262,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
 
 
     return (
-        <AppContext.Provider value={{ classList, teacherList, studentList, subjectList, attendanceList, getClassList, getTeacherList, getStudentList, getSubjectList, getAttendance, createClass, createTeacher, createStudent, createSubject, addSubjectToTeacher, addTeacherToClass, addSubjectToClass }}>
+        <AppContext.Provider value={{ classList, teacherList, studentList, subjectList, attendanceList, teacherClasses, getClassList, getTeacherList, getStudentList, getSubjectList, getAttendance, getTeacherClasses, createClass, createTeacher, createStudent, createSubject, addSubjectToTeacher, addTeacherToClass, addSubjectToClass }}>
             {children}
         </AppContext.Provider>
     );
