@@ -7,6 +7,7 @@ import NewStudentModal from "../modals/NewStudentModal";
 import NewSubjetModal from "../modals/NewSubjectModal";
 import ClassSubject from "../modals/ClassSubject";
 import ClassTeacher from "../modals/ClassTeacher";
+import NewDiscusionModal from "../modals/NewDiscussionModal";
 
 const ModalProvider = () => {
     const [isMounted, setIsMounted] = useState(false);
@@ -25,6 +26,7 @@ const ModalProvider = () => {
             <NewSubjetModal />
             <ClassSubject />
             <ClassTeacher />
+            <NewDiscusionModal />
             
         </div>
     )

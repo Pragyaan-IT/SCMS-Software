@@ -40,3 +40,16 @@ export interface TeacherClasses {
     id: number;
     className: string;
 }
+
+export interface TodayAttendance{
+    slot: string;
+    subjectName: string;
+    attendance: boolean;
+}
+
+export interface TodayClass{
+    slot: string;
+    subjectName: string;
+    day: string;
+    teacherName: string;
+}

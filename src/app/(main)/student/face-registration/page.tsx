@@ -79,7 +79,7 @@ export default function FaceRegistration() {
 
           if (response.ok) {
             setFaces(result.faces);
-            setCapturedImages((prev) => [...prev, imageData]); 
+            setCapturedImages((prev) => [...prev, imageData]);
             toast.success(
               `Image ${capturedImages.length + 1} captured successfully!`,
             );

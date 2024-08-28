@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 
-export type ModalType = "newClass" | "newTeacher" | "newStudent" | "newSubject" | "addTeacher" | "addSubject";
+export type ModalType = "newClass" | "newTeacher" | "newStudent" | "newSubject" | "addTeacher" | "addSubject" | "newDiscussion"
 
 interface ModalData {
     classId?: number;

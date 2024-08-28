@@ -28,14 +28,14 @@ export function SidebarMain({ children }: { children: React.ReactNode }) {
         },
         {
             label: "Profile",
-            href: "/student/profile",
+            href: "/student/dashboard/profile",
             icon: (
                 <UserCog2 className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
             ),
         },
         {
             label: "Discussion",
-            href: "/student/discussion",
+            href: "/student/dashboard/discussion",
             icon: (
                 <MessagesSquare className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
             ),

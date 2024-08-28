@@ -4,7 +4,6 @@ import { and, eq } from "drizzle-orm";
 import { NextResponse } from "next/server";
 
 const className = '3A';
-const day = 'Tuesday';
 
 interface AttendanceRecord {
     teacherId: number;
@@ -36,11 +35,13 @@ export async function GET(request: Request) {
         .where(
             and(
                 eq(classes.name, className),
-                eq(timetable.day, day),
+                eq(timetable.day, today),
                 eq(teachers.id, parseInt(teacherId))
             )
         )
         .orderBy(timetable.slot, attendance.date);
+
+    console.log(attendanceRecords)
 
     return NextResponse.json({ attendance: attendanceRecords }, { status: 200 });
 }
@@ -62,6 +63,9 @@ function getCurrentSlot() {
 export async function POST(request: Request) {
     const { name, time } = await request.json();
     const [studentName, registration_id] = name.split("|");
+    const day = new Date().toLocaleString('en-us', { weekday: 'long' });
+    const currentSlot = getCurrentSlot()?.toString();
+
     const student = await db
         .select({
             id: students.id,
@@ -70,10 +74,10 @@ export async function POST(request: Request) {
         .from(students)
         .where(eq(students.registration_id, registration_id))
 
-    const currentSlot = getCurrentSlot()?.toString();
 
     const class_id = student[0].class_id;
-    const day = new Date().toLocaleString('en-us', { weekday: 'long' });
+
+    console.log("STUDENT", student, class_id);
 
     const timetableRecord = await db
         .select({
@@ -92,6 +96,9 @@ export async function POST(request: Request) {
                 eq(timetable.day, day)
             )
         );
+    
+    console.log(timetableRecord);
+    
 
 
     await db.insert(attendance).values({

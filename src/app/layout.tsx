@@ -31,8 +31,8 @@ export default function RootLayout({
           fontSans.variable,
         )}
       >
-        <NextTopLoader color="gray" showSpinner={false}  />
         <AppProvider>
+        <NextTopLoader color="gray" showSpinner={false}  />
           <ThemeProvider
             attribute="class"
             defaultTheme="light"

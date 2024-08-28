@@ -80,15 +80,6 @@ export const subjects = pgTable("subjects", {
   name: text("name").notNull(),
 });
 
-export const classStudents = pgTable("class_students", {
-  id: serial("id").primaryKey(),
-  class_id: integer("class_id")
-    .references(() => classes.id)
-    .notNull(),
-  student_id: integer("student_id")
-    .references(() => students.id)
-    .notNull(),
-});
 
 export const classSubjects = pgTable("class_subjects", {
   id: serial("id").primaryKey(),
@@ -144,6 +135,7 @@ export const marks = pgTable("marks", {
   date: timestamp("date").notNull(),
 });
 
+// Complaints Table
 export const complaints = pgTable("complaints", {
   id: serial("id").primaryKey(),
   teacherName: text("teacher_name").notNull(),
@@ -152,4 +144,29 @@ export const complaints = pgTable("complaints", {
   message: text("message").notNull(),
   receivedAt: timestamp("received_at").defaultNow().notNull(),
   isResolved: boolean("is_resolved").default(false).notNull(),
+});
+
+// Discussion Table
+export const discussions = pgTable("discussions", {
+  id: serial("id").primaryKey(),
+  student_id: integer("student_id")
+    .references(() => students.id)
+    .notNull(),
+  question: text("question").notNull(),
+  is_solved: boolean("is_solved").default(false).notNull(),
+  created_at: timestamp("created_at").defaultNow().notNull(),
+});
+
+// Discussion Replies Table
+export const discussionReplies = pgTable("discussion_replies", {
+  id: serial("id").primaryKey(),
+  discussion_id: integer("discussion_id")
+    .references(() => discussions.id)
+    .notNull(),
+  teacher_id: integer("teacher_id")
+    .references(() => teachers.id),
+  student_id: integer("student_id")
+    .references(() => students.id),
+  reply: text("reply").notNull(),
+  created_at: timestamp("created_at").defaultNow().notNull(),
 });

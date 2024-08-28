@@ -30,7 +30,6 @@ export async function POST(request: Request) {
     const teacher_id = generateId().toString();
 
     try {
-        console.log(teacher_id)
         const newClass = await db.insert(teachers).values({
             name, email, password, teacher_id
         }).returning({

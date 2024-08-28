@@ -1,7 +1,7 @@
 "use client"
 import { useModal } from '@/app/hooks/use-modal-store';
-import { Attendance, Class, Student, Subject, Teacher, TeacherClasses } from '@/lib/types';
-import React, { createContext, useContext, ReactNode, useState } from 'react';
+import { Attendance, Class, Student, Subject, Teacher, TeacherClasses, TodayAttendance, TodayClass } from '@/lib/types';
+import React, { createContext, useContext, ReactNode, useState, useEffect } from 'react';
 import { toast } from 'sonner';
 
 type AppContextType = {
@@ -17,6 +17,9 @@ type AppContextType = {
     getSubjectList: () => void;
     getAttendance: (teacherId: number) => void;
     getTeacherClasses: (teacherId: number) => void;
+    getTodayAttendance: (studentId: string) => Promise<TodayAttendance[]>;
+    getTodayClass: (studentId: string, day:string) => Promise<TodayClass[]>;
+    getStudentProfile: (studentId: string) => Promise<Student[]>;
     createClass: (name: string) => void;
     createTeacher: ({ name, email, password }: TeacherData) => void;
     createStudent: ({ name, email, password, registration_id, class_id }: StudentData) => void;
@@ -72,7 +75,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
         const data = await response.json();
         setSubjectList(data.subjects);
     }
-    
+
     const getAttendance = async (teacherId: number) => {
         const response = await fetch(`/api/attendance?teacherId=${teacherId}`);
         const data = await response.json();
@@ -91,6 +94,24 @@ export function AppProvider({ children }: { children: ReactNode }) {
         setTeacherClasses(data.teacherClasses);
     }
 
+    const getTodayAttendance = async (studentId: string): Promise<TodayAttendance[]> => {
+        const response = await fetch(`/api/student/${studentId}/attendance`);
+        const data = await response.json();
+        return data.todayAttendance;
+    }
+
+    const getTodayClass = async (studentId: string, day: string): Promise<TodayClass[]> => {
+        const response = await fetch(`/api/student/${studentId}/timetable?day=${day}`);
+        const data = await response.json();
+        console.log(data)
+        return data.todayClass;
+    }
+
+    const getStudentProfile = async (studentId: string) => {
+        const response = await fetch(`/api/student/${studentId}`);
+        const data = await response.json();
+        return data.student;
+    }
 
     const createClass = async (name: string) => {
         try {
@@ -248,7 +269,6 @@ export function AppProvider({ children }: { children: ReactNode }) {
             if (res.ok) {
                 toast.success('Subject added successfully');
                 const newSubject = await res.json();
-                // setSubjectList((prev) => [...prev, ...newSubject]);
                 onClose();
             } else {
                 const error = await res.json();
@@ -259,10 +279,8 @@ export function AppProvider({ children }: { children: ReactNode }) {
         }
     }
 
-
-
     return (
-        <AppContext.Provider value={{ classList, teacherList, studentList, subjectList, attendanceList, teacherClasses, getClassList, getTeacherList, getStudentList, getSubjectList, getAttendance, getTeacherClasses, createClass, createTeacher, createStudent, createSubject, addSubjectToTeacher, addTeacherToClass, addSubjectToClass }}>
+        <AppContext.Provider value={{ classList, teacherList, studentList, subjectList, attendanceList, teacherClasses, getClassList, getTeacherList, getStudentList, getSubjectList, getAttendance, getTeacherClasses, getTodayAttendance, getTodayClass, getStudentProfile, createClass, createTeacher, createStudent, createSubject, addSubjectToTeacher, addTeacherToClass, addSubjectToClass }}>
             {children}
         </AppContext.Provider>
     );
@@ -271,8 +289,9 @@ export function AppProvider({ children }: { children: ReactNode }) {
 export function useAppContext() {
     const context = useContext(AppContext);
     if (context === undefined) {
-        throw new Error('useAppContext must be used within an AppProvider');
+        throw new Error('useAppContext must be used within a AppProvider');
     }
+
     return context;
 }
 

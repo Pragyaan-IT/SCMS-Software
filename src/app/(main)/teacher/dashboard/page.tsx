@@ -14,7 +14,7 @@ export default function DashboardPage() {
   const router = useRouter()
   useEffect(() => {
     if (!session) {
-      router.push("/sign-in");
+      router.push("/sign-in/teacher");
     }
     if (session && session.user.role !== "teacher") {
       router.push("/");
