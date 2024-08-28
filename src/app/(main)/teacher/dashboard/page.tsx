@@ -10,17 +10,17 @@ import { useRouter } from "next/navigation";
 import { SubjectPerformanceChart } from "../_components/subject-perfomance-chart";
 
 export default function DashboardPage() {
-  const { data: session } = useSession();
-  const router = useRouter()
-  useEffect(() => {
-    if (!session) {
-      router.push("/sign-in");
-    }
-    if (session && session.user.role !== "teacher") {
-      router.push("/");
-    }
+  // const { data: session } = useSession();
+  // const router = useRouter()
+  // useEffect(() => {
+  //   if (!session) {
+  //     router.push("/sign-in");
+  //   }
+  //   if (session && session.user.role !== "teacher") {
+  //     router.push("/");
+  //   }
     
-  }, [session]);
+  // }, [session]);
   return (
     <section>
       <PageTitle title="Dashboard" />

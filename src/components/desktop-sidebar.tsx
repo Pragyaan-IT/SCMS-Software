@@ -12,6 +12,7 @@ const RoleBasedNavigation = ({ role }: { role: UserRole }) => {
         <>
           <NavButton href={`/${role}/dashboard`} name="Dashboard" />
           <NavButton href={`/${role}/attendance`} name="Attendance" />
+          <NavButton href={`/${role}/timetable`} name="Time Table" />
           <NavButton href={`/${role}/kanban`} name="Kanban" />
           <NavButton href={`/${role}/complaints`} name="Complaints" />
         </>
