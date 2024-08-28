@@ -26,16 +26,16 @@ import { DataTable } from "./data-table";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { dummyAttendance, dummyStudents } from "../dummy-data";
 import { useAppContext } from "@/components/providers/context-provider";
-// import { useSession } from "next-auth/react";
-// import { useRouter } from "next/navigation";
+import { useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
 import { TeacherClasses } from "@/lib/types";
 
 export default function AttendanceTable() {
   const [selectedClass, setSelectedClass] = useState<string>("");
   const [dateRange, setDateRange] = useState<DateRange | undefined>();
   const [searchQuery, setSearchQuery] = useState("");
-  // const { data: session } = useSession();
-  // const router = useRouter()
+  const { data: session } = useSession();
+  const router = useRouter()
 
   const { getAttendance, getTeacherClasses, attendanceList, teacherClasses: dummyClasses } = useAppContext();
 
@@ -71,25 +71,20 @@ export default function AttendanceTable() {
     });
   }, [filteredData]);
 
-  // Removed authentication check
-  // if (!session || session.user.role !== "teacher") {
-  //   router.push("/");
-  //   return;
-  // }
+  if (!session || session.user.role !== "teacher") {
+    router.push("/");
+    return;
+  }
 
   useEffect(() => {
-    // Commented out authentication-dependent call
-    // getTeacherClasses(parseInt(session.user.id));
-    getTeacherClasses(1); // Using a dummy ID for testing
+    getTeacherClasses(parseInt(session.user.id));
   }, []);
 
   useEffect(() => {
     let intervalId: any = null;
     const startInterval = () => {
       intervalId = setInterval(async () => {
-        // Commented out authentication-dependent call
-        // getAttendance(parseInt(session.user.id));
-        getAttendance(1); // Using a dummy ID for testing
+        getAttendance(parseInt(session.user.id));
       }, 2000);
     };
 
@@ -112,9 +107,7 @@ export default function AttendanceTable() {
       }
     };
 
-    // Commented out authentication-dependent call
-    // getAttendance(parseInt(session.user.id));
-    getAttendance(1); // Using a dummy ID for testing
+    getAttendance(parseInt(session.user.id));
 
     checkAndSetInterval();
     const hourlyCheckId = setInterval(checkAndSetInterval, 60000);
