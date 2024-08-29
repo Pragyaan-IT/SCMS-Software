@@ -79,16 +79,13 @@ export default function TimetablePage() {
                             </svg>
                         </button>
                     </div>
-                    <div className="search-bar">
-                        <input type="text" placeholder="Search months" className="search-input border border-gray-300 rounded-lg py-1 px-3" />
-                    </div>
                 </div>
 
                 <div className="flex flex-col">
                     <div className="grid grid-cols-5 uppercase">
                         {
                             nextFiveDays.map((day, index) => (
-                                <div key={index} className="p-4 text-center bg-gray-300 relative font-bold ">{day}</div>
+                                <div key={index} className="md:p-4 py-2 px-1 md:text-lg text-xs text-center bg-gray-300 relative font-bold overflow-hidden ">{day}</div>
                             ))
                         }
                     </div>
@@ -114,8 +111,8 @@ export default function TimetablePage() {
                     {
                         todayClass?.map((item, index) => (
                             <div key={index} className="flex justify-between items-center p-2 border-b-1 border-gray-400 font-bold">
-                                <span className="class-time">{getTiming(item.slot)}</span>
-                                <span className="class-subject">{item.subjectName}</span>
+                                <span className="md:text-base md:font-bold text-sm">{getTiming(item.slot)}</span>
+                                <span className="md:text-base md:font-bold text-sm">{item.subjectName}</span>
                             </div>
                         ))
                     }

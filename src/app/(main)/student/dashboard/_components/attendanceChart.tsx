@@ -35,7 +35,7 @@ export function AttendanceChart() {
   return (
     <Card className="min-w-80">
       <CardHeader>
-        <CardTitle className="text-white">Attendance</CardTitle>
+        <CardTitle className="dark:text-white text-black">Attendance</CardTitle>
         <CardDescription>Attendance (last 5 days)</CardDescription>
       </CardHeader>
       <CardContent>

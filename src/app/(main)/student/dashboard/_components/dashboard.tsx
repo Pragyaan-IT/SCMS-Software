@@ -8,7 +8,7 @@ const Dashboard = () => {
   return (
     <div className="flex h-screen flex-1">
       <div className="flex h-full w-full flex-1 flex-col gap-2 p-2 md:p-10">
-        <div className="flex gap-2">
+        <div className="flex gap-2 md:flex-row flex-col">
           <div className="flex w-fit flex-col items-center justify-center gap-4 rounded-lg px-6 pb-4 pt-2 shadow-2xl">
             <AttendanceChart />
           </div>
@@ -33,7 +33,7 @@ const Dashboard = () => {
             </p>
           </div>
         </div>
-        <div className="flex flex-1 gap-2">
+        <div className="flex flex-1 gap-2 md:flex-row flex-col">
           <StudentTodayAttendance />
           <StudentTodayClass />
         </div>

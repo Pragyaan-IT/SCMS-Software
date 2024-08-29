@@ -35,7 +35,7 @@ export default function DiscussionPage() {
 
     return (
         <div className="py-4 px-2">
-            <div className="p-6 md:w-3/5 w-4/5 border-2 border-gray-600 rounded-md mx-auto mt-4">
+            <div className="md:p-6 p-2 md:w-3/5 w-full border-2 border-gray-600 rounded-md mx-auto mt-4">
                 <h3 className="text-lg text-center font-semibold text-gray-800 dark:text-gray-200">
                     Discuss, ask questions and get help from your peers and teachers.
                 </h3>
@@ -43,11 +43,11 @@ export default function DiscussionPage() {
                     If you have any questions, feel free to ask them here. Just click on the &quot;New Discussion&quot; button to get started.
                 </p>
             </div>
-            <div className="flex m-4">
-                <div className="w-4/5 px-4">
+            <div className="flex m-4 md:flex-row flex-col">
+                <div className="md:w-4/5 w-full md:px-4 px-2">
                     <SearchQuestionForm />
                 </div>
-                <div>
+                <div className="flex gap-2 items-center mt-2 md:mt-0 md:justify-normal justify-center">
                     <DropdownMenu>
                         <DropdownMenuTrigger className='bg-gray-200 px-4 text-black h-10 content-center text-medium rounded-lg flex items-center'>
                             <Tag size={20} className="mr-2" /> Labels
@@ -63,11 +63,11 @@ export default function DiscussionPage() {
                         </DropdownMenuContent>
                     </DropdownMenu>
 
+                <Button onClick={() => { onOpen("newDiscussion") }} className="bg-gray-800 text-white rounded-lg px-4" >New Discussion</Button>
                 </div>
-                <Button onClick={() => { onOpen("newDiscussion") }} className="bg-gray-800 text-white ml-2 rounded-lg px-4" >New Discussion</Button>
             </div>
 
-            <div className="flex flex-col rounded-t-lg border border-gray-800 overflow-hidden md:w-4/5 w-full mx-auto">
+            <div className="flex flex-col rounded-t-lg border border-gray-800 overflow-hidden md:w-4/5 w-full mx-auto mt-6">
                 <div className="p-4 border-b border-gray-800 rounded-t-md bg-gray-200">
                     <div className="flex items-center gap-2">
                         <CircleDot size={20} />
