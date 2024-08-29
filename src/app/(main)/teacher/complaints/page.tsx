@@ -16,6 +16,13 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { createGrievance } from "@/db/actions";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -37,16 +44,26 @@ const formSchema = z.object({
   message: z.string().min(1, {
     message: "Message is required",
   }),
+  type: z.enum([
+    "projector",
+    "computer",
+    "internet",
+    "other",
+    "light",
+    "fan",
+    "AC",
+  ]),
 });
 
 export default function SubmitGrievance() {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      teacherName: "",
+      teacherName: "Alia Bhatt",
       teacherId: "",
       classroomNumber: "",
       message: "",
+      type: "computer",
     },
   });
   async function onSubmit(values: z.infer<typeof formSchema>) {
@@ -78,14 +95,14 @@ export default function SubmitGrievance() {
                   <FormItem>
                     <FormLabel>Teacher Name</FormLabel>
                     <FormControl>
-                      <Input placeholder="Enter Name" {...field} />
+                      <Input disabled placeholder="Enter Name" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
                 )}
               />
               <div className="flex flex-row gap-4">
-                <FormField
+                {/* <FormField
                   control={form.control}
                   name="teacherId"
                   render={({ field }) => (
@@ -98,6 +115,35 @@ export default function SubmitGrievance() {
                       <FormMessage />
                     </FormItem>
                   )}
+                /> */}
+                <FormField
+                  control={form.control}
+                  name="type"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Type of Grievance</FormLabel>
+                      <Select
+                        onValueChange={field.onChange}
+                        defaultValue={field.value}
+                      >
+                        <FormControl>
+                          <SelectTrigger>
+                            <SelectValue placeholder="Select Type" />
+                          </SelectTrigger>
+                        </FormControl>
+                        <SelectContent>
+                          <SelectItem value="computer">Computer</SelectItem>
+                          <SelectItem value="projector">Projector</SelectItem>
+                          <SelectItem value="internet">Internet</SelectItem>
+                          <SelectItem value="light">Light</SelectItem>
+                          <SelectItem value="fan">Fan</SelectItem>
+                          <SelectItem value="AC">AC</SelectItem>
+                          <SelectItem value="other">Other</SelectItem>
+                        </SelectContent>
+                      </Select>
+                      <FormMessage />
+                    </FormItem>
+                  )}
                 />
                 <FormField
                   control={form.control}
@@ -106,10 +152,7 @@ export default function SubmitGrievance() {
                     <FormItem>
                       <FormLabel>Classroom Number</FormLabel>
                       <FormControl>
-                        <Input
-                          placeholder="Enter Number"
-                          {...field}
-                        />
+                        <Input placeholder="Enter Number" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -129,7 +172,6 @@ export default function SubmitGrievance() {
                   </FormItem>
                 )}
               />
-
               <Button color="primary" type="submit">
                 Submit
               </Button>
