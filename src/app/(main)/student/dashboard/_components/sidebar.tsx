@@ -62,8 +62,8 @@ export function SidebarMain({ children }: { children: React.ReactNode }) {
               ))}
             </div>
             <Button
+              variant={"ghost"}
               onClick={handleLogout}
-              variant={"secondary"}
               className={cn(
                 "group/sidebar absolute bottom-0 left-1/2 flex w-full -translate-x-1/2 items-center justify-start gap-2 rounded px-2 py-2",
               )}
