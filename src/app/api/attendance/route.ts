@@ -41,8 +41,6 @@ export async function GET(request: Request) {
         )
         .orderBy(timetable.slot, attendance.date);
 
-    console.log(attendanceRecords)
-
     return NextResponse.json({ attendance: attendanceRecords }, { status: 200 });
 }
 

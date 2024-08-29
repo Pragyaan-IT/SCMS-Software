@@ -63,3 +63,6 @@ export interface TimetableEntry {
   subject_name: string;
   teacher_name: string;
 }
+
+
+export const questionTypes:string[] =[ "Doubt", "Numerical", "Conceptual"]

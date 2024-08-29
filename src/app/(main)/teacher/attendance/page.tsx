@@ -72,7 +72,7 @@ export default function AttendanceTable() {
   }, [filteredData]);
 
   if (!session || session.user.role !== "teacher") {
-    router.push("/");
+    router.push("/sign-in/teacher");
     return;
   }
 
@@ -98,7 +98,7 @@ export default function AttendanceTable() {
     const checkAndSetInterval = () => {
       const now = new Date();
       const minutes = now.getMinutes();
-      if (minutes < 15) {
+      if (minutes < 25) {
         if (!intervalId) {
           startInterval();
         }

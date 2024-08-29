@@ -152,7 +152,10 @@ export const discussions = pgTable("discussions", {
   student_id: integer("student_id")
     .references(() => students.id)
     .notNull(),
-  question: text("question").notNull(),
+  title: text("title").notNull(),
+  subject_id: integer("subject_id").references(() => subjects.id).notNull(),
+  type: text("type"),
+  description: text("description").notNull(),
   is_solved: boolean("is_solved").default(false).notNull(),
   created_at: timestamp("created_at").defaultNow().notNull(),
 });
@@ -168,5 +171,6 @@ export const discussionReplies = pgTable("discussion_replies", {
   student_id: integer("student_id")
     .references(() => students.id),
   reply: text("reply").notNull(),
+  is_solution: boolean("is_solution").default(false).notNull(),
   created_at: timestamp("created_at").defaultNow().notNull(),
 });

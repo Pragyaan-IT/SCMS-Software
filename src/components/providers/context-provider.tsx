@@ -18,15 +18,21 @@ type AppContextType = {
     getAttendance: (teacherId: number) => void;
     getTeacherClasses: (teacherId: number) => void;
     getTodayAttendance: (studentId: string) => Promise<TodayAttendance[]>;
-    getTodayClass: (studentId: string, day:string) => Promise<TodayClass[]>;
+    getTodayClass: (studentId: string, day: string) => Promise<TodayClass[]>;
     getStudentProfile: (studentId: string) => Promise<Student[]>;
+    getAllDiscussion: () => Promise<any[]>;
+    getDiscussions: (id: number) => Promise<any[]>;
+    getDiscussionReply: (id: number) => Promise<any[]>;
     createClass: (name: string) => void;
     createTeacher: ({ name, email, password }: TeacherData) => void;
     createStudent: ({ name, email, password, registration_id, class_id }: StudentData) => void;
     createSubject: (name: string) => void;
+    createDiscussion: (studentId: number, title: string, subjectId: number, description: string, type?: string) => void;
     addSubjectToTeacher: (teacherId: number, subjectId: number) => void;
     addTeacherToClass: (teacherId: number, classId: number) => void;
     addSubjectToClass: (subjectId: number, classId: number) => void;
+    replyDiscussion: (discussionId: number, reply: string) => void;
+    markSolved: (discussionId: number, replyId: number) => void;
 };
 
 
@@ -111,6 +117,24 @@ export function AppProvider({ children }: { children: ReactNode }) {
         const response = await fetch(`/api/student/${studentId}`);
         const data = await response.json();
         return data.student;
+    }
+
+    const getAllDiscussion = async () => {
+        const response = await fetch('/api/discussion');
+        const data = await response.json();
+        return data.allDiscussions;
+    }
+
+    const getDiscussions = async (id: number) => {
+        const response = await fetch(`/api/discussion/${id}`);
+        const data = await response.json();
+        return data.discussion;
+    }
+
+    const getDiscussionReply = async (id: number) => {
+        const response = await fetch(`/api/discussion/${id}/reply`);
+        const data = await response.json();
+        return data.reply;
     }
 
     const createClass = async (name: string) => {
@@ -209,6 +233,36 @@ export function AppProvider({ children }: { children: ReactNode }) {
         }
     }
 
+    const createDiscussion = async (studentId: number, title: string, subjectId: number, description: string, type?: string) => {
+        try {
+            const res = await fetch('/api/discussion', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    studentId,
+                    title,
+                    subjectId,
+                    description,
+                    type
+                })
+            })
+
+            if (res.ok) {
+                toast.success('Subject created successfully');
+                const newSubject = await res.json();
+                setSubjectList((prev) => [...prev, ...newSubject]);
+                onClose();
+            } else {
+                const error = await res.json();
+            }
+        } catch (error) {
+            console.error(error);
+            toast.error('Error creating subject');
+        }
+    }
+
     const addSubjectToTeacher = async (teacherId: number, subjectId: number) => {
         try {
             const res = await fetch(`/api/teacher/${teacherId}/subject`, {
@@ -279,8 +333,53 @@ export function AppProvider({ children }: { children: ReactNode }) {
         }
     }
 
+    const replyDiscussion = async (discussionId: number, reply: string) => {
+        try {
+            console.log(reply)
+            const res = await fetch(`/api/discussion/${discussionId}/reply`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ reply })
+            })
+
+            if (res.ok) {
+                toast.success('Reply added successfully');
+                const newReply = await res.json();
+                onClose();
+            } else {
+                const error = await res.json();
+            }
+        } catch (error) {
+            console.error(error);
+            toast.error('Error adding reply');
+        }
+    }
+
+    const markSolved = async (discussionId: number, replyId: number) => {
+        try {
+            const res = await fetch(`/api/discussion/${discussionId}/reply`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ replyId })
+            })
+
+            if (res.ok) {
+                toast.success('Marked solved');
+            } else {
+                const error = await res.json();
+            }
+        } catch (error) {
+            console.error(error);
+            toast.error('Error Occured');
+        }
+    }
+
     return (
-        <AppContext.Provider value={{ classList, teacherList, studentList, subjectList, attendanceList, teacherClasses, getClassList, getTeacherList, getStudentList, getSubjectList, getAttendance, getTeacherClasses, getTodayAttendance, getTodayClass, getStudentProfile, createClass, createTeacher, createStudent, createSubject, addSubjectToTeacher, addTeacherToClass, addSubjectToClass }}>
+        <AppContext.Provider value={{ classList, teacherList, studentList, subjectList, attendanceList, teacherClasses, getClassList, getTeacherList, getStudentList, getSubjectList, getAttendance, getTeacherClasses, getTodayAttendance, getTodayClass, getStudentProfile, getAllDiscussion, getDiscussions, createClass, getDiscussionReply, createTeacher, createStudent, createSubject, createDiscussion, addSubjectToTeacher, addTeacherToClass, addSubjectToClass, replyDiscussion, markSolved }}>
             {children}
         </AppContext.Provider>
     );
