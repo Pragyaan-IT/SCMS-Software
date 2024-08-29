@@ -27,12 +27,12 @@ export default function TeacherDashboard() {
           </div>
           <div className="grid flex-1 auto-rows-min gap-0.5">
             <div className="text-sm text-muted-foreground">
-              Assignments Graded
+              Quizzes Created
             </div>
             <div className="flex items-baseline gap-1 text-xl font-bold tabular-nums leading-none">
-              30/40
+              30
               <span className="text-sm font-normal text-muted-foreground">
-                assignments
+                quizzes
               </span>
             </div>
           </div>
