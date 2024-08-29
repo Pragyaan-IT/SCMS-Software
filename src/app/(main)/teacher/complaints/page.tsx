@@ -78,7 +78,7 @@ export default function SubmitGrievance() {
   }
   return (
     <div className="flex h-svh w-full items-center justify-center">
-      <Card>
+      <Card className="w-full max-w-xl">
         <CardHeader>
           <CardTitle>Submit Grievance</CardTitle>
           <CardDescription>
@@ -101,7 +101,7 @@ export default function SubmitGrievance() {
                   </FormItem>
                 )}
               />
-              <div className="flex flex-row gap-4">
+              <div className="flex w-full flex-row gap-4">
                 {/* <FormField
                   control={form.control}
                   name="teacherId"
@@ -120,7 +120,7 @@ export default function SubmitGrievance() {
                   control={form.control}
                   name="type"
                   render={({ field }) => (
-                    <FormItem>
+                    <FormItem className="w-full">
                       <FormLabel>Type of Grievance</FormLabel>
                       <Select
                         onValueChange={field.onChange}
@@ -149,7 +149,7 @@ export default function SubmitGrievance() {
                   control={form.control}
                   name="classroomNumber"
                   render={({ field }) => (
-                    <FormItem>
+                    <FormItem className="w-full">
                       <FormLabel>Classroom Number</FormLabel>
                       <FormControl>
                         <Input placeholder="Enter Number" {...field} />

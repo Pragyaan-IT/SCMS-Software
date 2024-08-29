@@ -1,167 +1,144 @@
 "use client";
 
 import { useAppContext } from "@/components/providers/context-provider";
+import { Button } from "@/components/ui/button";
+import { Calendar } from "@/components/ui/calendar";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
 import { getTiming } from "@/lib/getTiming";
 import { TodayClass } from "@/lib/types";
-import { cn } from "@/lib/utils";
+import { format, isSameDay } from "date-fns";
 import { useSession } from "next-auth/react";
 import { useEffect, useState } from "react";
 
 export default function TimetablePage() {
   const { getTodayClass } = useAppContext();
-
   const { data: session } = useSession();
   const [todayClass, setTodayClass] = useState<TodayClass[] | null>(null);
-  const [nextFiveDays, setNextFiveDays] = useState<any[]>([]);
-  const [nextFiveDates, setNextFiveDates] = useState<any[]>([]);
-  const [activeDate, setActiveDate] = useState("");
-
-  const getDays = () => {
-    const days = [
-      "Sunday",
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday",
-    ];
-    const today = new Date();
-    const result = [];
-    for (let i = 0; i < 7; i++) {
-      const nextDay = new Date(today);
-      nextDay.setDate(today.getDate() + i);
-      if (nextDay.getDay() !== 0 && nextDay.getDay() !== 6) {
-        result.push(days[nextDay.getDay()]);
-      }
-    }
-    setNextFiveDays(result);
-  };
-
-  const getDates = () => {
-    const dates = [];
-    const today = new Date();
-    for (let i = 0; i < 7; i++) {
-      const nextDay = new Date(today);
-      nextDay.setDate(today.getDate() + i);
-      if (nextDay.getDay() !== 0 && nextDay.getDay() !== 6) {
-        dates.push(nextDay.getDate());
-      }
-    }
-    setNextFiveDates(dates);
-  };
+  const [nextFiveDays, setNextFiveDays] = useState<Date[]>([]);
+  const [activeDate, setActiveDate] = useState(new Date());
+  const [isCalendarOpen, setIsCalendarOpen] = useState(false);
 
   useEffect(() => {
     async function getTodayStudentClass(id: string) {
-      const today = new Date().toLocaleString("en-US", { weekday: "long" });
-      const classes = await getTodayClass(id, today);
+      const dayName = format(activeDate, "EEEE");
+      const classes = await getTodayClass(id, dayName);
       setTodayClass(classes);
     }
 
     if (session) {
       getTodayStudentClass(session?.user.id);
     }
-    getDays();
-    getDates();
-  }, [session]);
 
-  const findTimetable = async (index: number) => {
-    setActiveDate(nextFiveDates[index]);
-    const timetable = await getTodayClass(
-      session?.user.id!,
-      nextFiveDays[index],
-    );
-    setTodayClass(timetable);
+    // Calculate next five weekdays
+    const days = [];
+    let currentDate = new Date();
+    while (days.length < 5) {
+      if (currentDate.getDay() !== 0 && currentDate.getDay() !== 6) {
+        days.push(new Date(currentDate));
+      }
+      currentDate.setDate(currentDate.getDate() + 1);
+    }
+    setNextFiveDays(days);
+  }, [session, activeDate]);
+
+  const handleDateClick = (date: Date) => {
+    setActiveDate(date);
   };
 
   return (
-    <div className="p-4">
-      <h1 className="te text-2xl font-semibold">Timetable</h1>
-      <div className="mx-auto w-full">
-        <div className="relative mb-4 flex items-center justify-between border border-b-1 p-4">
-          <div className="flex items-center">
-            <div className="mr-4 text-lg font-semibold">
-              <span className="rounded-full px-2 py-1 text-blue-800">26</span>
-              <span className="ml-2">August</span>,{" "}
-              <span className="ml-2">2024</span>
-            </div>
-            <button
-              id="toggle-calendar"
-              className="ml-2 text-blue-500 hover:text-blue-700"
+    <Card className="mx-auto w-full rounded-none border-0">
+      <CardHeader>
+        <CardTitle className="text-2xl font-semibold">Timetable</CardTitle>
+      </CardHeader>
+      <CardContent>
+        <div className="space-y-4">
+          <div className="flex items-center justify-between">
+            <Button
+              variant="outline"
+              onClick={() => setIsCalendarOpen(!isCalendarOpen)}
+              className="w-[280px]"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M19 9l-7 7-7-7"
-                />
-              </svg>
-            </button>
-          </div>
-          <div className="search-bar">
-            <input
+              {format(activeDate, "dd MMMM yyyy, EEEE")}
+            </Button>
+            <Input
               type="text"
               placeholder="Search months"
-              className="search-input rounded-lg border px-3 py-1"
+              className="max-w-[200px]"
             />
           </div>
-        </div>
 
-        <div className="flex flex-col">
-          <div className="grid grid-cols-5 uppercase">
-            {nextFiveDays.map((day, index) => (
-              <div key={index} className="relative p-4 text-center font-bold">
-                {day}
-              </div>
-            ))}
-          </div>
-          <div className="grid grid-cols-5">
-            {nextFiveDates.map((date, index) => (
-              <div
+          {isCalendarOpen && (
+            <Calendar
+              mode="single"
+              selected={activeDate}
+              onSelect={(date) => {
+                if (date) {
+                  setActiveDate(date);
+                  setIsCalendarOpen(false);
+                }
+              }}
+              className="rounded-md border"
+            />
+          )}
+
+          <div className="flex space-x-2 overflow-x-auto pb-2">
+            {nextFiveDays.map((date, index) => (
+              <Button
                 key={index}
-                onClick={() => {
-                  findTimetable(index);
-                }}
-                className={cn(
-                  "relative cursor-pointer p-4 text-center",
-                  activeDate === date && "",
-                  new Date().getDate() === date && "text-white",
-                )}
+                variant={isSameDay(date, activeDate) ? "default" : "outline"}
+                onClick={() => handleDateClick(date)}
               >
-                {date}
-              </div>
+                {format(date, "EEE, MMM d")}
+              </Button>
             ))}
           </div>
-        </div>
 
-        <div className="rounded border-t-1 p-2">
-          <p className="font-semibold">Holidays</p>
-          <ul>
-            <li>August 26 - Janmashtami</li>
-            <li>August 28 - Sports Day</li>
-          </ul>
-        </div>
+          <Card>
+            <CardHeader>
+              <CardTitle>Holidays</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <ul className="list-disc pl-5">
+                <li>August 26 - Janmashtami</li>
+                <li>August 28 - Sports Day</li>
+              </ul>
+            </CardContent>
+          </Card>
 
-        <div className="mt-4 rounded border-t-1 p-2">
-          <p className="font-semibold">Timetable: {todayClass?.[0].day}</p>
-          {todayClass?.map((item, index) => (
-            <div
-              key={index}
-              className="bord flex items-center justify-between border-b-1 p-2 font-bold"
-            >
-              <span className="class-time">{getTiming(item.slot)}</span>
-              <span className="class-subject">{item.subjectName}</span>
-            </div>
-          ))}
+          <Card>
+            <CardHeader>
+              <CardTitle>Timetable: {format(activeDate, "EEEE")}</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <Table>
+                <TableHeader>
+                  <TableRow>
+                    <TableHead>Time</TableHead>
+                    <TableHead>Subject</TableHead>
+                  </TableRow>
+                </TableHeader>
+                <TableBody>
+                  {todayClass?.map((item, index) => (
+                    <TableRow key={index}>
+                      <TableCell>{getTiming(item.slot)}</TableCell>
+                      <TableCell>{item.subjectName}</TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
+            </CardContent>
+          </Card>
         </div>
-      </div>
-    </div>
+      </CardContent>
+    </Card>
   );
 }
