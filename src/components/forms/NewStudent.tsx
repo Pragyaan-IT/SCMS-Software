@@ -73,8 +73,8 @@ const NewStudentForm = () => {
                                         </FormControl>
                                         <SelectContent className='md:w-80 w-60'>
                                             {
-                                                classList.map((item) => (
-                                                    <SelectItem  value={item.id.toString()}>{item.name}</SelectItem>
+                                                classList.map((item, idx) => (
+                                                    <SelectItem key={idx}  value={item.id.toString()}>{item.name}</SelectItem>
                                                 ))
                                             }
                                         </SelectContent>

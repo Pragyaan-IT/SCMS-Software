@@ -43,6 +43,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { getTiming } from "@/lib/getTiming";
 
 interface TimetableEntry {
   id: number;
@@ -51,12 +52,11 @@ interface TimetableEntry {
   day: string;
   slot: string;
   subject_name: string;
-  teacher_name: string;
 }
 
 interface Class {
-  id: number;
-  name: string;
+  id: number | null;
+  name: string | null;
 }
 
 const columns: ColumnDef<TimetableEntry>[] = [
@@ -104,17 +104,12 @@ const columns: ColumnDef<TimetableEntry>[] = [
   {
     accessorKey: "slot",
     header: "Time Slot",
-    cell: ({ row }) => <div>{row.getValue("slot")}</div>,
+    cell: ({ row }) => <div>{getTiming(row.getValue("slot"))}</div>,
   },
   {
     accessorKey: "subject_name",
     header: "Subject",
     cell: ({ row }) => <div>{row.getValue("subject_name")}</div>,
-  },
-  {
-    accessorKey: "teacher_name",
-    header: "Teacher",
-    cell: ({ row }) => <div>{row.getValue("teacher_name")}</div>,
   },
   {
     id: "actions",
@@ -170,8 +165,8 @@ export function AdvancedTimetableDataTable({
   const filteredData = React.useMemo(() => {
     return selectedClass && timetableData
       ? timetableData.filter(
-          (entry) => entry.class_id.toString() === selectedClass,
-        )
+        (entry) => entry.class_id.toString() === selectedClass,
+      )
       : timetableData || [];
   }, [timetableData, selectedClass]);
 
@@ -208,7 +203,7 @@ export function AdvancedTimetableDataTable({
             </SelectTrigger>
             <SelectContent>
               {classes.map((cls) => (
-                <SelectItem key={cls.id} value={cls.id.toString()}>
+                <SelectItem key={cls.id} value={(cls.id)!.toString()}>
                   {cls.name}
                 </SelectItem>
               ))}
@@ -263,9 +258,9 @@ export function AdvancedTimetableDataTable({
                       {header.isPlaceholder
                         ? null
                         : flexRender(
-                            header.column.columnDef.header,
-                            header.getContext(),
-                          )}
+                          header.column.columnDef.header,
+                          header.getContext(),
+                        )}
                     </TableHead>
                   );
                 })}

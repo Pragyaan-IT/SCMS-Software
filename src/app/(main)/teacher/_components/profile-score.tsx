@@ -7,7 +7,7 @@ import { ChartContainer } from "@/components/ui/chart";
 
 export default function TeacherDashboard() {
   return (
-    <Card className="max-w-xs">
+    <Card className="w-1/2">
       <CardContent className="flex gap-4 p-4">
         <div className="grid items-center gap-2">
           <div className="grid flex-1 auto-rows-min gap-0.5">

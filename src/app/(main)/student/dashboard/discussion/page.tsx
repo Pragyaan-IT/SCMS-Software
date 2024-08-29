@@ -40,7 +40,7 @@ export default function DiscussionPage() {
                     Discuss, ask questions and get help from your peers and teachers.
                 </h3>
                 <p className="text-sm text-gray-600 dark:text-gray-300 mt-2 text-center">
-                    If you have any questions, feel free to ask them here. Just click on the "New Discussion" button to get started.
+                    If you have any questions, feel free to ask them here. Just click on the &quot;New Discussion&quot; button to get started.
                 </p>
             </div>
             <div className="flex m-4">

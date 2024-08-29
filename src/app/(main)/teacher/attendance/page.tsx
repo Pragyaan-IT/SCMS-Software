@@ -71,20 +71,24 @@ export default function AttendanceTable() {
     });
   }, [filteredData]);
 
-  if (!session || session.user.role !== "teacher") {
-    router.push("/sign-in/teacher");
-    return;
-  }
 
   useEffect(() => {
+    if (!session || session.user.role !== "teacher") {
+      router.push("/sign-in/teacher");
+      return
+    }
     getTeacherClasses(parseInt(session.user.id));
-  }, []);
+  }, [session]);
 
   useEffect(() => {
+    if (!session || session.user.role !== "teacher") {
+      router.push("/sign-in/teacher");
+      return
+    }
     let intervalId: any = null;
     const startInterval = () => {
       intervalId = setInterval(async () => {
-        getAttendance(parseInt(session.user.id));
+        getAttendance(parseInt(session?.user.id));
       }, 2000);
     };
 
@@ -116,7 +120,7 @@ export default function AttendanceTable() {
       stopInterval();
       clearInterval(hourlyCheckId);
     };
-  }, []);
+  }, [session]);
 
   return (
     <section className="flex flex-col gap-4">

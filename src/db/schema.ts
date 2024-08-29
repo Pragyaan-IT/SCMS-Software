@@ -36,6 +36,7 @@ export const students = pgTable("students", {
   class_id: integer("class_id").references(() => classes.id),
   role: roleEnum("role").notNull().default("student"),
   created_at: timestamp("created_at").defaultNow(),
+  profile_pic: text('profile_pic').notNull()
 });
 
 // Teachers Table
@@ -172,5 +173,21 @@ export const discussionReplies = pgTable("discussion_replies", {
     .references(() => students.id),
   reply: text("reply").notNull(),
   is_solution: boolean("is_solution").default(false).notNull(),
+  created_at: timestamp("created_at").defaultNow().notNull(),
+});
+
+// Quiz Table
+export const quizzes = pgTable("quizzes", {
+  id: serial("id").primaryKey(),
+  subject_id: integer("subject_id")
+    .references(() => subjects.id)
+    .notNull(),
+  teacher_id: integer("teacher_id")
+    .references(() => teachers.id)
+    .notNull(),
+  title: text("title").notNull(),
+  description: text("description").notNull(),
+  total_marks: integer("total_marks").notNull(),
+  due_date: timestamp("due_date").notNull(),
   created_at: timestamp("created_at").defaultNow().notNull(),
 });

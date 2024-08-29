@@ -75,8 +75,6 @@ export async function POST(request: Request) {
 
     const class_id = student[0].class_id;
 
-    console.log("STUDENT", student, class_id);
-
     const timetableRecord = await db
         .select({
             id: timetable.id,

@@ -11,6 +11,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
+import { signOut } from "next-auth/react";
 import { useState } from "react";
 
 type UserRole = "teacher" | "student";
@@ -22,7 +23,13 @@ const RoleBasedNavigation = ({ role }: { role: UserRole }) => {
         <>
           <NavButton href={`/${role}/dashboard`} name="Dashboard" />
           <NavButton href={`/${role}/attendance`} name="Attendance" />
+          <NavButton href={`/${role}/timetable`} name="Time Table" />
           <NavButton href={`/${role}/kanban`} name="Kanban" />
+          <NavButton href={`/${role}/complaints`} name="Complaints" />
+          <NavButton href={`/${role}/discussion`} name="Discussion" />
+          <Button variant="ghost" className="justify-start text-black dark:text-white hover:bg-primary hover:text-primary-foreground" onClick={() => { signOut({ callbackUrl: "/" }) }} >
+            Logout
+          </Button>
         </>
       );
     case "student":
