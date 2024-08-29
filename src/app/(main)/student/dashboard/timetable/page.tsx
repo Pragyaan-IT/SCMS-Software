@@ -137,6 +137,25 @@ export default function TimetablePage() {
               </Table>
             </CardContent>
           </Card>
+        <div className="rounded border-t-1 p-2">
+          <p className="font-semibold">Holidays</p>
+          <ul>
+            <li>August 26 - Janmashtami</li>
+            <li>August 28 - Sports Day</li>
+          </ul>
+        </div>
+
+        <div className="mt-4 rounded border-t-1 p-2">
+          <p className="font-semibold">Timetable: {todayClass?.[0].day}</p>
+          {todayClass?.map((item, index) => (
+            <div
+              key={index}
+              className="bord flex items-center justify-between border-b-1 p-2 font-bold"
+            >
+              <span className="md:text-base md:font-bold text-sm">{getTiming(item.slot)}</span>
+              <span className="md:text-base md:font-bold text-sm">{item.subjectName}</span>
+            </div>
+          ))}
         </div>
       </CardContent>
     </Card>

@@ -1,6 +1,14 @@
 "use client";
 
 import { useAppContext } from "@/components/providers/context-provider";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"; 
 import { getTiming } from "@/lib/getTiming";
 import { TodayAttendance } from "@/lib/types";
 import { useSession } from "next-auth/react";
@@ -26,20 +34,30 @@ const StudentTodayAttendance = () => {
   }, [session]);
 
   return (
-    <div className="h-full w-full rounded-lg p-4">
-      <h1>Today&apos;s Attendance</h1>
-      <div className="flex flex-col gap-2 p-4">
-        {todayAttendance
+       <Card className="md:w-1/2">
+       <CardHeader>
+         <CardTitle className="text-white">Timetable</CardTitle>
+         <CardDescription>Today's Attendance</CardDescription>
+       </CardHeader>
+       <CardContent>
+       {todayAttendance
           ?.sort((a: any, b: any) => a.slot - b.slot)
           .map((attendance, index) => (
-            <div key={index} className="flex justify-between rounded px-4 py-2">
-              <span>{getTiming(attendance.slot)}</span>
-              <span>{attendance.subjectName}</span>
-              <span>{attendance.attendance ? "Present" : "Absent"}</span>
+            <div key={index} className="flex justify-between rounded md:px-4 px-1 py-2">
+              <span className="md:text-base text-xs">{getTiming(attendance.slot)}</span>
+              <span className="md:text-base text-xs">{attendance.subjectName}</span>
+              <span className="md:text-base text-xs">{attendance.attendance ? "Present" : "Absent"}</span>
             </div>
           ))}
-      </div>
-    </div>
+       </CardContent>
+       <CardFooter>
+         <div className="flex w-full items-start gap-2 text-sm">
+           <div className="grid gap-2">
+             <p className="font-bold text-white">Overall Attendance - 94%</p>
+           </div>
+         </div>
+       </CardFooter>
+     </Card>
   );
 };
 

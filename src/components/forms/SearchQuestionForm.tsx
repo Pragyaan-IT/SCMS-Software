@@ -27,7 +27,7 @@ const SearchQuestionForm = () => {
         <form>
             <div className="flex items-center">
                 <DropdownMenu>
-                    <DropdownMenuTrigger className='bg-gray-800 px-4 text-white h-10 content-center text-medium rounded-s-lg flex items-center'>Filter <ChevronDown className='ml-2' size={20} /></DropdownMenuTrigger>
+                    <DropdownMenuTrigger className='bg-gray-800 md:px-4 px-2 text-white h-10 content-center text-medium rounded-s-lg flex items-center'>Filter <ChevronDown className='ml-2' size={20} /></DropdownMenuTrigger>
                     <DropdownMenuContent>
                         <DropdownMenuLabel>Select Subject</DropdownMenuLabel>
                         <DropdownMenuSeparator />

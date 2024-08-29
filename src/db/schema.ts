@@ -37,7 +37,7 @@ export const students = pgTable("students", {
   class_id: integer("class_id").references(() => classes.id),
   role: roleEnum("role").notNull().default("student"),
   created_at: timestamp("created_at").defaultNow(),
-  profile_pic: text('profile_pic').notNull()
+  profile_pic: text('profile_pic')
 });
 
 // Teachers Table
