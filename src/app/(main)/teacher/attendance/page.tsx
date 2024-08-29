@@ -23,69 +23,53 @@ import { columns } from "./columns";
 import { DataTable } from "./data-table";
 
 // Import dummy data
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { dummyAttendance, dummyStudents } from "../dummy-data";
 import { useAppContext } from "@/components/providers/context-provider";
+import { ScrollArea } from "@/components/ui/scroll-area";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
-import { TeacherClasses } from "@/lib/types";
+import { dummyStudents } from "../dummy-data";
 
 export default function AttendanceTable() {
   const [selectedClass, setSelectedClass] = useState<string>("");
   const [dateRange, setDateRange] = useState<DateRange | undefined>();
   const [searchQuery, setSearchQuery] = useState("");
-  const { data: session } = useSession();
-  const router = useRouter()
+  const { data: session, status } = useSession();
+  const router = useRouter();
 
-  const { getAttendance, getTeacherClasses, attendanceList, teacherClasses: dummyClasses } = useAppContext();
-
-  const filteredData = useMemo(() => {
-    return attendanceList.filter((record: any) => {
-      const student = dummyStudents.find((s) => s.id === record.student_id);
-      const matchesClass = selectedClass
-        ? student?.class_id.toString() === selectedClass
-        : true;
-      const matchesDate = dateRange
-        ? new Date(record.date) >= (dateRange.from || new Date(0)) &&
-        new Date(record.date) <= (dateRange.to || new Date())
-        : true;
-      const matchesSearch = searchQuery
-        ? student?.name.toLowerCase().includes(searchQuery.toLowerCase())
-        : true;
-      return matchesClass && matchesDate && matchesSearch;
-    });
-  }, [selectedClass, dateRange, searchQuery]);
-
-  const formattedData = useMemo(() => {
-    return filteredData.map((record: any) => {
-      const student = dummyStudents.find((s) => s.id === record.student_id);
-      const className =
-        dummyClasses?.find((c) => c.id === student?.class_id)?.className || "Unknown";
-      return {
-        id: record.id,
-        studentName: student?.name || "Unknown",
-        className,
-        date: format(new Date(record.date), "PPP"),
-        present: record.present,
-      };
-    });
-  }, [filteredData]);
-
-  if (!session || session.user.role !== "teacher") {
-    router.push("/sign-in/teacher");
-    return;
-  }
+  const {
+    getAttendance,
+    getTeacherClasses,
+    attendanceList,
+    teacherClasses: dummyClasses,
+  } = useAppContext();
 
   useEffect(() => {
-    getTeacherClasses(parseInt(session.user.id));
-  }, []);
+    if (
+      status === "unauthenticated" ||
+      (session && session.user.role !== "teacher")
+    ) {
+      router.push("/sign-in/teacher");
+    }
+  }, [status, session, router]);
 
   useEffect(() => {
-    let intervalId: any = null;
-    const startInterval = () => {
-      intervalId = setInterval(async () => {
+    if (session?.user.id) {
+      getTeacherClasses(parseInt(session.user.id));
+    }
+  }, [session, getTeacherClasses]);
+
+  useEffect(() => {
+    let intervalId: NodeJS.Timeout | null = null;
+
+    const fetchAttendance = () => {
+      if (session?.user.id) {
         getAttendance(parseInt(session.user.id));
-      }, 2000);
+      }
+    };
+
+    const startInterval = () => {
+      fetchAttendance();
+      intervalId = setInterval(fetchAttendance, 2000);
     };
 
     const stopInterval = () => {
@@ -107,8 +91,6 @@ export default function AttendanceTable() {
       }
     };
 
-    getAttendance(parseInt(session.user.id));
-
     checkAndSetInterval();
     const hourlyCheckId = setInterval(checkAndSetInterval, 60000);
 
@@ -116,8 +98,48 @@ export default function AttendanceTable() {
       stopInterval();
       clearInterval(hourlyCheckId);
     };
-  }, []);
+  }, [session, getAttendance]);
 
+  const filteredData = useMemo(() => {
+    return attendanceList.filter((record: any) => {
+      const student = dummyStudents.find((s) => s.id === record.student_id);
+      const matchesClass = selectedClass
+        ? student?.class_id.toString() === selectedClass
+        : true;
+      const matchesDate = dateRange
+        ? new Date(record.date) >= (dateRange.from || new Date(0)) &&
+          new Date(record.date) <= (dateRange.to || new Date())
+        : true;
+      const matchesSearch = searchQuery
+        ? student?.name.toLowerCase().includes(searchQuery.toLowerCase())
+        : true;
+      return matchesClass && matchesDate && matchesSearch;
+    });
+  }, [selectedClass, dateRange, searchQuery]);
+
+  const formattedData = useMemo(() => {
+    return filteredData.map((record: any) => {
+      const student = dummyStudents.find((s) => s.id === record.student_id);
+      const className =
+        dummyClasses?.find((c) => c.id === student?.class_id)?.className ||
+        "Unknown";
+      return {
+        id: record.id,
+        studentName: student?.name || "Unknown",
+        className,
+        date: format(new Date(record.date), "PPP"),
+        present: record.present,
+      };
+    });
+  }, [filteredData]);
+
+  if (status === "loading") {
+    return <div>Loading...</div>;
+  }
+
+  if (!session || session.user.role !== "teacher") {
+    return null;
+  }
   return (
     <section className="flex flex-col gap-4">
       <PageTitle title="Attendance" />

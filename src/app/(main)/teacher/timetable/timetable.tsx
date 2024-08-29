@@ -154,7 +154,7 @@ interface AdvancedTimetableDataTableProps {
   classes?: Class[];
 }
 
-export function AdvancedTimetableDataTable({
+export default function TimetableDataTable({
   timetableData = [],
   classes = [],
 }: AdvancedTimetableDataTableProps) {
@@ -330,4 +330,3 @@ export function AdvancedTimetableDataTable({
   );
 }
 
-export default AdvancedTimetableDataTable;

@@ -1,10 +1,9 @@
-"use client"
+"use client";
 import NavButton from "@/components/nav-button";
+import { signOut } from "next-auth/react";
 import Link from "next/link";
 import ThemeToggle from "./theme-toggle";
 import { ScrollArea } from "./ui/scroll-area";
-import { signOut } from "next-auth/react";
-import { Button } from "./ui/button";
 
 type UserRole = "teacher" | "student";
 
@@ -19,9 +18,13 @@ const RoleBasedNavigation = ({ role }: { role: UserRole }) => {
           <NavButton href={`/${role}/kanban`} name="Kanban" />
           <NavButton href={`/${role}/complaints`} name="Complaints" />
           <NavButton href={`/${role}/discussion`} name="Discussion" />
-          <Button variant="ghost" className="justify-start text-black dark:text-white hover:bg-primary hover:text-primary-foreground" onClick={()=>{signOut({callbackUrl: "/"})}} >
-            Logout
-          </Button>
+          <NavButton
+            href={"#"}
+            name="Logout"
+            onClick={() => {
+              signOut({ callbackUrl: "/" });
+            }}
+          />
         </>
       );
     case "student":
