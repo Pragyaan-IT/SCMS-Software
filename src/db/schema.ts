@@ -14,6 +14,7 @@ export const roleEnum = pgEnum("role", [
   "teacher",
   "student",
   "parent",
+  'grievances_handler'
 ]);
 
 // Admin Table
@@ -47,6 +48,15 @@ export const teachers = pgTable("teachers", {
   email: text("email").notNull().unique(),
   password: text("password").notNull(),
   role: roleEnum("role").notNull().default("teacher"),
+});
+
+// Greviances Handlers Table
+export const grievancesHandlers = pgTable("grievances_handlers", {
+  id: serial("id").primaryKey(),
+  name: text("name").notNull(),
+  email: text("email").notNull().unique(),
+  password: text("password").notNull(),
+  role: roleEnum("role").notNull().default("grievances_handler"),
 });
 
 export const teacherSubjects = pgTable("teacher_subjects", {
@@ -190,4 +200,17 @@ export const quizzes = pgTable("quizzes", {
   total_marks: integer("total_marks").notNull(),
   due_date: timestamp("due_date").notNull(),
   created_at: timestamp("created_at").defaultNow().notNull(),
+});
+
+// Student Performance
+export const studentPerformance = pgTable("student_performance", {
+  id: serial("id").primaryKey(),
+  student_id: integer("student_id")
+    .references(() => students.id)
+    .notNull(),
+  subject_id: integer("subject_id")
+    .references(() => subjects.id)
+    .notNull(),
+  report: text("report").notNull(),
+  date: timestamp("date").notNull(),
 });

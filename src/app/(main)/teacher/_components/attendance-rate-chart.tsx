@@ -1,53 +1,75 @@
-"use client"
+"use client";
 
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card"
-import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis, Tooltip } from "recharts"
-import { ChartContainer, ChartTooltip, ChartTooltipContent, ChartConfig } from "@/components/ui/chart"
-import { TrendingUp, TrendingDown } from "lucide-react"
-
-const data = [
-  { subject: "Math", attendanceRate: 95 },
-  { subject: "Science", attendanceRate: 88 },
-  { subject: "History", attendanceRate: 92 },
-  { subject: "English", attendanceRate: 90 },
-  { subject: "Art", attendanceRate: 85 },
-];
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card";
+import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis, Tooltip } from "recharts";
+import { ChartContainer, ChartTooltip, ChartTooltipContent, ChartConfig } from "@/components/ui/chart";
+import { TrendingUp, TrendingDown } from "lucide-react";
+import { useEffect, useState } from "react";
+import { countPresentStudent, getTotalStudent } from "@/db/actions";
 
 const chartConfig = {
   attendanceRate: {
     label: "Attendance Rate",
     color: "hsl(var(--chart-1))",
   },
-} satisfies ChartConfig
+} satisfies ChartConfig;
 
 export function AttendanceRateChart() {
-  const averageAttendance = data.reduce((sum, item) => sum + item.attendanceRate, 0) / data.length
-  const previousAverageAttendance = 89 // This would typically come from historical data
-  const percentageChange = ((averageAttendance - previousAverageAttendance) / previousAverageAttendance) * 100
+  const [chartData, setChartData] = useState<any[]>([]);
+
+  useEffect(() => {
+    (async () => {
+      const totalStudentResponse = await getTotalStudent(1);
+      const totalStudents = totalStudentResponse[0]?.totalStudents as number;
+
+      const attendanceRecords = await countPresentStudent(4);
+
+      const now = new Date();
+      const pastDays = Array.from({ length: 5 }, (_, i) => {
+        const date = new Date(now);
+        date.setDate(now.getDate() - i - 1); 
+        return date.toISOString().split('T')[0]; 
+      });
+
+      const data = attendanceRecords
+        .filter(record => pastDays.includes(record.attendanceDate))
+        .map(record => {
+          const attendanceRate = (record.presentStudents / totalStudents) * 100;
+          return { day: record.attendanceDate, attendanceRate };
+        });
+
+      data.sort((a, b) => new Date(b.day).getTime() - new Date(a.day).getTime());
+
+      setChartData(data);
+    })();
+  }, []);
+
 
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Attendance Rates by Subject</CardTitle>
+        <CardTitle>Attendance Rates (Last 5 days)</CardTitle>
         <CardDescription>Current Semester Overview</CardDescription>
       </CardHeader>
       <CardContent className="pb-4">
         <ChartContainer config={chartConfig}>
           <ResponsiveContainer width="100%" height={300}>
-            <BarChart data={data}>
-              <XAxis 
-                dataKey="subject" 
+            <BarChart data={chartData}>
+              <XAxis
+                dataKey="day"
                 tickLine={false}
                 axisLine={false}
                 tickMargin={8}
+                tickFormatter={(tick) => new Date(tick).toLocaleDateString()}
               />
-              <YAxis 
+              <YAxis
                 tickLine={false}
                 axisLine={false}
                 tickMargin={8}
+                domain={[0, 100]}
               />
-              <Bar 
-                dataKey="attendanceRate" 
+              <Bar
+                dataKey="attendanceRate"
                 fill="var(--color-attendanceRate)"
                 radius={[4, 4, 0, 0]}
               />
@@ -60,21 +82,10 @@ export function AttendanceRateChart() {
         </ChartContainer>
       </CardContent>
       <CardFooter className="flex-col items-start gap-2 text-sm">
-        <div className="flex gap-2 font-medium leading-none">
-          {percentageChange > 0 ? (
-            <>
-              Trending up by {percentageChange.toFixed(1)}% this semester <TrendingUp className="h-4 w-4" />
-            </>
-          ) : (
-            <>
-              Trending down by {Math.abs(percentageChange).toFixed(1)}% this semester <TrendingDown className="h-4 w-4" />
-            </>
-          )}
-        </div>
         <div className="leading-none text-muted-foreground">
-          Showing attendance rates for all subjects this semester
+          Showing attendance rates for the last 5 days (excluding today)
         </div>
       </CardFooter>
     </Card>
-  )
+  );
 }
