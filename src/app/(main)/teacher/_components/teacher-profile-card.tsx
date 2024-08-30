@@ -21,6 +21,8 @@ export default function TeacherProfileCard({ profile }: { profile: any }) {
           className="h-40 w-40 rounded-full"
           src={profile.profile_pic}
           alt="teacher pic"
+          width={100}
+          height={100}
         />
         <Table>
           {/* <TableHeader>

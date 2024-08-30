@@ -29,6 +29,8 @@ export default function ProfileCard({ profile }: { profile: any }) {
           className="rounded-full h-40 w-40"
           src={profile.profile_pic}
           alt="boy"
+          width={100}
+          height={100}
         />
         <Table>
           {/* <TableHeader>
