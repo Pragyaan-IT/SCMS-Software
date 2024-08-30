@@ -44,7 +44,7 @@ export default function StudentPerformanceChart() {
   return (
     <Card className="h-min">
       <CardHeader>
-        <CardTitle>Student Performance</CardTitle>
+        <CardTitle>Teacher&apos;s Performance</CardTitle>
         <CardDescription>January - July 2024</CardDescription>
       </CardHeader>
       <CardContent>

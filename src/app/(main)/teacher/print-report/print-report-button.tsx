@@ -1,18 +1,14 @@
 "use client";
 
-import boy from "@/public/boy.png";
+import hcverma from "@/public/hcverma.jpg";
 import { Button } from "@nextui-org/button";
 import html2canvas from "html2canvas";
 import { jsPDF } from "jspdf";
 import { useRef } from "react";
-import Dashboard from "../_components/dashboard";
-import { WeightDistributionChart } from "../_components/weight-distribution-chart";
-// import ProfileScore from "../_components/profile-score-2";
-// import QuestionsAnswered from "../_components/questions-answered";
-// import TeacherProfileCard from "../_components/teacher-profile-card";
-import QuestionsAnswered from "../../../teacher/_components/questions-answered";
-import ProfileCard from "../_components/profile-card";
-import StudentProfileScore from "../_components/profile-score-2";
+import { WeightDistributionChart } from "../../student/dashboard/_components/weight-distribution-chart";
+import ProfileScore from "../_components/profile-score-2";
+import QuestionsAnswered from "../_components/questions-answered";
+import TeacherProfileCard from "../_components/teacher-profile-card";
 import ProfileScoreTable from "./teacher-table";
 
 export default function PrintReport() {
@@ -32,14 +28,11 @@ export default function PrintReport() {
     pdf.save("student-report.pdf");
   };
 
-
-  
-  const profile = {
-    name: "Shashank Shekhar Pandey",
-    email: "shashank@gmail.com",  
-    registration_id: "100002",
-    isFaceRegistered: true,
-    profile_pic: "https://res.cloudinary.com/dfn0nvt6t/image/upload/", 
+  const student = {
+    name: "Aman Varshney",
+    email: "aman@dsd.dsd",
+    profile_pic: hcverma,
+    is_face_registered: true,
   };
 
   return (
@@ -47,19 +40,18 @@ export default function PrintReport() {
       <Button
         type="button"
         onClick={handleDownloadPdf}
-        className="fixed right-10 top-10 z-50"
+        className="fixed right-10 top-10"
       >
         Download as PDF
       </Button>
       <div ref={printRef}>
-        <div className=""><Dashboard profile={profile} /></div>
         <div className="">
           <div className="grid grid-cols-1 gap-2 lg:grid-cols-5">
             <div className="col-span-2">
-              <ProfileCard profile={profile} />
+              <TeacherProfileCard profile={student} />
             </div>
             <div className="col-span-3 flex flex-col gap-2">
-              <StudentProfileScore />
+              <ProfileScore />
               <QuestionsAnswered />
             </div>
             {/* <StudentPerformanceChart /> */}

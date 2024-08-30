@@ -1,7 +1,6 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
+import Image from "next/image";
 
 export default function TeacherProfileCard({ profile }: { profile: any }) {
   // const studentData = await db
@@ -17,14 +16,12 @@ export default function TeacherProfileCard({ profile }: { profile: any }) {
 
   return (
     <Card className="h-min">
-      {/* <CardHeader>
-        <CardTitle>Your Profile</CardTitle>
-      </CardHeader> */}
-      <CardContent className="flex flex-col gap-5 pt-6">
-        <Avatar className="h-32 w-32">
-          <AvatarImage  src={profile.profile_pic} />
-          <AvatarFallback>CN</AvatarFallback>
-        </Avatar>
+      <CardContent className="flex flex-col items-center gap-5 pt-6">
+        <Image
+          className="h-40 w-40 rounded-full"
+          src={profile.profile_pic}
+          alt="teacher pic"
+        />
         <Table>
           {/* <TableHeader>
             <TableRow>
@@ -44,9 +41,7 @@ export default function TeacherProfileCard({ profile }: { profile: any }) {
               <TableCell className="py-4 text-right">{profile.email}</TableCell>
             </TableRow>
             <TableRow>
-              <TableCell className="py-4 font-medium">
-                Teacher ID
-              </TableCell>
+              <TableCell className="py-4 font-medium">Teacher ID</TableCell>
               <TableCell className="py-4 text-right">
                 {profile.registration_id}
               </TableCell>
