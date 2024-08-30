@@ -24,11 +24,11 @@ export default function DashboardPage() {
   // }, [session]);
 
   const studentData = {
-    name: "Mr Moshin Quresh",
-    email: "moshinquresh@gmail.com",
-    registration_id: "100002",
+    name: "Aman Varshney",
+    email: "av.amanvarshney11@gmail.com",
+    registrationId: "2215000198",
     isFaceRegistered: true,
-    profile_pic: "https://res.cloudinary.com/dfn0nvt6t/image/upload/v1725018419/IMG_0755_jrcw0g.jpg",
+    profile_pic: "https://api.multiavatar.com/avataaars/amanvarshney.png",
   };
 
   return (

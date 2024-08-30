@@ -59,7 +59,7 @@ export default function SubmitGrievance() {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      teacherName: "Mr.Moshin Quresh",
+      teacherName: "Alia Bhatt",
       teacherId: "",
       classroomNumber: "",
       message: "",
