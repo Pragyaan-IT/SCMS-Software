@@ -29,8 +29,8 @@ export default function PrintReport() {
   };
 
   const student = {
-    name: "Aman Varshney",
-    email: "aman@dsd.dsd",
+    name: "HC Verma",
+    email: "hc.verma@gmail.com",
     profile_pic: hcverma,
     is_face_registered: true,
   };

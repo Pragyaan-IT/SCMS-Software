@@ -1,3 +1,4 @@
+import boy from "@/public/boy.png";
 import Dashboard from "./_components/dashboard";
 
 export default async function DashboardPage() {
@@ -14,12 +15,12 @@ export default async function DashboardPage() {
 
   // if (!(student?.is_face_registered)) {
   //   redirect("/student/face-registration?registration_id=" + session.user.id + "&student_name=" + student?.name);
-// }
+  // }
 
   const student = {
-    name: "Aman Varshney",
-    email: "aman@dsd.dsd",
-    profile_pic: "",
+    name: "Shashank Pandey",
+    email: "shashank@gmail.com",
+    profile_pic: boy,
     is_face_registered: true,
   };
 
