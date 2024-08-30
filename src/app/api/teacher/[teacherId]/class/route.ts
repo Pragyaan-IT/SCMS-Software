@@ -8,6 +8,7 @@ interface params {
 }
 
 export async function GET(request: Request, { params }: { params: params }) {
+    console.log(params.teacherId)
     const teacherClasses = await db
         .select({
             id: classes.id,

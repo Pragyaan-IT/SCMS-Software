@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import {
   BookOpen,
   ChartBar,
+  File,
   LayoutDashboard,
   MessagesSquare,
   UserCog2,
@@ -36,6 +37,11 @@ export function SidebarMain({ children }: { children: React.ReactNode }) {
       label: "Print Report",
       href: "/student/dashboard/print-report",
       icon: <MessagesSquare className="h-5 w-5 flex-shrink-0" />,
+    },
+    {
+      label: "Resources",
+      href: "/student/dashboard/resources",
+      icon: <File className="h-5 w-5 flex-shrink-0" />,
     },
   ];
   const [open, setOpen] = useState(false);

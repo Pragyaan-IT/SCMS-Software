@@ -23,11 +23,13 @@ type AppContextType = {
     getAllDiscussion: () => Promise<any[]>;
     getDiscussions: (id: number) => Promise<any[]>;
     getDiscussionReply: (id: number) => Promise<any[]>;
+    getResources: () => Promise<any[]>;
     createClass: (name: string) => void;
     createTeacher: ({ name, email, password }: TeacherData) => void;
     createStudent: ({ name, email, password, registration_id, class_id }: StudentData) => void;
     createSubject: (name: string) => void;
     createDiscussion: (studentId: number, title: string, subjectId: number, description: string, type?: string) => void;
+    createResource: (title: string, description: string, resourceUrl: string, classId: number) => void;
     addSubjectToTeacher: (teacherId: number, subjectId: number) => void;
     addTeacherToClass: (teacherId: number, classId: number) => void;
     addSubjectToClass: (subjectId: number, classId: number) => void;
@@ -263,6 +265,43 @@ export function AppProvider({ children }: { children: ReactNode }) {
         }
     }
 
+    const createResource = async (title: string, description: string, resourceUrl: string, classId: number) => {
+        try {
+            const res = await fetch('/api/resource', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ title, description, resourceUrl, classId })
+            })
+
+            if (res.ok) {
+                toast.success('Resource created successfully');
+                const newResource = await res.json();
+                // setSubjectList((prev) => [...prev, ...newSubject]);
+                onClose();
+            } else {
+                const error = await res.json();
+            }
+        } catch (error) {
+            console.error(error);
+            toast.error('Error creating resource');
+        }
+    }
+
+    const getResources = async () => {
+        try {
+            const res = await fetch('/api/resource');
+            if (res.ok) {
+                const data = await res.json();
+                return data.resources;
+            }
+        } catch (error) {
+            console.error(error);
+        }
+    }
+
+
     const addSubjectToTeacher = async (teacherId: number, subjectId: number) => {
         try {
             const res = await fetch(`/api/teacher/${teacherId}/subject`, {
@@ -379,7 +418,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
     }
 
     return (
-        <AppContext.Provider value={{ classList, teacherList, studentList, subjectList, attendanceList, teacherClasses, getClassList, getTeacherList, getStudentList, getSubjectList, getAttendance, getTeacherClasses, getTodayAttendance, getTodayClass, getStudentProfile, getAllDiscussion, getDiscussions, createClass, getDiscussionReply, createTeacher, createStudent, createSubject, createDiscussion, addSubjectToTeacher, addTeacherToClass, addSubjectToClass, replyDiscussion, markSolved }}>
+        <AppContext.Provider value={{ classList, teacherList, studentList, subjectList, attendanceList, teacherClasses, getClassList, getTeacherList, getStudentList, getSubjectList, getAttendance, getTeacherClasses, getTodayAttendance, getTodayClass, getStudentProfile, getAllDiscussion, getDiscussions, getResources, createClass, getDiscussionReply, createTeacher, createStudent, createSubject, createDiscussion, createResource, addSubjectToTeacher, addTeacherToClass, addSubjectToClass, replyDiscussion, markSolved }}>
             {children}
         </AppContext.Provider>
     );

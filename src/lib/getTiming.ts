@@ -1,5 +1,9 @@
 export const getTiming = (slot: string) => {
     switch (slot) {
+        case '6':
+            return '06:00 AM - 07:00 AM';
+        case '7':
+            return '07:00 AM - 08:00 AM';
         case '9':
             return '09:00 AM - 10:00 AM';
         case '10':

@@ -2,8 +2,10 @@
 
 import { and, asc, eq, gte, sql } from "drizzle-orm";
 import { db } from ".";
-import { attendance, classes, classTeachers, complaints, students, subjects, teachers, timetable } from "./schema";
+import { attendance, classes, classTeachers, complaints, shareResources, students, subjects, teachers, timetable } from "./schema";
 import { count } from "console";
+import { getServerSession } from "next-auth";
+import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 
 // using any for now
 export async function createGrievance(values: any) {
@@ -60,3 +62,35 @@ export async function getTotalStudent(id: number) {
 
   return totalStudentsInClass;
 }
+
+export const getResources = async () => {
+  try {
+    const session = await getServerSession(authOptions)
+    if (!session) {
+      return;
+    }
+
+    const id = session.user.id;
+    console.log(id)
+    const student = await db.select().from(students).where(eq(students.registration_id, id.toString()));
+    console.log(student)
+    const resources = await db
+      .select({
+        id: shareResources.id,
+        title: shareResources.title,
+        description: shareResources.description,
+        link: shareResources.link,
+        created_at: shareResources.created_at,
+        teacherName: teachers.name,
+      })
+      .from(shareResources)
+      .leftJoin(teachers, eq(shareResources.teacher_id, teachers.id))
+      .where(eq(shareResources.class_id, student[0]?.class_id ?? 0));
+
+      console.log("Resources", resources)
+    return resources
+  } catch (error) {
+    console.error(error);
+  }
+}
+
