@@ -1,5 +1,3 @@
-"use client";
-
 import {
   ColumnDef,
   ColumnFiltersState,
@@ -28,6 +26,13 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Input } from "@/components/ui/input";
 import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import {
   Table,
   TableBody,
   TableCell,
@@ -35,23 +40,16 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 import { getTiming } from "@/lib/getTiming";
 
 interface TimetableEntry {
   id: number;
   class_id: number;
-  class_name: string;
+  class_name: string | null;
   day: string;
   slot: string;
-  subject_name: string;
+  subject_name: string | null;
+  teacher_name: string | null;
 }
 
 interface Class {
@@ -109,7 +107,12 @@ const columns: ColumnDef<TimetableEntry>[] = [
   {
     accessorKey: "subject_name",
     header: "Subject",
-    cell: ({ row }) => <div>{row.getValue("subject_name")}</div>,
+    cell: ({ row }) => <div>{row.getValue("subject_name") || "N/A"}</div>,
+  },
+  {
+    accessorKey: "teacher_name",
+    header: "Teacher",
+    cell: ({ row }) => <div>{row.getValue("teacher_name")}</div>,
   },
   {
     id: "actions",
@@ -145,13 +148,13 @@ const columns: ColumnDef<TimetableEntry>[] = [
 ];
 
 interface AdvancedTimetableDataTableProps {
-  timetableData?: TimetableEntry[];
-  classes?: Class[];
+  timetableData: TimetableEntry[];
+  classes: Class[];
 }
 
 export default function TimetableDataTable({
-  timetableData = [],
-  classes = [],
+  timetableData,
+  classes,
 }: AdvancedTimetableDataTableProps) {
   const [sorting, setSorting] = React.useState<SortingState>([]);
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
@@ -163,11 +166,11 @@ export default function TimetableDataTable({
   const [selectedClass, setSelectedClass] = React.useState<string>("");
 
   const filteredData = React.useMemo(() => {
-    return selectedClass && timetableData
+    return selectedClass
       ? timetableData.filter(
-        (entry) => entry.class_id.toString() === selectedClass,
-      )
-      : timetableData || [];
+          (entry) => entry.class_id.toString() === selectedClass,
+        )
+      : timetableData;
   }, [timetableData, selectedClass]);
 
   const table = useReactTable({
@@ -189,22 +192,25 @@ export default function TimetableDataTable({
     },
   });
 
-  if (!timetableData || timetableData.length === 0) {
+  if (timetableData.length === 0) {
     return <div>No timetable data available.</div>;
   }
 
   return (
     <div className="w-full">
       <div className="flex items-center pb-4">
-        {classes && classes.length > 0 && (
+        {classes.length > 0 && (
           <Select onValueChange={setSelectedClass} value={selectedClass}>
             <SelectTrigger className="w-[200px]">
               <SelectValue placeholder="Select a class" />
             </SelectTrigger>
             <SelectContent>
               {classes.map((cls) => (
-                <SelectItem key={cls.id} value={(cls.id)!.toString()}>
-                  {cls.name}
+                <SelectItem
+                  key={cls.id?.toString()}
+                  value={cls.id?.toString() ?? ""}
+                >
+                  {cls.name ?? "Unnamed Class"}
                 </SelectItem>
               ))}
             </SelectContent>
@@ -258,9 +264,9 @@ export default function TimetableDataTable({
                       {header.isPlaceholder
                         ? null
                         : flexRender(
-                          header.column.columnDef.header,
-                          header.getContext(),
-                        )}
+                            header.column.columnDef.header,
+                            header.getContext(),
+                          )}
                     </TableHead>
                   );
                 })}
@@ -324,4 +330,3 @@ export default function TimetableDataTable({
     </div>
   );
 }
-

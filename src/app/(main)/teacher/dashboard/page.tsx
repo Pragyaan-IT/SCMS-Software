@@ -12,18 +12,18 @@ import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 
 export default function DashboardPage() {
-  const { data: session } = useSession();
-  const router = useRouter()
-  useEffect(() => {
-    if (!session) {
-      router.push("/sign-in/teacher");
-    }
-    if (session && session.user.role !== "teacher") {
-      router.push("/");
-    }
-    console.log(session);
+  // const { data: session } = useSession();
+  // const router = useRouter()
+  // useEffect(() => {
+  //   if (!session) {
+  //     router.push("/sign-in/teacher");
+  //   }
+  //   if (session && session.user.role !== "teacher") {
+  //     router.push("/");
+  //   }
+  //   console.log(session);
 
-  }, [session]);
+  // }, [session]);
   return (
     <section>
       <PageTitle title="Dashboard" />

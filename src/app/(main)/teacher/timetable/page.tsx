@@ -10,8 +10,8 @@ import { classes, classTeachers, subjects, teachers, timetable } from "@/db/sche
 export default async function TimetablePage() {
   const teacherTimetable = await db
     .select({
-      timetableId: timetable.id,
-      classId: timetable.class_id,
+      id: timetable.id,
+      class_id: timetable.class_id,
       class_name: classes.name,
       day: timetable.day,
       slot: timetable.slot,
