@@ -1,44 +1,50 @@
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { ScrollArea } from "@/components/ui/scroll-area";
 import { Separator } from "@/components/ui/separator";
 import { AttendanceChart } from "./attendanceChart";
 import { GradeChart } from "./gradeChart";
+import ProfileCard from "./profile-card";
 import StudentTodayAttendance from "./TodayAttendance";
 import StudentTodayClass from "./TodayClass";
 
 const Dashboard = () => {
   return (
-    <div className="flex h-screen flex-1">
-      <div className="flex h-full w-full flex-1 flex-col gap-2 p-2 md:p-10">
-        <div className="flex gap-2 md:flex-row flex-col">
-          <div className="flex w-fit flex-col items-center justify-center gap-4 rounded-lg px-6 pb-4 pt-2 shadow-2xl">
-            <AttendanceChart />
+    <ScrollArea className="h-svh">
+      <div className="flex flex-col gap-2 p-2 md:p-10">
+        <div className="grid grid-cols-1 gap-2 md:grid-cols-3 lg:grid-cols-4 h-min">
+          <div className="w-full col-span-2">
+            <ProfileCard />
           </div>
-          <div className="flex w-fit flex-col items-center justify-center gap-4 rounded-lg px-6 py-2 shadow-2xl">
-            <GradeChart />
-          </div>
-          <div className="flex w-full flex-col gap-4 rounded-lg p-4 shadow-2xl">
-            <p>Upcoming Quizes</p>
-            <p className="flex justify-between">
-              <span className="font-semibold">Math: 20th June</span>
-              <span>08:00 PM</span>
-            </p>
-            <Separator />
-            <p className="flex justify-between">
-              <span className="font-semibold">Science: 25th June</span>
-              <span>08:00 PM</span>
-            </p>
-            <Separator />
-            <p className="flex justify-between">
-              <span className="font-semibold">History: 30th June</span>
-              <span>08:00 PM</span>
-            </p>
-          </div>
+          <AttendanceChart />
+          <GradeChart />
         </div>
-        <div className="flex flex-1 gap-2 md:flex-row flex-col">
+        <div className="flex flex-1 flex-col gap-2 md:flex-row">
+          <Card>
+            <CardHeader>
+              <CardTitle>Upcoming Quizes</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="flex justify-between">
+                <span className="font-semibold">Math: 20th June</span>
+                <span>08:00 PM</span>
+              </p>
+              <Separator />
+              <p className="flex justify-between">
+                <span className="font-semibold">Science: 25th June</span>
+                <span>08:00 PM</span>
+              </p>
+              <Separator />
+              <p className="flex justify-between">
+                <span className="font-semibold">History: 30th June</span>
+                <span>08:00 PM</span>
+              </p>
+            </CardContent>
+          </Card>
           <StudentTodayAttendance />
           <StudentTodayClass />
         </div>
       </div>
-    </div>
+    </ScrollArea>
   );
 };
 

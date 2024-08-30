@@ -1,12 +1,8 @@
 "use client";
 
 import AnimatedCircularProgressBar from "@/components/ui/circular-progress";
-import { useEffect, useState } from "react";
 
-
-export function CircularProgress({value}:{value: number}) {
-
-
+export function CircularProgress({ value }: { value: number }) {
   return (
     <AnimatedCircularProgressBar
       max={100}

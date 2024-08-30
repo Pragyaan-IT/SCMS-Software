@@ -33,13 +33,13 @@ const chartConfig = {
 
 export function AttendanceChart() {
   return (
-    <Card className="min-w-80">
+    <Card className="">
       <CardHeader>
         <CardTitle className="">Attendance</CardTitle>
         <CardDescription>Attendance (last 5 days)</CardDescription>
       </CardHeader>
       <CardContent>
-        <ChartContainer config={chartConfig}>
+        <ChartContainer config={chartConfig} className="min-h-[100px]">
           <AreaChart
             accessibilityLayer
             data={chartData}

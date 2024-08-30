@@ -36,7 +36,7 @@ export function GradeChart() {
         <CardDescription>Exams</CardDescription>
       </CardHeader>
       <CardContent>
-        <ChartContainer className="mx-auto" config={chartConfig}>
+        <ChartContainer className="min-h-[100px]" config={chartConfig}>
           <AreaChart
             accessibilityLayer
             data={chartData}

@@ -36,7 +36,7 @@ const StudentTodayAttendance = () => {
   return (
     <Card className="md:w-1/2">
       <CardHeader>
-        <CardTitle className="text-white">Timetable</CardTitle>
+        <CardTitle>Timetable</CardTitle>
         <CardDescription>Today&apos;s Attendance</CardDescription>
       </CardHeader>
       <CardContent>
