@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
 
-export default async function ProfileCard() {
+export default async function ProfileCard({ profile }: { profile: any }) {
   // const studentData = await db
   //   .select({
   //     name: students.name,
@@ -16,6 +16,7 @@ export default async function ProfileCard() {
   //   .from(students)
 
   // dummy data
+  console.log(profile)
   const studentData = {
     name: "Aman Varshney",
     email: "av.amanvarshney11@gmail.com",
@@ -31,7 +32,7 @@ export default async function ProfileCard() {
       </CardHeader>
       <CardContent className="flex flex-row gap-6">
         <Avatar className="h-32 w-32">
-          <AvatarImage src={studentData.image} />
+          <AvatarImage src={profile.profile_pic} />
           <AvatarFallback>CN</AvatarFallback>
         </Avatar>
         <Table>
@@ -47,13 +48,13 @@ export default async function ProfileCard() {
             <TableRow>
               <TableCell className="py-4 font-medium">Name</TableCell>
               <TableCell className="py-4 text-right">
-                {studentData.name}
+                {profile.name}
               </TableCell>
             </TableRow>
             <TableRow>
               <TableCell className="py-4 font-medium">Email</TableCell>
               <TableCell className="py-4 text-right">
-                {studentData.email}
+                {profile.email}
               </TableCell>
             </TableRow>
             <TableRow>
@@ -61,7 +62,7 @@ export default async function ProfileCard() {
                 Registration ID
               </TableCell>
               <TableCell className="py-4 text-right">
-                {studentData.registrationId}
+                {profile.registration_id}
               </TableCell>
             </TableRow>
             <TableRow>
@@ -69,7 +70,7 @@ export default async function ProfileCard() {
                 Face Registration
               </TableCell>
               <TableCell className="py-4 text-right">
-                {studentData.isFaceRegistered ? (
+                {profile.is_face_registered ? (
                   <Badge>Face Registered</Badge>
                 ) : (
                   <Badge variant={"destructive"}>Face Not Registered</Badge>

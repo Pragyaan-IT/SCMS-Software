@@ -81,7 +81,7 @@ export default function TimetablePage() {
         <div className="relative mb-4 flex items-center justify-between border border-b-1 p-4">
           <div className="flex items-center">
             <div className="mr-4 text-lg font-semibold">
-              <span className="rounded-full px-2 py-1 text-blue-800">26</span>
+              <span className="rounded-full px-2 py-1 text-blue-800">30</span>
               <span className="ml-2">August</span>,{" "}
               <span className="ml-2">2024</span>
             </div>
@@ -105,19 +105,12 @@ export default function TimetablePage() {
               </svg>
             </button>
           </div>
-          <div className="search-bar">
-            <input
-              type="text"
-              placeholder="Search months"
-              className="search-input rounded-lg border px-3 py-1"
-            />
-          </div>
         </div>
 
         <div className="flex flex-col">
           <div className="grid grid-cols-5 uppercase">
             {nextFiveDays.map((day, index) => (
-              <div key={index} className="relative p-4 text-center font-bold">
+              <div key={index} className="relative md:p-4 px-2 py-1 text-center md:text-base text-xs font-bold bg-gray-200 overflow-hidden">
                 {day}
               </div>
             ))}
@@ -130,9 +123,9 @@ export default function TimetablePage() {
                   findTimetable(index);
                 }}
                 className={cn(
-                  "relative cursor-pointer p-4 text-center",
-                  activeDate === date && "",
-                  new Date().getDate() === date && "text-white",
+                  "relative cursor-pointer md:p-4 px-2 py-1 text-center",
+                  activeDate === date && "bg-gray-200",
+                  new Date().getDate() === date && "bg-green-500",
                 )}
               >
                 {date}
