@@ -156,7 +156,7 @@ const TeacherTimetable: React.FC<TeacherTimetableProps> = ({ teacherId }) => {
                   <TableCell key={`${day}-${time}`} className="p-0">
                     {lesson && (
                       <div
-                        className={`h-full p-2 text-background ${subjectColors[lesson.subject.name] || "bg-gray-100"}`}
+                        className={`h-full p-2 ${subjectColors[lesson.subject.name] || "bg-gray-100"}`}
                       >
                         <div className="font-semibold">
                           {lesson.subject.name}
