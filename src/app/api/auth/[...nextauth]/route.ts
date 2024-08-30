@@ -21,6 +21,7 @@ export const authOptions: NextAuthOptions = {
         if (!credentials?.registration_id || !credentials?.password) {
           throw new Error("Invalid credentials");
         }
+        console.log(credentials);
         const student = await db.select()
           .from(students)
           .where(eq(students.registration_id, credentials.registration_id.toString()))

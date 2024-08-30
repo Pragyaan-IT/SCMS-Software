@@ -123,6 +123,7 @@ export default function FaceRegistration() {
       const data = await res.json();
       if (res.ok && data.success) {
         localStorage.setItem("is_face_registered", "true");
+        videoRef.current = null;
         router.push("/student/dashboard");
       }
       setCapturedImages([]);
