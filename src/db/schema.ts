@@ -6,7 +6,7 @@ import {
   serial,
   text,
   timestamp,
-  time
+  time,
 } from "drizzle-orm/pg-core";
 
 export const roleEnum = pgEnum("role", [
@@ -14,7 +14,7 @@ export const roleEnum = pgEnum("role", [
   "teacher",
   "student",
   "parent",
-  'grievances_handler'
+  "grievances_handler",
 ]);
 
 // Admin Table
@@ -37,7 +37,7 @@ export const students = pgTable("students", {
   class_id: integer("class_id").references(() => classes.id),
   role: roleEnum("role").notNull().default("student"),
   created_at: timestamp("created_at").defaultNow(),
-  profile_pic: text('profile_pic')
+  profile_pic: text("profile_pic"),
 });
 
 // Teachers Table
@@ -90,7 +90,6 @@ export const subjects = pgTable("subjects", {
   id: serial("id").primaryKey(),
   name: text("name").notNull(),
 });
-
 
 export const classSubjects = pgTable("class_subjects", {
   id: serial("id").primaryKey(),
@@ -164,7 +163,9 @@ export const discussions = pgTable("discussions", {
     .references(() => students.id)
     .notNull(),
   title: text("title").notNull(),
-  subject_id: integer("subject_id").references(() => subjects.id).notNull(),
+  subject_id: integer("subject_id")
+    .references(() => subjects.id)
+    .notNull(),
   type: text("type"),
   description: text("description").notNull(),
   is_solved: boolean("is_solved").default(false).notNull(),
@@ -177,10 +178,8 @@ export const discussionReplies = pgTable("discussion_replies", {
   discussion_id: integer("discussion_id")
     .references(() => discussions.id)
     .notNull(),
-  teacher_id: integer("teacher_id")
-    .references(() => teachers.id),
-  student_id: integer("student_id")
-    .references(() => students.id),
+  teacher_id: integer("teacher_id").references(() => teachers.id),
+  student_id: integer("student_id").references(() => students.id),
   reply: text("reply").notNull(),
   is_solution: boolean("is_solution").default(false).notNull(),
   created_at: timestamp("created_at").defaultNow().notNull(),
