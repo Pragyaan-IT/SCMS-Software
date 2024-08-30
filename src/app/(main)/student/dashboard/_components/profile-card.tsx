@@ -30,7 +30,7 @@ export default async function ProfileCard({ profile }: { profile: any }) {
       <CardHeader>
         <CardTitle>Your Profile</CardTitle>
       </CardHeader>
-      <CardContent className="flex flex-row gap-6">
+      <CardContent className="flex md:flex-row gap-6 flex-col">
         <Avatar className="h-32 w-32">
           <AvatarImage src={profile.profile_pic} />
           <AvatarFallback>CN</AvatarFallback>
