@@ -1,10 +1,3 @@
-import { authOptions } from "@/app/api/auth/[...nextauth]/route";
-import ChatBot from "@/components/chatbot";
-import PageTitle from "@/components/page-title";
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { db } from "@/db";
-import { getServerSession } from "next-auth";
-import { redirect } from "next/navigation";
 import Dashboard from "./_components/dashboard";
 
 export default async function DashboardPage() {
@@ -26,7 +19,6 @@ export default async function DashboardPage() {
   return (
     <section>
       <Dashboard />
-      <ChatBot />
     </section>
   );
 }

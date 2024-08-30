@@ -5,9 +5,9 @@ import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
 import NextTopLoader from "nextjs-toploader";
 
-import "./globals.css";
-import ModalProvider from "@/components/providers/modal-provider";
 import { AppProvider } from "@/components/providers/context-provider";
+import ModalProvider from "@/components/providers/modal-provider";
+import "./globals.css";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -32,14 +32,15 @@ export default function RootLayout({
         )}
       >
         <AppProvider>
-        <NextTopLoader color="gray" showSpinner={false}  />
+          <NextTopLoader color="black" showSpinner={false} />
           <ThemeProvider
             attribute="class"
             defaultTheme="light"
             enableSystem
             disableTransitionOnChange
           >
-            <SessionWrapper>{children}
+            <SessionWrapper>
+              {children}
               <ModalProvider />
             </SessionWrapper>
           </ThemeProvider>
