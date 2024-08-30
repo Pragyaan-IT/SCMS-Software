@@ -14,12 +14,12 @@ export default async function DashboardPage() {
 
   // if (!(student?.is_face_registered)) {
   //   redirect("/student/face-registration?registration_id=" + session.user.id + "&student_name=" + student?.name);
-  // }
+// }
 
   const student = {
     name: "Aman Varshney",
     email: "aman@dsd.dsd",
-    profile_pic: "https://api.multiavatar.com/avataaars/amanvarshney.png",
+    profile_pic: "",
     is_face_registered: true,
   };
 

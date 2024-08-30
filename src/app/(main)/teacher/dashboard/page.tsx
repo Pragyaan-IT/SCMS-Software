@@ -28,7 +28,7 @@ export default function DashboardPage() {
     email: "av.amanvarshney11@gmail.com",
     registrationId: "2215000198",
     isFaceRegistered: true,
-    profile_pic: "https://api.multiavatar.com/avataaars/amanvarshney.png",
+    profile_pic: "",
   };
 
   return (
