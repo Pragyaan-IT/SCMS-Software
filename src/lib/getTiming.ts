@@ -24,5 +24,9 @@ export const getTiming = (slot: string) => {
             return '12:00 AM - 1:00 AM';
         case '1':
             return '01:00 AM - 02:00 AM';
+        case '2':
+            return '02:00 AM - 03:00 AM';
+        case '3':
+            return '03:00 AM - 04:00 AM';
     }
 }

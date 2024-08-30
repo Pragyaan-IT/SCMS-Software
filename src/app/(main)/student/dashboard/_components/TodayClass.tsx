@@ -50,6 +50,9 @@ const StudentTodayClass = () => {
               <span className="text-xs md:text-base">
                 {getTiming(item.slot)}
               </span>
+              <span className="text-xs md:text-base">
+                {getTiming(item.subjectName)}
+              </span>
               <span className="text-sm md:text-base">{item.teacherName}</span>
             </div>
           ))}

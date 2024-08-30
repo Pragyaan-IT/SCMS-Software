@@ -28,11 +28,6 @@ export function SidebarMain({ children }: { children: React.ReactNode }) {
       icon: <ChartBar className="h-5 w-5 flex-shrink-0" />,
     },
     {
-      label: "Profile",
-      href: "/student/dashboard/profile",
-      icon: <UserCog2 className="h-5 w-5 flex-shrink-0" />,
-    },
-    {
       label: "Discussion",
       href: "/student/dashboard/discussion",
       icon: <MessagesSquare className="h-5 w-5 flex-shrink-0" />,

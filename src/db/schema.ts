@@ -213,3 +213,17 @@ export const studentPerformance = pgTable("student_performance", {
   report: text("report").notNull(),
   date: timestamp("date").notNull(),
 });
+
+
+// Share Resources
+export const shareResources = pgTable("share_resources", {
+  id: serial("id").primaryKey(),
+  teacher_id: integer("teacher_id")
+    .references(() => teachers.id)
+    .notNull(),
+  class_id: integer("class_id").references(() => classes.id).notNull(),
+  title: text("title").notNull(),
+  description: text("description").notNull(),
+  link: text("link").notNull(),
+  created_at: timestamp("created_at").defaultNow().notNull()
+});
