@@ -22,7 +22,7 @@ export default function TeacherProfileCard({ profile }: { profile: any }) {
       </CardHeader> */}
       <CardContent className="flex flex-col gap-5 pt-6">
         <Avatar className="h-32 w-32">
-          <AvatarImage src={profile.profile_pic} />
+          <AvatarImage  src={profile.profile_pic} />
           <AvatarFallback>CN</AvatarFallback>
         </Avatar>
         <Table>
@@ -45,24 +45,24 @@ export default function TeacherProfileCard({ profile }: { profile: any }) {
             </TableRow>
             <TableRow>
               <TableCell className="py-4 font-medium">
-                Registration ID
+                Teacher ID
               </TableCell>
               <TableCell className="py-4 text-right">
                 {profile.registration_id}
               </TableCell>
             </TableRow>
-            <TableRow>
+            {/* <TableRow>
               <TableCell className="py-4 font-medium">
                 Face Registration
               </TableCell>
-              <TableCell className="pt-4 text-right">
+              <TableCell className="pt-4 text-right">l
                 {profile.is_face_registered ? (
                   <Badge>Face Registered</Badge>
                 ) : (
                   <Badge variant={"destructive"}>Face Not Registered</Badge>
                 )}
               </TableCell>
-            </TableRow>
+            </TableRow> */}
           </TableBody>
         </Table>
         {/* <div className="flex flex-col gap-1">
