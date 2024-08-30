@@ -35,7 +35,7 @@ export function AttendanceChart() {
   return (
     <Card className="min-w-80">
       <CardHeader>
-        <CardTitle className="dark:text-white text-black">Attendance</CardTitle>
+        <CardTitle className="">Attendance</CardTitle>
         <CardDescription>Attendance (last 5 days)</CardDescription>
       </CardHeader>
       <CardContent>
@@ -73,7 +73,7 @@ export function AttendanceChart() {
       <CardFooter>
         <div className="flex w-full items-start gap-2 text-sm">
           <div className="grid gap-2">
-            <p className="font-bold text-white">Overall Attendance - 94%</p>
+            <p className="font-bold">Overall Attendance - 94%</p>
           </div>
         </div>
       </CardFooter>

@@ -142,7 +142,7 @@ export default function FaceRegistration() {
         </CardHeader>
         <CardContent className="grid gap-8 p-6 lg:grid-cols-2">
           <div className="flex flex-col items-center justify-center gap-4">
-            <div className="mb-4 h-[480px] w-[640px]">
+            <div className="mb-4 md:h-[380px] md:w-[540px] lg:h-[480px] lg:w-[640px]">
               <video
                 style={{ transform: "scaleX(-1)" }}
                 ref={videoRef}

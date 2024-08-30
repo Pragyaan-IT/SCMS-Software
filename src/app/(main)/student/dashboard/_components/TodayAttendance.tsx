@@ -8,7 +8,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"; 
+} from "@/components/ui/card";
 import { getTiming } from "@/lib/getTiming";
 import { TodayAttendance } from "@/lib/types";
 import { useSession } from "next-auth/react";
@@ -34,30 +34,39 @@ const StudentTodayAttendance = () => {
   }, [session]);
 
   return (
-       <Card className="md:w-1/2">
-       <CardHeader>
-         <CardTitle className="text-white">Timetable</CardTitle>
-         <CardDescription>Today's Attendance</CardDescription>
-       </CardHeader>
-       <CardContent>
-       {todayAttendance
+    <Card className="md:w-1/2">
+      <CardHeader>
+        <CardTitle className="text-white">Timetable</CardTitle>
+        <CardDescription>Today&apos;s Attendance</CardDescription>
+      </CardHeader>
+      <CardContent>
+        {todayAttendance
           ?.sort((a: any, b: any) => a.slot - b.slot)
           .map((attendance, index) => (
-            <div key={index} className="flex justify-between rounded md:px-4 px-1 py-2">
-              <span className="md:text-base text-xs">{getTiming(attendance.slot)}</span>
-              <span className="md:text-base text-xs">{attendance.subjectName}</span>
-              <span className="md:text-base text-xs">{attendance.attendance ? "Present" : "Absent"}</span>
+            <div
+              key={index}
+              className="flex justify-between rounded px-1 py-2 md:px-4"
+            >
+              <span className="text-xs md:text-base">
+                {getTiming(attendance.slot)}
+              </span>
+              <span className="text-xs md:text-base">
+                {attendance.subjectName}
+              </span>
+              <span className="text-xs md:text-base">
+                {attendance.attendance ? "Present" : "Absent"}
+              </span>
             </div>
           ))}
-       </CardContent>
-       <CardFooter>
-         <div className="flex w-full items-start gap-2 text-sm">
-           <div className="grid gap-2">
-             <p className="font-bold text-white">Overall Attendance - 94%</p>
-           </div>
-         </div>
-       </CardFooter>
-     </Card>
+      </CardContent>
+      <CardFooter>
+        <div className="flex w-full items-start gap-2 text-sm">
+          <div className="grid gap-2">
+            <p className="font-bold">Overall Attendance - 94%</p>
+          </div>
+        </div>
+      </CardFooter>
+    </Card>
   );
 };
 

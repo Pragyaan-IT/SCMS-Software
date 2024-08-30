@@ -49,12 +49,12 @@ export function SidebarMain({ children }: { children: React.ReactNode }) {
   return (
     <div
       className={cn(
-        "mx-auto flex h-screen w-full flex-1 flex-col overflow-hidden rounded-md border md:flex-row bg-white",
+        "mx-auto flex h-screen w-full flex-1 flex-col overflow-hidden rounded-md border md:flex-row",
       )}
     >
       <Sidebar open={open} setOpen={setOpen}>
-        <SidebarBody className="justify-between gap-10 bg-white">
-          <div className="relative flex flex-1 flex-col overflow-y-auto overflow-x-hidden bg-white">
+        <SidebarBody className="justify-between gap-10">
+          <div className="relative flex flex-1 flex-col overflow-y-auto overflow-x-hidden">
             {open ? <Logo /> : <LogoIcon />}
             <div className="mt-8 flex flex-col gap-2">
               {links.map((link, idx) => (
