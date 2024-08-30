@@ -11,6 +11,7 @@ const ChatBot = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<any[]>([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [isInitialDataFetched, setIsInitialDataFetched] = useState(false);
   const scrollAreaRef = useRef<any>(null);
 
   useEffect(() => {
@@ -18,6 +19,68 @@ const ChatBot = () => {
       scrollAreaRef.current.scrollTop = scrollAreaRef.current.scrollHeight;
     }
   }, [messages]);
+
+  useEffect(() => {
+    const fetchInitialData = async () => {
+      try {
+        const response = await fetch(
+          "https://8100-01j6f35wcrtxm9mqx4xdkcv7wm.cloudspaces.litng.ai/analyze",
+          {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              student_data: {
+                attendance: 84.0,
+                marks: 89.4,
+                questions_asked: 9,
+                quiz_score: 77.1,
+                avg_entry_time: 12.8
+              }
+            }),
+          }
+        );
+
+        if (!response.ok) throw new Error("Network response was not ok");
+
+        const reader = response?.body?.getReader();
+        let receivedMessage = "";
+
+        while (true) {
+          const { done, value }: any = await reader.read();
+          if (done) break;
+          receivedMessage += new TextDecoder().decode(value);
+        }
+
+        setMessages((prev) => [
+          ...prev,
+          {
+            role: "assistant",
+            content: receivedMessage,
+            time: new Date().toLocaleTimeString([], {
+              hour: "2-digit",
+              minute: "2-digit",
+            }),
+          },
+        ]);
+      } catch (error) {
+        console.error("Error:", error);
+        setMessages((prev) => [
+          ...prev,
+          {
+            role: "assistant",
+            content: "Sorry, I encountered an error while fetching the initial analysis.",
+            time: new Date().toLocaleTimeString([], {
+              hour: "2-digit",
+              minute: "2-digit",
+            }),
+          },
+        ]);
+      }
+    };
+    if (!isInitialDataFetched) {
+      fetchInitialData();
+    }
+  }, [isInitialDataFetched]);
 
   const sendMessage = async (content: any) => {
     if (!content.trim()) return;
@@ -34,9 +97,9 @@ const ChatBot = () => {
     setIsLoading(true);
 
     try {
-      content += "Not more than 50 words try to limit in small explanation";
+      content += " Not more than 50 words. Try to limit it to a small explanation.";
       const response = await fetch(
-        "https://8000-01j6f35wcrtxm9mqx4xdkcv7wm.cloudspaces.litng.ai/chat",
+        "https://8100-01j6f35wcrtxm9mqx4xdkcv7wm.cloudspaces.litng.ai/chat",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -46,7 +109,7 @@ const ChatBot = () => {
             top_p: 0.7,
             max_tokens: 1024,
           }),
-        },
+        }
       );
 
       if (!response.ok) throw new Error("Network response was not ok");
@@ -55,31 +118,22 @@ const ChatBot = () => {
       let receivedMessage = "";
 
       while (true) {
-        const { done, value }: any = await reader?.read();
+        const { done, value }: any = await reader.read();
         if (done) break;
         receivedMessage += new TextDecoder().decode(value);
-        setMessages((prev) => {
-          const lastMessage = prev[prev.length - 1];
-          if (lastMessage.role === "assistant") {
-            return [
-              ...prev.slice(0, -1),
-              { ...lastMessage, content: receivedMessage },
-            ];
-          } else {
-            return [
-              ...prev,
-              {
-                role: "assistant",
-                content: receivedMessage,
-                time: new Date().toLocaleTimeString([], {
-                  hour: "2-digit",
-                  minute: "2-digit",
-                }),
-              },
-            ];
-          }
-        });
       }
+
+      setMessages((prev) => [
+        ...prev,
+        {
+          role: "assistant",
+          content: receivedMessage,
+          time: new Date().toLocaleTimeString([], {
+            hour: "2-digit",
+            minute: "2-digit",
+          }),
+        },
+      ]);
     } catch (error) {
       console.error("Error:", error);
       setMessages((prev) => [
@@ -129,7 +183,7 @@ const ChatBot = () => {
                     time={msg.time}
                     pic="https://pagedone.io/asset/uploads/1710412177.png"
                   />
-                ),
+                )
               )}
               {isLoading && <div className="text-left">Thinking...</div>}
             </div>
