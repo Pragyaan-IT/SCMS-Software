@@ -1,4 +1,3 @@
-import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
 import Image from "next/image";
@@ -17,14 +16,7 @@ export default function TeacherProfileCard({ profile }: { profile: any }) {
 
   return (
     <Card className="h-min">
-      {/* <CardHeader>
-        <CardTitle>Your Profile</CardTitle>
-      </CardHeader> */}
-      <CardContent className="flex flex-col gap-5 pt-6 items-center">
-        {/* <Avatar className="h-32 w-32">
-          <AvatarImage src={profile.profile_pic} />
-          <AvatarFallback>CN</AvatarFallback>
-        </Avatar> */}
+      <CardContent className="flex flex-col items-center gap-5 pt-6">
         <Image
           className="h-40 w-40 rounded-full"
           src={profile.profile_pic}
@@ -49,25 +41,23 @@ export default function TeacherProfileCard({ profile }: { profile: any }) {
               <TableCell className="py-4 text-right">{profile.email}</TableCell>
             </TableRow>
             <TableRow>
-              <TableCell className="py-4 font-medium">
-                Registration ID
-              </TableCell>
+              <TableCell className="py-4 font-medium">Teacher ID</TableCell>
               <TableCell className="py-4 text-right">
                 {profile.registration_id}
               </TableCell>
             </TableRow>
-            <TableRow>
+            {/* <TableRow>
               <TableCell className="py-4 font-medium">
                 Face Registration
               </TableCell>
-              <TableCell className="pt-4 text-right">
+              <TableCell className="pt-4 text-right">l
                 {profile.is_face_registered ? (
                   <Badge>Face Registered</Badge>
                 ) : (
                   <Badge variant={"destructive"}>Face Not Registered</Badge>
                 )}
               </TableCell>
-            </TableRow>
+            </TableRow> */}
           </TableBody>
         </Table>
         {/* <div className="flex flex-col gap-1">
