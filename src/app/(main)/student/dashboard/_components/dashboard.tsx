@@ -4,20 +4,23 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { Separator } from "@/components/ui/separator";
 import { AttendanceChart } from "./attendanceChart";
 import ProfileCard from "./profile-card";
-import StudentProfileScore from "./profile-score";
+import StudentProfileScore2 from "./profile-score-2";
+import StudentQuestionsAnsweredChart from "./studentQuestionAnswered";
 import StudentTodayClass from "./TodayClass";
-import TotalAttendanceChart from "./total-attendance-chart";
 
 const Dashboard = ({ profile }: { profile: any }) => {
   return (
     <ScrollArea className="h-svh">
       <div className="flex flex-col gap-2 p-2 md:p-10">
-        <div className="grid h-min grid-cols-1 gap-2 md:grid-cols-3 lg:grid-cols-4">
+        <div className="grid h-min grid-cols-1 gap-2 md:grid-cols-3">
           <div className="w-full">
             <ProfileCard profile={profile} />
           </div>
-          <StudentProfileScore />
-          <TotalAttendanceChart />
+          {/* <TotalAttendanceChart /> */}
+          <div className="flex flex-col gap-2">
+            <StudentProfileScore2 />
+            <StudentQuestionsAnsweredChart />
+          </div>
           <AttendanceChart />
           {/* <GradeChart /> */}
         </div>

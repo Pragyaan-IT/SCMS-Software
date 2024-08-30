@@ -5,7 +5,7 @@ import { PolarAngleAxis, RadialBar, RadialBarChart } from "recharts";
 import { Card, CardContent } from "@/components/ui/card";
 import { ChartContainer } from "@/components/ui/chart";
 
-export default function StudentProfileScore() {
+export default function StudentProfileScore2() {
   return (
     <Card className="">
       <CardContent className="flex justify-between gap-4 p-4">

@@ -4,6 +4,7 @@ import { Button } from "@nextui-org/button";
 import html2canvas from "html2canvas";
 import { jsPDF } from "jspdf";
 import { useRef } from "react";
+import boy from "@/public/boy.png"
 import Dashboard from "../_components/dashboard";
 import { WeightDistributionChart } from "../_components/weight-distribution-chart";
 // import ProfileScore from "../_components/profile-score-2";
@@ -36,7 +37,7 @@ export default function PrintReport() {
     email: "shashank@gmail.com",
     registration_id: "100002",
     isFaceRegistered: true,
-    profile_pic: "",
+    profile_pic: boy,
   };
 
   return (
@@ -49,9 +50,9 @@ export default function PrintReport() {
         Download as PDF
       </Button>
       <div ref={printRef}>
-        <div className="">
+        {/* <div className="">
           <Dashboard profile={profile} />
-        </div>
+        </div> */}
         <div className="">
           <div className="grid grid-cols-1 gap-2 lg:grid-cols-5">
             <div className="col-span-2">
