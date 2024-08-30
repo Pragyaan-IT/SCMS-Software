@@ -1,11 +1,10 @@
 "use client";
 
-import { Button } from "@nextui-org/button";
+import boy from "@/public/boy.png";
+import { Button } from "@/components/ui/button";
 import html2canvas from "html2canvas";
 import { jsPDF } from "jspdf";
 import { useRef } from "react";
-import boy from "@/public/boy.png"
-import Dashboard from "../_components/dashboard";
 import { WeightDistributionChart } from "../_components/weight-distribution-chart";
 // import ProfileScore from "../_components/profile-score-2";
 // import QuestionsAnswered from "../_components/questions-answered";
@@ -36,7 +35,7 @@ export default function PrintReport() {
     name: "Shashank Shekhar Pandey",
     email: "shashank@gmail.com",
     registration_id: "100002",
-    isFaceRegistered: true,
+    is_face_registered: true,
     profile_pic: boy,
   };
 
@@ -67,8 +66,16 @@ export default function PrintReport() {
 
           <div className="flex flex-col gap-2">
             <ProfileScoreTable />
-            <div className="w-full">
+            <div className="grid grid-cols-2 gap-2">
               <WeightDistributionChart />
+              <div className="rounded-md p-4">
+                <h3 className="mb-2 text-xl font-semibold">Formula Used</h3>
+                <p className="text-lg font-medium">
+                  Profile Score = (Attendance × w₁ + CPI × w₂ + Questions Asked
+                  × w₃ + Quiz Scores × w₄ + Entry Time Score × w₅) / Total
+                  Weights
+                </p>
+              </div>
             </div>
           </div>
         </div>

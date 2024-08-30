@@ -45,13 +45,6 @@ const ProfileScoreTable = () => {
           ))}
         </TableBody>
       </Table>
-      <div className="mt-4 rounded-md p-4">
-        <h3 className="mb-2 text-xl font-semibold">Formula Used</h3>
-        <p className="text-lg font-medium">
-          Profile Score = (Attendance × w₁ + CPI × w₂ + Questions Asked × w₃ +
-          Quiz Scores × w₄ + Entry Time Score × w₅) / Total Weights
-        </p>
-      </div>
     </div>
   );
 };
