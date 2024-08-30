@@ -13,7 +13,7 @@ const Dashboard = ({profile}:{profile:any}) => {
     <ScrollArea className="h-svh">
       <div className="flex flex-col gap-2 p-2 md:p-10">
         <div className="grid grid-cols-1 gap-2 md:grid-cols-3 lg:grid-cols-4 h-min">
-          <div className="w-full col-span-2">
+          <div className="w-full lg:col-span-2">
             <ProfileCard profile={profile} />
           </div>
           <TotalAttendanceChart />

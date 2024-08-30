@@ -15,22 +15,12 @@ export default function ProfileCard({ profile }: { profile: any }) {
   //   })
   //   .from(students)
 
-  // dummy data
-  console.log(profile);
-  const studentData = {
-    name: "Aman Varshney",
-    email: "av.amanvarshney11@gmail.com",
-    registrationId: "2215000198",
-    isFaceRegistered: true,
-    image: "https://api.multiavatar.com/avataaars/amanvarshney.png",
-  };
-
   return (
     <Card className="h-full">
       <CardHeader>
         <CardTitle>Your Profile</CardTitle>
       </CardHeader>
-      <CardContent className="flex flex-row gap-6">
+      <CardContent className="flex flex-col gap-6 lg:flex-row">
         <Avatar className="h-32 w-32">
           <AvatarImage src={profile.profile_pic} />
           <AvatarFallback>CN</AvatarFallback>
