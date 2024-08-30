@@ -4,6 +4,7 @@ import { Button } from "@nextui-org/button";
 import html2canvas from "html2canvas";
 import { jsPDF } from "jspdf";
 import { useRef } from "react";
+import Dashboard from "../_components/dashboard";
 
 export default function PrintReport() {
   const printRef = useRef<HTMLDivElement | null>(null);
@@ -22,6 +23,16 @@ export default function PrintReport() {
     pdf.save("student-report.pdf");
   };
 
+
+  
+  const profile = {
+    name: "Shashank Shekhar Pandey",
+    email: "shashank@gmail.com",  
+    registration_id: "100002",
+    isFaceRegistered: true,
+    profile_pic: "https://res.cloudinary.com/dfn0nvt6t/image/upload/", 
+  };
+
   return (
     <div>
       <Button
@@ -32,7 +43,7 @@ export default function PrintReport() {
         Download as PDF
       </Button>
       <div ref={printRef}>
-        <div className="">{/* <Dashboard /> */}</div>
+        <div className=""><Dashboard profile={profile} /></div>
       </div>
     </div>
   );
