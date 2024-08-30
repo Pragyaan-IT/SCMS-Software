@@ -27,7 +27,14 @@ const RoleBasedNavigation = ({ role }: { role: UserRole }) => {
           <NavButton href={`/${role}/kanban`} name="Kanban" />
           <NavButton href={`/${role}/complaints`} name="Complaints" />
           <NavButton href={`/${role}/discussion`} name="Discussion" />
-          <Button variant="ghost" className="justify-start text-black dark:text-white hover:bg-primary hover:text-primary-foreground" onClick={() => { signOut({ callbackUrl: "/" }) }} >
+          <NavButton href={`/${role}/print-report`} name="Profile Report" />
+          <Button
+            variant="ghost"
+            className="justify-start text-black hover:bg-primary hover:text-primary-foreground dark:text-white"
+            onClick={() => {
+              signOut({ callbackUrl: "/" });
+            }}
+          >
             Logout
           </Button>
         </>

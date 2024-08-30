@@ -8,6 +8,7 @@ import QuestionsAnswered from "../_components/questions-answered";
 import StudentPerformanceChart from "../_components/student-performance-chart";
 import { SubjectPerformanceChart } from "../_components/subject-perfomance-chart";
 import TeacherProfileCard from "../_components/teacher-profile-card";
+import hcverma from "@/public/hcverma.jpg"
 
 export default function DashboardPage() {
   // const { data: session } = useSession();
@@ -24,11 +25,11 @@ export default function DashboardPage() {
   // }, [session]);
 
   const studentData = {
-    name: "Mr Moshin Quresh",
-    email: "moshinquresh@gmail.com",
-    registration_id: "100002",
+    name: "HC Verma",
+    email: "hc.verma@gmail.com",
+    registrationId: "2215000198",
     isFaceRegistered: true,
-    profile_pic: "https://res.cloudinary.com/dfn0nvt6t/image/upload/v1725018419/IMG_0755_jrcw0g.jpg",
+    profile_pic: hcverma,
   };
 
   return (

@@ -1,7 +1,7 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
+import Image from "next/image";
 
 export default function ProfileCard({ profile }: { profile: any }) {
   // const studentData = await db
@@ -20,11 +20,18 @@ export default function ProfileCard({ profile }: { profile: any }) {
       <CardHeader>
         <CardTitle>Your Profile</CardTitle>
       </CardHeader>
-      <CardContent className="flex flex-col gap-6 lg:flex-row">
-        <Avatar className="h-32 w-32">
+      <CardContent className="flex flex-col gap-4 items-center">
+        {/* <Avatar className="h-32 w-32">
           <AvatarImage src={profile.profile_pic} />
           <AvatarFallback>CN</AvatarFallback>
-        </Avatar>
+        </Avatar> */}
+        <Image
+          className="rounded-full h-40 w-40"
+          src={profile.profile_pic}
+          alt="boy"
+          width={100}
+          height={100}
+        />
         <Table>
           {/* <TableHeader>
             <TableRow>
@@ -43,14 +50,14 @@ export default function ProfileCard({ profile }: { profile: any }) {
               <TableCell className="py-4 font-medium">Email</TableCell>
               <TableCell className="py-4 text-right">{profile.email}</TableCell>
             </TableRow>
-            <TableRow>
+            {/* <TableRow>
               <TableCell className="py-4 font-medium">
                 Registration ID
               </TableCell>
               <TableCell className="py-4 text-right">
                 {profile.registration_id}
               </TableCell>
-            </TableRow>
+            </TableRow> */}
             <TableRow>
               <TableCell className="py-4 font-medium">
                 Face Registration

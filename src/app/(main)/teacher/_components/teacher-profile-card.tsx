@@ -1,7 +1,7 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
+import Image from "next/image";
 
 export default function TeacherProfileCard({ profile }: { profile: any }) {
   // const studentData = await db
@@ -20,11 +20,18 @@ export default function TeacherProfileCard({ profile }: { profile: any }) {
       {/* <CardHeader>
         <CardTitle>Your Profile</CardTitle>
       </CardHeader> */}
-      <CardContent className="flex flex-col gap-5 pt-6">
-        <Avatar className="h-32 w-32">
-          <AvatarImage  src={profile.profile_pic} />
+      <CardContent className="flex flex-col gap-5 pt-6 items-center">
+        {/* <Avatar className="h-32 w-32">
+          <AvatarImage src={profile.profile_pic} />
           <AvatarFallback>CN</AvatarFallback>
-        </Avatar>
+        </Avatar> */}
+        <Image
+          className="h-40 w-40 rounded-full"
+          src={profile.profile_pic}
+          alt="teacher pic"
+          width={100}
+          height={100}
+        />
         <Table>
           {/* <TableHeader>
             <TableRow>
@@ -45,24 +52,24 @@ export default function TeacherProfileCard({ profile }: { profile: any }) {
             </TableRow>
             <TableRow>
               <TableCell className="py-4 font-medium">
-                Teacher ID
+                Registration ID
               </TableCell>
               <TableCell className="py-4 text-right">
                 {profile.registration_id}
               </TableCell>
             </TableRow>
-            {/* <TableRow>
+            <TableRow>
               <TableCell className="py-4 font-medium">
                 Face Registration
               </TableCell>
-              <TableCell className="pt-4 text-right">l
+              <TableCell className="pt-4 text-right">
                 {profile.is_face_registered ? (
                   <Badge>Face Registered</Badge>
                 ) : (
                   <Badge variant={"destructive"}>Face Not Registered</Badge>
                 )}
               </TableCell>
-            </TableRow> */}
+            </TableRow>
           </TableBody>
         </Table>
         {/* <div className="flex flex-col gap-1">
