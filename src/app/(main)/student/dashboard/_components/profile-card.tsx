@@ -1,13 +1,7 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import {
-  Table,
-  TableBody,
-  TableCaption,
-  TableCell,
-  TableRow,
-} from "@/components/ui/table";
+import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
 
 export default async function ProfileCard() {
   // const studentData = await db
@@ -31,7 +25,7 @@ export default async function ProfileCard() {
   };
 
   return (
-    <Card>
+    <Card className="h-full">
       <CardHeader>
         <CardTitle>Your Profile</CardTitle>
       </CardHeader>
@@ -51,22 +45,30 @@ export default async function ProfileCard() {
           </TableHeader> */}
           <TableBody>
             <TableRow>
-              <TableCell className="font-medium">Name</TableCell>
-              <TableCell className="text-right">{studentData.name}</TableCell>
+              <TableCell className="py-4 font-medium">Name</TableCell>
+              <TableCell className="py-4 text-right">
+                {studentData.name}
+              </TableCell>
             </TableRow>
             <TableRow>
-              <TableCell className="font-medium">Email</TableCell>
-              <TableCell className="text-right">{studentData.email}</TableCell>
+              <TableCell className="py-4 font-medium">Email</TableCell>
+              <TableCell className="py-4 text-right">
+                {studentData.email}
+              </TableCell>
             </TableRow>
             <TableRow>
-              <TableCell className="font-medium">Registration ID</TableCell>
-              <TableCell className="text-right">
+              <TableCell className="py-4 font-medium">
+                Registration ID
+              </TableCell>
+              <TableCell className="py-4 text-right">
                 {studentData.registrationId}
               </TableCell>
             </TableRow>
             <TableRow>
-              <TableCell className="font-medium">Face Registration</TableCell>
-              <TableCell className="text-right">
+              <TableCell className="py-4 font-medium">
+                Face Registration
+              </TableCell>
+              <TableCell className="py-4 text-right">
                 {studentData.isFaceRegistered ? (
                   <Badge>Face Registered</Badge>
                 ) : (
