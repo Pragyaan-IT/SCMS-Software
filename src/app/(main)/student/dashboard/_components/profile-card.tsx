@@ -3,7 +3,10 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
 
-export default async function ProfileCard() {
+export default function ProfileCard() {
+  // Fetch data in a top lever server component nitish warna error ayega
+  // props se pass karna padega
+
   // const studentData = await db
   //   .select({
   //     name: students.name,
