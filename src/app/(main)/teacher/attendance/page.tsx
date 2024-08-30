@@ -82,7 +82,7 @@ export default function AttendanceTable() {
     const checkAndSetInterval = () => {
       const now = new Date();
       const minutes = now.getMinutes();
-      if (minutes < 25) {
+      if (minutes < 15) {
         if (!intervalId) {
           startInterval();
         }

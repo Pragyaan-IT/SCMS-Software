@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
 
-export default async function ProfileCard({ profile }: { profile: any }) {
+export default function ProfileCard({ profile }: { profile: any }) {
   // const studentData = await db
   //   .select({
   //     name: students.name,
@@ -15,22 +15,12 @@ export default async function ProfileCard({ profile }: { profile: any }) {
   //   })
   //   .from(students)
 
-  // dummy data
-  console.log(profile)
-  const studentData = {
-    name: "Aman Varshney",
-    email: "av.amanvarshney11@gmail.com",
-    registrationId: "2215000198",
-    isFaceRegistered: true,
-    image: "https://api.multiavatar.com/avataaars/amanvarshney.png",
-  };
-
   return (
     <Card className="h-full">
       <CardHeader>
         <CardTitle>Your Profile</CardTitle>
       </CardHeader>
-      <CardContent className="flex md:flex-row gap-6 flex-col">
+      <CardContent className="flex flex-col gap-6 lg:flex-row">
         <Avatar className="h-32 w-32">
           <AvatarImage src={profile.profile_pic} />
           <AvatarFallback>CN</AvatarFallback>
@@ -47,15 +37,11 @@ export default async function ProfileCard({ profile }: { profile: any }) {
           <TableBody>
             <TableRow>
               <TableCell className="py-4 font-medium">Name</TableCell>
-              <TableCell className="py-4 text-right">
-                {profile.name}
-              </TableCell>
+              <TableCell className="py-4 text-right">{profile.name}</TableCell>
             </TableRow>
             <TableRow>
               <TableCell className="py-4 font-medium">Email</TableCell>
-              <TableCell className="py-4 text-right">
-                {profile.email}
-              </TableCell>
+              <TableCell className="py-4 text-right">{profile.email}</TableCell>
             </TableRow>
             <TableRow>
               <TableCell className="py-4 font-medium">
