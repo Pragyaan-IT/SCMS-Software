@@ -4,12 +4,10 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 
 import { AttendanceRateChart } from "../_components/attendance-rate-chart";
 import ProfileScore from "../_components/profile-score";
+import QuestionsAnswered from "../_components/questions-answered";
 import StudentPerformanceChart from "../_components/student-performance-chart";
 import { SubjectPerformanceChart } from "../_components/subject-perfomance-chart";
-import QuestionsAnswered from "../_components/questions-answered";
-import { useSession } from "next-auth/react";
-import { useRouter } from "next/navigation";
-import { useEffect } from "react";
+import TeacherProfileCard from "../_components/teacher-profile-card";
 
 export default function DashboardPage() {
   // const { data: session } = useSession();
@@ -24,16 +22,28 @@ export default function DashboardPage() {
   //   console.log(session);
 
   // }, [session]);
+
+  const studentData = {
+    name: "Aman Varshney",
+    email: "av.amanvarshney11@gmail.com",
+    registrationId: "2215000198",
+    isFaceRegistered: true,
+    profile_pic: "https://api.multiavatar.com/avataaars/amanvarshney.png",
+  };
+
   return (
     <section>
       <PageTitle title="Dashboard" />
       <ScrollArea className="h-[calc(100dvh-140px)] w-full">
-        <div className="flex gap-8 items-center">
-          <ProfileScore />
-          <QuestionsAnswered />
-        </div>
-        <div className="grid grid-cols-1 gap-4 p-2 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-2 lg:grid-cols-3">
+          <TeacherProfileCard profile={studentData} />
+          <div className="flex flex-col gap-2">
+            <ProfileScore />
+            <QuestionsAnswered />
+          </div>
           <StudentPerformanceChart />
+        </div>
+        <div className="grid grid-cols-1 gap-4 p-2 md:grid-cols-2">
           <AttendanceRateChart />
           <SubjectPerformanceChart />
         </div>

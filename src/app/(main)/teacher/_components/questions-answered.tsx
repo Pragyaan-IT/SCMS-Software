@@ -8,7 +8,7 @@ import { Separator } from "@/components/ui/separator";
 
 export default function QuestionsAnsweredChart() {
   return (
-    <Card className="w-1/2">
+    <Card>
       <CardContent className="flex gap-4 p-4 pb-2">
         <ChartContainer
           config={{
@@ -22,7 +22,7 @@ export default function QuestionsAnsweredChart() {
               color: "hsl(var(--chart-3))",
             },
           }}
-          className="h-[140px] w-full"
+          className="h-[100px] w-full"
         >
           <BarChart
             margin={{
@@ -73,10 +73,12 @@ export default function QuestionsAnsweredChart() {
           </BarChart>
         </ChartContainer>
       </CardContent>
-      <CardFooter className="flex flex-row border-t p-4 ml-4">
+      <CardFooter className="ml-4 flex flex-row border-t p-4">
         <div className="flex w-full items-center gap-2">
           <div className="grid flex-1 auto-rows-min gap-0.5">
-            <div className="text-xs text-muted-foreground text-orange-700">Answered</div>
+            <div className="text-xs text-muted-foreground text-orange-700">
+              Answered
+            </div>
             <div className="flex items-baseline gap-1 text-2xl font-bold tabular-nums leading-none text-orange-700">
               150
               <span className="text-sm font-normal text-muted-foreground">
@@ -86,7 +88,9 @@ export default function QuestionsAnsweredChart() {
           </div>
           <Separator orientation="vertical" className="mx-2 h-10 w-px" />
           <div className="grid flex-1 auto-rows-min gap-0.5">
-            <div className="text-xs text-muted-foreground text-cyan-700">Unanswered</div>
+            <div className="text-xs text-cyan-700 text-muted-foreground">
+              Unanswered
+            </div>
             <div className="flex items-baseline gap-1 text-2xl font-bold tabular-nums leading-none text-cyan-700">
               50
               <span className="text-sm font-normal text-muted-foreground">
@@ -96,7 +100,9 @@ export default function QuestionsAnsweredChart() {
           </div>
           <Separator orientation="vertical" className="mx-2 h-10 w-px" />
           <div className="grid flex-1 auto-rows-min gap-0.5">
-            <div className="text-xs text-muted-foreground text-teal-900">Avg Response Time</div>
+            <div className="text-xs text-muted-foreground text-teal-900">
+              Avg Response Time
+            </div>
             <div className="flex items-baseline gap-1 text-2xl font-bold tabular-nums leading-none text-teal-900">
               2.5
               <span className="text-sm font-normal text-muted-foreground">

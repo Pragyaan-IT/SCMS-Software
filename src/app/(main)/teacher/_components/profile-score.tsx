@@ -7,8 +7,8 @@ import { ChartContainer } from "@/components/ui/chart";
 
 export default function TeacherDashboard() {
   return (
-    <Card className="w-1/2">
-      <CardContent className="flex gap-4 p-4">
+    <Card className="">
+      <CardContent className="flex justify-between gap-4 p-4">
         <div className="grid items-center gap-2">
           <div className="grid flex-1 auto-rows-min gap-0.5">
             <div className="text-sm text-muted-foreground">Classes Taught</div>
@@ -26,9 +26,7 @@ export default function TeacherDashboard() {
             </div>
           </div>
           <div className="grid flex-1 auto-rows-min gap-0.5">
-            <div className="text-sm text-muted-foreground">
-              Quizzes Created
-            </div>
+            <div className="text-sm text-muted-foreground">Quizzes Created</div>
             <div className="flex items-baseline gap-1 text-xl font-bold tabular-nums leading-none">
               30
               <span className="text-sm font-normal text-muted-foreground">
@@ -52,7 +50,7 @@ export default function TeacherDashboard() {
               color: "hsl(var(--chart-3))",
             },
           }}
-          className="mx-auto aspect-square w-full max-w-[80%]"
+          className="min-h-[100px]"
         >
           <RadialBarChart
             margin={{
