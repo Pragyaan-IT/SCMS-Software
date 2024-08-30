@@ -6,6 +6,7 @@ import { GradeChart } from "./gradeChart";
 import ProfileCard from "./profile-card";
 import StudentTodayAttendance from "./TodayAttendance";
 import StudentTodayClass from "./TodayClass";
+import TotalAttendanceChart from "./total-attendance-chart";
 
 const Dashboard = ({profile}:{profile:any}) => {
   return (
@@ -15,8 +16,9 @@ const Dashboard = ({profile}:{profile:any}) => {
           <div className="w-full col-span-2">
             <ProfileCard profile={profile} />
           </div>
+          <TotalAttendanceChart />
           <AttendanceChart />
-          <GradeChart />
+          {/* <GradeChart /> */}
         </div>
         <div className="flex flex-1 flex-col gap-2 md:flex-row ">
           <Card className="md:w-1/4 w-full">

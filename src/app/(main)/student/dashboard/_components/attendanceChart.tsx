@@ -19,7 +19,7 @@ import { Bar, BarChart, CartesianGrid, LabelList, XAxis } from "recharts";
 
 const chartData = [
   { day: "Monday", attendance: 100 },
-  { day: "Tuesday", attendance: 40 },
+  { day: "Tuesday", attendance: 40, fill: "hsl(0 84.2% 60.2%)" }, // imp to give color we will need to format the data
   { day: "Wednesday", attendance: 95 },
   { day: "Thursday", attendance: 97 },
   { day: "Friday", attendance: 94 },

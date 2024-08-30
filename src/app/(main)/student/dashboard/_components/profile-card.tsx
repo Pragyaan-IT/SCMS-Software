@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
 
-export default async function ProfileCard({ profile }: { profile: any }) {
+export default function ProfileCard({ profile }: { profile: any }) {
   // const studentData = await db
   //   .select({
   //     name: students.name,
@@ -16,7 +16,7 @@ export default async function ProfileCard({ profile }: { profile: any }) {
   //   .from(students)
 
   // dummy data
-  console.log(profile)
+  console.log(profile);
   const studentData = {
     name: "Aman Varshney",
     email: "av.amanvarshney11@gmail.com",
@@ -47,15 +47,11 @@ export default async function ProfileCard({ profile }: { profile: any }) {
           <TableBody>
             <TableRow>
               <TableCell className="py-4 font-medium">Name</TableCell>
-              <TableCell className="py-4 text-right">
-                {profile.name}
-              </TableCell>
+              <TableCell className="py-4 text-right">{profile.name}</TableCell>
             </TableRow>
             <TableRow>
               <TableCell className="py-4 font-medium">Email</TableCell>
-              <TableCell className="py-4 text-right">
-                {profile.email}
-              </TableCell>
+              <TableCell className="py-4 text-right">{profile.email}</TableCell>
             </TableRow>
             <TableRow>
               <TableCell className="py-4 font-medium">
