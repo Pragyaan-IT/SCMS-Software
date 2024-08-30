@@ -4,7 +4,6 @@ import { Button } from "@nextui-org/button";
 import html2canvas from "html2canvas";
 import { jsPDF } from "jspdf";
 import { useRef } from "react";
-import Dashboard from "../_components/dashboard";
 
 export default function PrintReport() {
   const printRef = useRef<HTMLDivElement | null>(null);
@@ -25,13 +24,15 @@ export default function PrintReport() {
 
   return (
     <div>
-      <Button type="button" onClick={handleDownloadPdf} className=" fixed right-10 top-10">
+      <Button
+        type="button"
+        onClick={handleDownloadPdf}
+        className="fixed right-10 top-10"
+      >
         Download as PDF
       </Button>
       <div ref={printRef}>
-        <div className="">
-          <Dashboard />
-        </div>
+        <div className="">{/* <Dashboard /> */}</div>
       </div>
     </div>
   );
