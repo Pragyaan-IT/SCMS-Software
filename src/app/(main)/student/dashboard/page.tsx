@@ -1,4 +1,4 @@
-import boy from "@/public/boy.png";
+import boy from "@/public/hcverma.jpg";
 import Dashboard from "./_components/dashboard";
 
 export default async function DashboardPage() {
