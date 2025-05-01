@@ -18,8 +18,8 @@ export default async function DashboardPage() {
   // }
 
   const student = {
-    name: "Shashank Pandey",
-    email: "shashank@gmail.com",
+    name: "Dheeraj Singh",
+    email: "dheeraj@gmail.com",
     profile_pic: boy,
     is_face_registered: true,
   };
